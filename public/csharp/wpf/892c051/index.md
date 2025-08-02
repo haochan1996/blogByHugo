@@ -70,6 +70,6 @@ XAML 是基于 XML 的标记语言，以声明方式实现应用程序的外观�
 
 ---
 
-> 作者: <no value>  
+> 作者: [hobby](https://github.com/haochan1996)  
 > URL: http://localhost:1313/csharp/wpf/892c051/  
 

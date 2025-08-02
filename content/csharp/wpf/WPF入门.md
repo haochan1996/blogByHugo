@@ -5,10 +5,10 @@ date: 2025-08-02T18:25:47+08:00
 slug: 892c051
 draft: false
 author: 
-  name:
-  link:
-  email:
-  avatar:
+  name: hobby
+  link: https://github.com/haochan1996
+  email: espholychan@outllook.com
+  avatar: https://avatars.githubusercontent.com/u/190246046?v=4
 description:
 keywords:
 license:
