@@ -28,3 +28,27 @@ hugo new site blogByHugo --force
 ```bash
 hugo mod get github.com/hugo-fixit/FixIt
 ```
+
+要更新或管理版本，你可以使用 hugo mod get 命令。
+
+```bash
+# 更新所有模块
+hugo mod get -u
+# 更新所有模块及其依赖
+hugo mod get -u ./...
+# 更新一个模块
+hugo mod get -u github.com/hugo-fixit/FixIt
+# 获取特定版本（例如 v0.3.2, @latest, @main）
+hugo mod get github.com/hugo-fixit/FixIt@v0.3.2
+```bash
+
+### 运行
+
+在blogByHugo目录下执行以下命令：
+
+```bash
+hugo server -D
+```
+
+这将启动一个本地服务器，通常在`http://localhost:1313/`
+
