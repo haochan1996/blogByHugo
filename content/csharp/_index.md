@@ -1,11 +1,8 @@
 ---
-title: C# Programming Language
+title: C# 教程
 description: Learn about the C# programming language, its features, and how to get started with
+date: 2025-08-02T18:25:47+08:00
 cascade:
   params:
     type: posts
 ---
-
-# 你好 C# 编程语言
-
-啊圣诞节快乐发

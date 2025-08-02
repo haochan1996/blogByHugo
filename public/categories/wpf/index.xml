@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WPF - 分类 - 痴人呓语</title>
+    <link>http://localhost:1313/categories/wpf/</link>
+    <description>痴人呓语</description>
+    <generator>Hugo 0.148.2 &amp; FixIt v0.4.0-alpha-20250721024521-a1cd700b</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 03 Aug 2025 01:26:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/wpf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>布局控件</title>
+      <link>http://localhost:1313/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/</link>
+      <pubDate>Sun, 03 Aug 2025 01:26:27 +0800</pubDate><author>espholychan@outllook.com (hobby)</author>
+      <guid>http://localhost:1313/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/</guid>
+      <category domain="http://localhost:1313/categories/wpf/">WPF</category>
+      <description>&lt;h2 class=&#34;heading-element&#34; id=&#34;布局控件&#34;&gt;&lt;span&gt;布局控件&lt;/span&gt;&#xD;&#xA;  &lt;a href=&#34;#%e5%b8%83%e5%b1%80%e6%8e%a7%e4%bb%b6&#34; class=&#34;heading-mark&#34;&gt;&#xD;&#xA;    &lt;svg class=&#34;octicon octicon-link&#34; viewBox=&#34;0 0 16 16&#34; version=&#34;1.1&#34; width=&#34;16&#34; height=&#34;16&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&lt;p&gt;正文内容&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WPF入门</title>
+      <link>http://localhost:1313/csharp/wpf/892c051/</link>
+      <pubDate>Sat, 02 Aug 2025 18:25:47 +0800</pubDate>
+      <guid>http://localhost:1313/csharp/wpf/892c051/</guid>
+      <category domain="http://localhost:1313/categories/wpf/">WPF</category>
+      <description>&lt;h2 class=&#34;heading-element&#34; id=&#34;wpf概述&#34;&gt;&lt;span&gt;WPF概述&lt;/span&gt;&#xD;&#xA;  &lt;a href=&#34;#wpf%e6%a6%82%e8%bf%b0&#34; class=&#34;heading-mark&#34;&gt;&#xD;&#xA;    &lt;svg class=&#34;octicon octicon-link&#34; viewBox=&#34;0 0 16 16&#34; version=&#34;1.1&#34; width=&#34;16&#34; height=&#34;16&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&lt;p&gt;Windows Presentation Foundation 桌面指南（WPF），这是一个独立于分辨率的 UI 框架，它使用基于矢量的呈现引擎，旨在利用现代图形硬件。 WPF 提供了一组全面的应用程序开发功能，其中包括可扩展应用程序标记语言（XAML）、控件、数据绑定、布局、2D 和 3D 图形、动画、样式、模板、文档、媒体、文本和版式。 WPF 是 .NET 的一部分，因此可以生成包含 .NET API 其他元素的应用程序。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

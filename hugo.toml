@@ -38,7 +38,7 @@ hasCJKLanguage = false
       # whether set as a draft menu item whose function is similar to a draft post/page
       draft = false
       # FixIt 0.2.16 | NEW add fontawesome icon to a specific menu item
-      icon = "fa-solid fa-file-text"
+      icon = "fa-solid fa-tree"
       # FixIt 0.2.16 | NEW set menu item type, optional values: ["mobile", "desktop"]
       type = ""
       # FixIt 0.3.9 | NEW whether to show the submenu item divider line
@@ -287,7 +287,7 @@ hasCJKLanguage = false
 
 [Permalinks]
   # posts = ":year/:month/:filename"
-  posts = "posts/:slugorfilename"
+  posts = "posts/::slugorcontentbasename"
 
 # -------------------------------------------------------------------------------------
 # Privacy Configuration
@@ -295,7 +295,7 @@ hasCJKLanguage = false
 # -------------------------------------------------------------------------------------
 
 [privacy]
-  [privacy.twitter]
+  [privacy.x]
     enableDNT = true
   [privacy.youtube]
     privacyEnhanced = true
@@ -408,7 +408,7 @@ hasCJKLanguage = false
   # FixIt 0.2.12 | NEW enable PWA
   enablePWA = false
   # FixIt 0.2.14 | NEW whether to add external Icon for external links automatically
-  externalIcon = false
+  externalIcon = true
   # FixIt 0.3.13 | NEW whether to capitalize titles
   capitalizeTitles = true
   # FixIt 0.3.0 | NEW whether to add site title to the title of every page
@@ -555,7 +555,7 @@ hasCJKLanguage = false
     # whether to show the author
     author = true
     # Site creation year
-    since = ""
+    since = "2024"
     # FixIt 0.2.12 | NEW Public network security only in China (HTML format is supported)
     gov = ""
     # ICP info only in China (HTML format is supported)
@@ -569,7 +569,7 @@ hasCJKLanguage = false
       themeLogo = true
     # FixIt 0.2.17 | CHANGED Site creation time
     [params.footer.siteTime]
-      enable = false
+      enable = true
       animate = true
       icon = "fa-solid fa-heartbeat"
       pre = ""
