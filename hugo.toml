@@ -1,7 +1,13 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = '痴人呓语'
+theme = 'FixIt'
+defaultContentLanguage = 'zh-cn'
 
-[module]
-  [[module.imports]]
-    path = "github.com/hugo-fixit/FixIt"
+# 为了能完整地使用 FixIt 主题的所有功能，务必在站点配置文件中添加以下内容。
+[markup]
+  _merge = "shallow"
+[outputs]
+  _merge = "shallow"
+[taxonomies]
+  _merge = "shallow"
