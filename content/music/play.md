@@ -1,5 +1,5 @@
 ---
-title: "听听歌吧"
+title: ""
 date: 2025-08-04T00:21:35+0800
 slug: "8dd06b96-a944-4275-ab38-4afcb8b10160"
 draft: false
@@ -37,5 +37,8 @@ repost:
   url:
 ---
 
+## 网易云音乐歌单
 
 {{< music auto="https://music.163.com/#/playlist?id=81305697" list-max-height="680" >}}
+
+

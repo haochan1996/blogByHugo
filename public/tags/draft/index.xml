@@ -14,7 +14,7 @@
       <pubDate>Mon, 04 Aug 2025 00:21:35 +0800</pubDate><author>espholychan@outllook.com (hobby)</author>
       <guid>http://localhost:1313/music/8dd06b96-a944-4275-ab38-4afcb8b10160/</guid>
       <category domain="http://localhost:1313/categories/draft/">Draft</category>
-      <description>&lt;meting-js auto=&#34;https://music.163.com/#/playlist?id=81305697&#34; theme=&#34;#448aff&#34; list-max-height=&#34;680&#34;&gt;&lt;/meting-js&gt;</description>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;meting-js auto=&#34;https://music.163.com/#/playlist?id=81305697&#34; theme=&#34;#448aff&#34; list-max-height=&#34;680&#34;&gt;&lt;/meting-js&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
     </item>
   </channel>
 </rss>
