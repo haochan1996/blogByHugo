@@ -6,6 +6,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://localhost:1313/music/8dd06b96-a944-4275-ab38-4afcb8b10160/</loc>
+    <lastmod>2025-08-04T00:21:35+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-08-04T00:21:35+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -37,12 +43,6 @@
   </url>
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-08-04T00:21:35+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/music/8dd06b96-a944-4275-ab38-4afcb8b10160/</loc>
     <lastmod>2025-08-04T00:21:35+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
