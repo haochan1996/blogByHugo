@@ -6,7 +6,15 @@
     <description>痴人呓语</description>
     <generator>Hugo 0.148.2 &amp; FixIt v0.4.0-alpha-20250721024521-a1cd700b</generator>
     <language>zh-CN</language>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Mon, 04 Aug 2025 00:21:35 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/draft/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>听听歌吧</title>
+      <link>http://localhost:1313/music/8dd06b96-a944-4275-ab38-4afcb8b10160/</link>
+      <pubDate>Mon, 04 Aug 2025 00:21:35 +0800</pubDate><author>espholychan@outllook.com (hobby)</author>
+      <guid>http://localhost:1313/music/8dd06b96-a944-4275-ab38-4afcb8b10160/</guid>
+      <category domain="http://localhost:1313/categories/draft/">Draft</category>
+      <description>&lt;meting-js auto=&#34;https://music.163.com/#/playlist?id=81305697&#34; theme=&#34;#448aff&#34; list-max-height=&#34;680&#34;&gt;&lt;/meting-js&gt;</description>
+    </item>
   </channel>
 </rss>

@@ -98,8 +98,8 @@ hasCJKLanguage = false
     pre = ""
     # you can add extra information after the name (HTML format is supported), such as icons
     post = ""
-    name = "常用网站"
-    url = ""
+    name = "听听歌吧"
+    url = "/music/8dd06b96-a944-4275-ab38-4afcb8b10160/"
     # title will be shown when you hover on this menu link
     title = ""
     weight = 6
@@ -110,7 +110,7 @@ hasCJKLanguage = false
       # whether set as a draft menu item whose function is similar to a draft post/page
       draft = false
       # FixIt 0.2.16 | NEW add fontawesome icon to a specific menu item
-      icon = "fa-solid fa-bookmark"
+      icon = "fa-solid fa-music"
       # FixIt 0.2.16 | NEW set menu item type, optional values: ["mobile", "desktop"]
       type = ""
       # FixIt 0.3.9 | NEW whether to show the submenu item divider line
@@ -427,7 +427,7 @@ hasCJKLanguage = false
 
   # Author Configuration
   [params.author]
-    name = ""
+    name = "hobby"
     email = ""
     link = ""
     avatar = ""
@@ -450,7 +450,7 @@ hasCJKLanguage = false
     # whether to omit favicon resource links
     noFavicon = false
     # modern SVG favicon to use in place of older style .png and .ico files
-    svgFavicon = ""
+    svgFavicon = "favicon.svg"
     # Safari mask icon color
     iconColor = "#5bbad5"
     # Windows v8-10 tile color
@@ -462,7 +462,7 @@ hasCJKLanguage = false
 
   # Search config
   [params.search]
-    enable = false
+    enable = true
     # type of search engine ["algolia", "fuse", "cse", "post-chat"]
     type = "fuse"
     # max index length of the chunked content
@@ -1337,10 +1337,10 @@ hasCJKLanguage = false
         wordLimit = 0
         pageSize = 10
         imageUploader = false # FixIt 0.2.15 | NEW
-        highlighter = false # FixIt 0.2.15 | NEW
+        highlighter = true # FixIt 0.2.15 | NEW
         comment = false # FixIt 0.2.15 | NEW
         texRenderer = false # FixIt 0.2.16 | NEW
-        search = false # FixIt 0.2.16 | NEW
+        search = true # FixIt 0.2.16 | NEW
         recaptchaV3Key = "" # FixIt 0.2.16 | NEW
         turnstileKey = "" # FixIt 0.3.8 | NEW
         reaction = false # FixIt 0.2.18 | NEW
