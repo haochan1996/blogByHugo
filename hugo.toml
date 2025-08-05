@@ -3,7 +3,7 @@
 # set the theme for your site
 theme = 'FixIt'
 # website title
-title = "痴人呓语"
+title = "Hobbyの快乐小站"
 # Hostname (and path) to the root
 baseURL = "http://localhost:1313"
 # theme list
