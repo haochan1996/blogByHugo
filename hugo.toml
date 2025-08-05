@@ -54,7 +54,7 @@ hasCJKLanguage = false
     url = "/posts/"
     # title will be shown when you hover on this menu link
     title = ""
-    weight = 4
+    weight = 1
     # FixIt 0.2.14 | NEW add user-defined content to menu items
     [menu.main.params]
       # add css class to a specific menu item
@@ -450,7 +450,7 @@ hasCJKLanguage = false
     # whether to omit favicon resource links
     noFavicon = false
     # modern SVG favicon to use in place of older style .png and .ico files
-    svgFavicon = "favicon.svg"
+    svgFavicon = "/favicon.png"
     # Safari mask icon color
     iconColor = "#5bbad5"
     # Windows v8-10 tile color
@@ -515,9 +515,9 @@ hasCJKLanguage = false
     # Header title config
     [params.header.title]
       # URL of the LOGO
-      logo = ""
+      logo = "/favicon-192x192.png"
       # title name
-      name = ""
+      name = "痴人呓语"
       # you can add extra information before the name (HTML format is supported), such as icons
       pre = ""
       # you can add extra information after the name (HTML format is supported), such as icons
@@ -579,7 +579,7 @@ hasCJKLanguage = false
       powered = 0
       copyright = 0
       statistics = 0
-      visitor = 0
+      visitor = 1000
       beian = 0
 
   # FixIt 0.3.0 | NEW Archives page config (all pages of posts type)
@@ -635,11 +635,11 @@ hasCJKLanguage = false
   [params.home]
     # Home page profile
     [params.home.profile]
-      enable = false
+      enable = true
       # Gravatar Email for preferred avatar in home page
-      gravatarEmail = ""
+      gravatarEmail = "espholychan@outlook.com"
       # URL of avatar shown in home page
-      avatarURL = ""
+      avatarURL = "https://2.gravatar.com/avatar/3650b46b6582c3bd53d9d19932c37696fd5a671b503e0526f0da8fef6aec6920?size=512&d=initials"
       # FixIt 0.2.17 | NEW identifier of avatar menu link
       avatarMenu = ""
       # title shown in home page (HTML format is supported)
@@ -654,7 +654,7 @@ hasCJKLanguage = false
       disclaimer = ""
     # Home page posts
     [params.home.posts]
-      enable = true
+      enable = false
       # special amount of posts in each home posts page
       paginate = 6
 

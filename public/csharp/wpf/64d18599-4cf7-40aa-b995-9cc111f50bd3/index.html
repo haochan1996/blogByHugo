@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
     <meta name="robots" content="noodp" />
     <title>布局控件 - 痴人呓语</title><meta name="author" content="hobby">
-<meta name="description" content="布局控件"><meta name="keywords" content='WPF, C#'>
+<meta name="description" content="WPF 布局控件（继承自 Panel 类, 除了Border）通过测量（Measure）和排列（Arrange）两个阶段自动计算子元素的位置与尺寸，支持动态适应窗口大小变化。布局控件通过 Children 属性容纳子元素（如按钮、文本框等），支持嵌套组合实现复杂界面。
+控件 布局方式 Grid 网格，根据自定义行和列来设置控件的布局 StackPanel 堆叠，包含的元素在垂直或水平方向排列 WrapPanel 流式布局，自动换行/列 DockPanel 边缘停靠&#43;剩余填充 Canvas 画布，内部元素以像素为单位绝对坐标定位 UniformGrid 均分网格，相当于Grid的简化版，每个单元格的大小相同 Border 装饰的控件，用于绘制边框及背景，在Border中只能有一个子控件 Panel基类Panel 是 Windows Presentation Foundation（WPF）中提供布局支持的所有元素的基类。 Panel派生元素用于在可扩展应用程序标记语言（XAML）和代码中定位和排列元素。 WPF 包含一套全面的派生面板实现，可实现许多复杂布局。 这些派生类公开了启用大多数标准用户界面（UI）方案的属性和方法。 无法找到满足其需求的子排列行为的开发人员可以通过重写 ArrangeOverride 和 MeasureOverride 方法创建新的布局。
+"><meta name="keywords" content='WPF, C#'>
   <meta itemprop="name" content="布局控件">
-  <meta itemprop="description" content="布局控件">
-  <meta itemprop="datePublished" content="2025-08-03T01:26:27+08:00">
-  <meta itemprop="dateModified" content="2025-08-03T01:26:27+08:00">
-  <meta itemprop="wordCount" content="1">
+  <meta itemprop="description" content="WPF 布局控件（继承自 Panel 类, 除了Border）通过测量（Measure）和排列（Arrange）两个阶段自动计算子元素的位置与尺寸，支持动态适应窗口大小变化。布局控件通过 Children 属性容纳子元素（如按钮、文本框等），支持嵌套组合实现复杂界面。
+控件 布局方式 Grid 网格，根据自定义行和列来设置控件的布局 StackPanel 堆叠，包含的元素在垂直或水平方向排列 WrapPanel 流式布局，自动换行/列 DockPanel 边缘停靠&#43;剩余填充 Canvas 画布，内部元素以像素为单位绝对坐标定位 UniformGrid 均分网格，相当于Grid的简化版，每个单元格的大小相同 Border 装饰的控件，用于绘制边框及背景，在Border中只能有一个子控件 Panel基类Panel 是 Windows Presentation Foundation（WPF）中提供布局支持的所有元素的基类。 Panel派生元素用于在可扩展应用程序标记语言（XAML）和代码中定位和排列元素。 WPF 包含一套全面的派生面板实现，可实现许多复杂布局。 这些派生类公开了启用大多数标准用户界面（UI）方案的属性和方法。 无法找到满足其需求的子排列行为的开发人员可以通过重写 ArrangeOverride 和 MeasureOverride 方法创建新的布局。">
+  <meta itemprop="datePublished" content="2025-08-05T01:26:27+08:00">
+  <meta itemprop="dateModified" content="2025-08-05T01:26:27+08:00">
+  <meta itemprop="wordCount" content="394">
   <meta itemprop="keywords" content="WPF,C#"><meta property="og:url" content="http://localhost:1313/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/">
   <meta property="og:site_name" content="痴人呓语">
   <meta property="og:title" content="布局控件">
-  <meta property="og:description" content="布局控件">
+  <meta property="og:description" content="WPF 布局控件（继承自 Panel 类, 除了Border）通过测量（Measure）和排列（Arrange）两个阶段自动计算子元素的位置与尺寸，支持动态适应窗口大小变化。布局控件通过 Children 属性容纳子元素（如按钮、文本框等），支持嵌套组合实现复杂界面。
+控件 布局方式 Grid 网格，根据自定义行和列来设置控件的布局 StackPanel 堆叠，包含的元素在垂直或水平方向排列 WrapPanel 流式布局，自动换行/列 DockPanel 边缘停靠&#43;剩余填充 Canvas 画布，内部元素以像素为单位绝对坐标定位 UniformGrid 均分网格，相当于Grid的简化版，每个单元格的大小相同 Border 装饰的控件，用于绘制边框及背景，在Border中只能有一个子控件 Panel基类Panel 是 Windows Presentation Foundation（WPF）中提供布局支持的所有元素的基类。 Panel派生元素用于在可扩展应用程序标记语言（XAML）和代码中定位和排列元素。 WPF 包含一套全面的派生面板实现，可实现许多复杂布局。 这些派生类公开了启用大多数标准用户界面（UI）方案的属性和方法。 无法找到满足其需求的子排列行为的开发人员可以通过重写 ArrangeOverride 和 MeasureOverride 方法创建新的布局。">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="csharp">
-    <meta property="article:published_time" content="2025-08-03T01:26:27+08:00">
-    <meta property="article:modified_time" content="2025-08-03T01:26:27+08:00">
+    <meta property="article:published_time" content="2025-08-05T01:26:27+08:00">
+    <meta property="article:modified_time" content="2025-08-05T01:26:27+08:00">
     <meta property="article:tag" content="WPF">
     <meta property="article:tag" content="C#">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="布局控件">
-  <meta name="twitter:description" content="布局控件">
+  <meta name="twitter:description" content="WPF 布局控件（继承自 Panel 类, 除了Border）通过测量（Measure）和排列（Arrange）两个阶段自动计算子元素的位置与尺寸，支持动态适应窗口大小变化。布局控件通过 Children 属性容纳子元素（如按钮、文本框等），支持嵌套组合实现复杂界面。
+控件 布局方式 Grid 网格，根据自定义行和列来设置控件的布局 StackPanel 堆叠，包含的元素在垂直或水平方向排列 WrapPanel 流式布局，自动换行/列 DockPanel 边缘停靠&#43;剩余填充 Canvas 画布，内部元素以像素为单位绝对坐标定位 UniformGrid 均分网格，相当于Grid的简化版，每个单元格的大小相同 Border 装饰的控件，用于绘制边框及背景，在Border中只能有一个子控件 Panel基类Panel 是 Windows Presentation Foundation（WPF）中提供布局支持的所有元素的基类。 Panel派生元素用于在可扩展应用程序标记语言（XAML）和代码中定位和排列元素。 WPF 包含一套全面的派生面板实现，可实现许多复杂布局。 这些派生类公开了启用大多数标准用户界面（UI）方案的属性和方法。 无法找到满足其需求的子排列行为的开发人员可以通过重写 ArrangeOverride 和 MeasureOverride 方法创建新的布局。">
 <meta name="application-name" content="FixIt">
-<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="http://localhost:1313/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/" title="布局控件 - 痴人呓语" /><link rel="prev" type="text/html" href="http://localhost:1313/csharp/wpf/892c051/" title="WPF入门" /><link rel="next" type="text/html" href="http://localhost:1313/music/8dd06b96-a944-4275-ab38-4afcb8b10160/" title="" /><link rel="alternate" type="text/markdown" href="http://localhost:1313/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/index.md" title="布局控件 - 痴人呓语"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="http://localhost:1313/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/" title="布局控件 - 痴人呓语" /><link rel="prev" type="text/html" href="http://localhost:1313/music/8dd06b96-a944-4275-ab38-4afcb8b10160/" title="" /><link rel="alternate" type="text/markdown" href="http://localhost:1313/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/index.md" title="布局控件 - 痴人呓语"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
   {
@@ -39,8 +44,8 @@
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "http:\/\/localhost:1313\/csharp\/wpf\/64d18599-4cf7-40aa-b995-9cc111f50bd3\/"
-    },"genre": "posts","keywords": "WPF, C#","wordcount":  1 ,
-    "url": "http:\/\/localhost:1313\/csharp\/wpf\/64d18599-4cf7-40aa-b995-9cc111f50bd3\/","datePublished": "2025-08-03T01:26:27+08:00","dateModified": "2025-08-03T01:26:27+08:00","publisher": {
+    },"genre": "posts","keywords": "WPF, C#","wordcount":  394 ,
+    "url": "http:\/\/localhost:1313\/csharp\/wpf\/64d18599-4cf7-40aa-b995-9cc111f50bd3\/","datePublished": "2025-08-05T01:26:27+08:00","dateModified": "2025-08-05T01:26:27+08:00","publisher": {
       "@type": "Organization",
       "name": ""},"author": {
         "@type": "Person",
@@ -51,11 +56,11 @@
   <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
   <div class="header-wrapper">
     <div class="header-title">
-      <a href="/" title="痴人呓语"><span class="header-title-text">痴人呓语</span></a><span class="header-subtitle"></span></div>
+      <a href="/" title="痴人呓语"><img class="logo" src='/favicon-192x192.png' alt="痴人呓语" height="32" width="32"><span class="header-title-text">痴人呓语</span></a><span class="header-subtitle"></span></div>
     <nav>
       <ul class="menu"><li class="menu-item">
-              <a class="menu-link" href="/csharp/"><i class="fa-solid fa-tree fa-fw fa-sm" aria-hidden="true"></i> C#教程</a></li><li class="menu-item">
-              <a class="menu-link" href="/posts/"><i class="fa-solid fa-file-text fa-fw fa-sm" aria-hidden="true"></i> 文章</a></li><li class="menu-item has-children">
+              <a class="menu-link" href="/posts/"><i class="fa-solid fa-file-text fa-fw fa-sm" aria-hidden="true"></i> 文章</a></li><li class="menu-item">
+              <a class="menu-link" href="/csharp/"><i class="fa-solid fa-tree fa-fw fa-sm" aria-hidden="true"></i> C#教程</a></li><li class="menu-item has-children">
               <a class="menu-link" href="javascript:void(0);"><i class="fa-solid fa-hourglass-start fa-fw fa-sm" aria-hidden="true"></i> 回溯</a><i class="dropdown-icon fa-solid fa-chevron-down" aria-hidden="true"></i>
                 <ul class="sub-menu"><li class="menu-item">
                         <a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> 归档</a>
@@ -84,7 +89,7 @@
   <div class="header-container">
     <div class="header-wrapper">
       <div class="header-title">
-        <a href="/" title="痴人呓语"><span class="header-title-text">痴人呓语</span></a><span class="header-subtitle"></span></div>
+        <a href="/" title="痴人呓语"><img class="logo" src='/favicon-192x192.png' alt="痴人呓语" height="26" width="26"><span class="header-title-text">痴人呓语</span></a><span class="header-subtitle"></span></div>
       <div class="menu-toggle" id="menu-toggle-mobile">
         <span></span><span></span><span></span>
       </div>
@@ -106,7 +111,7 @@
             <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
               取消
             </a>
-          </li><li class="menu-item"><a class="menu-link" href="/csharp/"><i class="fa-solid fa-tree fa-fw fa-sm" aria-hidden="true"></i> C#教程</a></li><li class="menu-item"><a class="menu-link" href="/posts/"><i class="fa-solid fa-file-text fa-fw fa-sm" aria-hidden="true"></i> 文章</a></li><li class="menu-item"><span class="nested-item">
+          </li><li class="menu-item"><a class="menu-link" href="/posts/"><i class="fa-solid fa-file-text fa-fw fa-sm" aria-hidden="true"></i> 文章</a></li><li class="menu-item"><a class="menu-link" href="/csharp/"><i class="fa-solid fa-tree fa-fw fa-sm" aria-hidden="true"></i> C#教程</a></li><li class="menu-item"><span class="nested-item">
                   <a class="menu-link" href="javascript:void(0);"><i class="fa-solid fa-hourglass-start fa-fw fa-sm" aria-hidden="true"></i> 回溯</a>
                   <i class="dropdown-icon fa-solid fa-chevron-right" aria-hidden="true"></i>
                 </span>
@@ -131,7 +136,7 @@
   <article class="page single">
     <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="转载" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>布局控件</span>
       </h1></div><div class="post-meta">
-      <div class="post-meta-line"><span class="post-author"><a href="https://github.com/haochan1996" title="作者"target="_blank" rel="external nofollow noopener noreferrer author" class="author"><img class="avatar" src='https://avatars.githubusercontent.com/u/190246046?v=4' alt="hobby" height="16" width="16">&nbsp;hobby</a></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/wpf/" class="post-category" title="分类 - WPF"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> WPF</a></span></div><div class="post-meta-line"><span title="发布于 2025-08-03 01:26:27"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-08-03">2025-08-03</time></span>&nbsp;<span title="1 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 100 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 1 分钟</span>&nbsp;</div>
+      <div class="post-meta-line"><span class="post-author"><a href="https://github.com/haochan1996" title="作者"target="_blank" rel="external nofollow noopener noreferrer author" class="author"><img class="avatar" src='https://avatars.githubusercontent.com/u/190246046?v=4' alt="hobby" height="16" width="16">&nbsp;hobby</a></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/wpf/" class="post-category" title="分类 - WPF"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> WPF</a></span></div><div class="post-meta-line"><span title="发布于 2025-08-05 01:26:27"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-08-05">2025-08-05</time></span>&nbsp;<span title="394 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 400 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 2 分钟</span>&nbsp;</div>
     </div><div class="details toc" id="toc-static" data-kept="false">
         <div class="details-summary toc-title">
           <span>目录</span>
@@ -139,20 +144,359 @@
         </div>
         <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#布局控件">布局控件</a></li>
+    <li><a href="#panel基类">Panel基类</a></li>
+    <li><a href="#grid网格布局">Grid(网格布局)</a></li>
+    <li><a href="#stackpanel堆叠布局">StackPanel(堆叠布局)</a>
+      <ul>
+        <li><a href="#布局嵌套">布局嵌套</a></li>
+        <li><a href="#滚动支持"><strong>滚动支持</strong></a></li>
+        <li><a href="#动态操作子元素"><strong>动态操作子元素</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#wrappanel流式布局">WrapPanel(流式布局)</a></li>
+    <li><a href="#dockpanel停靠布局">DockPanel(停靠布局)</a></li>
+    <li><a href="#uniformgrid均分网格">UniformGrid(均分网格)</a></li>
+    <li><a href="#canvas画布">Canvas(画布)</a></li>
   </ul>
 </nav></div>
-      </div><div class="content" id="content"><h2 class="heading-element" id="布局控件"><span>布局控件</span>
-  <a href="#%e5%b8%83%e5%b1%80%e6%8e%a7%e4%bb%b6" class="heading-mark">
+      </div><div class="content" id="content"><p>WPF 布局控件（继承自 <code>Panel</code> 类, 除了<code>Border</code>）通过测量（Measure）和排列（Arrange）两个阶段自动计算子元素的位置与尺寸，支持动态适应窗口大小变化。布局控件通过 <code>Children</code> 属性容纳子元素（如按钮、文本框等），支持嵌套组合实现复杂界面。</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><strong>控件</strong></th>
+          <th style="text-align: center">布局方式</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><code>Grid</code></td>
+          <td style="text-align: center">网格，根据自定义行和列来设置控件的布局</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>StackPanel</code></td>
+          <td style="text-align: center">堆叠，包含的元素在垂直或水平方向排列</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>WrapPanel</code></td>
+          <td style="text-align: center">流式布局，自动换行/列</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>DockPanel</code></td>
+          <td style="text-align: center">边缘停靠+剩余填充</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>Canvas</code></td>
+          <td style="text-align: center">画布，内部元素以像素为单位绝对坐标定位</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>UniformGrid</code></td>
+          <td style="text-align: center">均分网格，相当于Grid的简化版，每个单元格的大小相同</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>Border</code></td>
+          <td style="text-align: center">装饰的控件，用于绘制边框及背景，在Border中只能有一个子控件</td>
+      </tr>
+  </tbody>
+</table>
+<h2 class="heading-element" id="panel基类"><span>Panel基类</span>
+  <a href="#panel%e5%9f%ba%e7%b1%bb" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h2></div><div class="post-footer" id="post-footer">
+</h2><p>Panel 是 Windows Presentation Foundation（WPF）中提供布局支持的所有元素的基类。 Panel派生元素用于在可扩展应用程序标记语言（XAML）和代码中定位和排列元素。 WPF 包含一套全面的派生面板实现，可实现许多复杂布局。 这些派生类公开了启用大多数标准用户界面（UI）方案的属性和方法。 无法找到满足其需求的子排列行为的开发人员可以通过重写 ArrangeOverride 和 MeasureOverride 方法创建新的布局。</p>
+<p>所有<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.controls.panel"target="_blank" rel="external nofollow noopener noreferrer">Panel<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>元素都支持由<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.frameworkelement"target="_blank" rel="external nofollow noopener noreferrer">FrameworkElement<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>定义的基本大小调整和定位属性，包括<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.frameworkelement.height"target="_blank" rel="external nofollow noopener noreferrer">Height<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>、<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.frameworkelement.width"target="_blank" rel="external nofollow noopener noreferrer">Width<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>、<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.frameworkelement.horizontalalignment"target="_blank" rel="external nofollow noopener noreferrer">HorizontalAlignment<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>、<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.frameworkelement.verticalalignment"target="_blank" rel="external nofollow noopener noreferrer">VerticalAlignment<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>和<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.frameworkelement.margin"target="_blank" rel="external nofollow noopener noreferrer">Margin<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a><a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.frameworkelement.layouttransform"target="_blank" rel="external nofollow noopener noreferrer">LayoutTransform<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>。 有关定位属性 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.frameworkelement"target="_blank" rel="external nofollow noopener noreferrer">FrameworkElement<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>的其他信息，请参阅 <a href="https://learn.microsoft.com/zh-cn/dotnet/desktop/wpf/advanced/alignment-margins-and-padding-overview"target="_blank" rel="external nofollow noopener noreferrer">对齐、边距和填充概述<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>。</p>
+<p><a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.controls.panel"target="_blank" rel="external nofollow noopener noreferrer">Panel<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 公开了在理解和使用布局时极为重要的附加属性。 该<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.controls.panel.background"target="_blank" rel="external nofollow noopener noreferrer">Background<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>属性用于用一个<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.media.brush"target="_blank" rel="external nofollow noopener noreferrer">Brush<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>填充派生面板元素的边界之间的区域。 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.controls.panel.children"target="_blank" rel="external nofollow noopener noreferrer">Children<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 表示由其 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.controls.panel"target="_blank" rel="external nofollow noopener noreferrer">Panel<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 构成的元素的子集合。 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.controls.panel.internalchildren"target="_blank" rel="external nofollow noopener noreferrer">InternalChildren<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 表示集合的内容 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.controls.panel.children"target="_blank" rel="external nofollow noopener noreferrer">Children<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 以及数据绑定生成的成员。 两者都由父级<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.controls.uielementcollection"target="_blank" rel="external nofollow noopener noreferrer">UIElementCollection<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>托管的子元素组成<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.controls.panel"target="_blank" rel="external nofollow noopener noreferrer">Panel<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>。</p>
+<p>面板还公开了一个 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.controls.panel.zindex"target="_blank" rel="external nofollow noopener noreferrer">Panel.ZIndex<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 附加属性，该属性可用于在派生 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.controls.panel"target="_blank" rel="external nofollow noopener noreferrer">Panel<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>中实现分层顺序。 具有较高<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.controls.panel.children"target="_blank" rel="external nofollow noopener noreferrer">Children<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>值的面板<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.controls.panel.zindex"target="_blank" rel="external nofollow noopener noreferrer">Panel.ZIndex<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>集合的成员显示在值较低的<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.controls.panel.zindex"target="_blank" rel="external nofollow noopener noreferrer">Panel.ZIndex<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>集合前面。 这对于面板特别有用，例如<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.controls.canvas"target="_blank" rel="external nofollow noopener noreferrer">Canvas<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a><a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.controls.grid"target="_blank" rel="external nofollow noopener noreferrer">Grid<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>，允许子元素共享相同的坐标空间。</p>
+<p><a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.controls.panel"target="_blank" rel="external nofollow noopener noreferrer">Panel<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 还定义了 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.controls.panel.onrender"target="_blank" rel="external nofollow noopener noreferrer">OnRender<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 方法，该方法可用于替代默认 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.controls.panel"target="_blank" rel="external nofollow noopener noreferrer">Panel<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>呈现行为。</p>
+<p>Panel提供了<code>GetZIndex</code>和<code>SetZIndex</code>方法成员，分别表示获取某个元素的Zindex顺序和设置某个元素的ZIndex顺序。</p>
+<p>什么是ZIndex?这是Panel提供的一个<strong>附加属性</strong>。假如一个单行单列的Grid布局控件中有两个Button,正常情况下，这两个Button都会以撑满Grid的方式星现在Grid中，那么，到底哪一个Button在上面，哪一个Button在下面呢?就看这两个Button的<code>Panel.ZIndex</code>附加属性的值，值越大越在上面，而值较小的那个Button将被上面的Button遮盖，从而在视觉上，用户只能看到一个Button。</p>
+<h2 class="heading-element" id="grid网格布局"><span>Grid(网格布局)</span>
+  <a href="#grid%e7%bd%91%e6%a0%bc%e5%b8%83%e5%b1%80" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>通过行（<code>RowDefinitions</code>）和列（<code>ColumnDefinitions</code>）定义表格结构，支持单元格合并与动态尺寸调整。</p>
+<p><strong>关键属性</strong>：</p>
+<ul>
+<li><code>Grid.Row</code> / <code>Grid.Column</code>：指定子元素位置。</li>
+<li><code>RowSpan</code> / <code>ColumnSpan</code>：跨行/列。</li>
+<li><code>ShowGridLines</code>: 是否显示网格线</li>
+<li>Grid的列宽与行高可采用固定、自动、按比例三种方式定义。
+<ol>
+<li>固定长度：值为一个确定的数字</li>
+<li>自动长度：值为<code>Auto</code>，实际作用就是取实际控件所需的最小值</li>
+<li>比例长度：
+<ul>
+<li><code>*</code>表示占用剩余的全部宽度；两行都是<code>*</code>，将平分剩余宽度;</li>
+<li>一个2<code>*</code>，一个<code>*</code>，则前者占剩余全部宽度的2/3，后者占1/3;</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<p>示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;Grid&gt;
+</span></span><span class="line"><span class="cl">    &lt;Grid.RowDefinitions&gt;   &lt;!--设置4行--&gt;
+</span></span><span class="line"><span class="cl">        &lt;RowDefinition Height=&#34;40&#34;&gt;&lt;/RowDefinition&gt; 
+</span></span><span class="line"><span class="cl">        &lt;RowDefinition Height=&#34;Auto&#34;&gt;&lt;/RowDefinition&gt;   
+</span></span><span class="line"><span class="cl">        &lt;RowDefinition Height=&#34;2*&#34;&gt;&lt;/RowDefinition&gt;    
+</span></span><span class="line"><span class="cl">        &lt;RowDefinition Height=&#34;*&#34;&gt;&lt;/RowDefinition&gt;   
+</span></span><span class="line"><span class="cl">    &lt;/Grid.RowDefinitions&gt;  
+</span></span><span class="line"><span class="cl">    &lt;Button Grid.Row=&#34;0&#34; Content=&#34;Button 1&#34;&gt;&lt;/Button&gt; 
+</span></span><span class="line"><span class="cl">    &lt;Button Grid.Row=&#34;1&#34; Content=&#34;Button 2&#34;&gt;&lt;/Button&gt;
+</span></span><span class="line"><span class="cl">    &lt;Button Grid.Row=&#34;2&#34; Content=&#34;Button 3&#34;&gt;&lt;/Button&gt; 
+</span></span><span class="line"><span class="cl">    &lt;Button Grid.Row=&#34;3&#34; Content=&#34;Button 4&#34;&gt;&lt;/Button&gt;
+</span></span><span class="line"><span class="cl">&lt;/Grid&gt;</span></span></code></pre></td></tr></table>
+</div>
+</div><p>效果：</p>
+<img src="https://blog-1301697820.cos.ap-guangzhou.myqcloud.com/blog/805533a8161f36e18eeafe43727731e7.png" alt="img" style="zoom: 50%;" />
+<h2 class="heading-element" id="stackpanel堆叠布局"><span>StackPanel(堆叠布局)</span>
+  <a href="#stackpanel%e5%a0%86%e5%8f%a0%e5%b8%83%e5%b1%80" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>子元素按单一方向（<code>Orientation=&quot;Vertical&quot;</code> 或 <code>Horizontal&quot;</code>）线性排列，不自动换行。<strong>默认方向</strong>是垂直排列（<code>Orientation=&quot;Vertical&quot;</code>），子元素从上到下堆叠。如果要设置<strong>水平排列</strong>，设置 <code>Orientation=&quot;Horizontal&quot;</code>，子元素从左到右排列。垂直布局时，子元素<strong>宽度</strong>默认拉伸至 StackPanel 的宽度，高度由内容决定（或显式设置）。水平布局时，子元素<strong>高度</strong>拉伸至 StackPanel 高度，宽度由内容决定。</p>
+<p>StackPanel关键属性如下：</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><strong>属性</strong></th>
+          <th style="text-align: center"><strong>说明</strong></th>
+          <th style="text-align: center"><strong>示例值</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><code>Orientation</code></td>
+          <td style="text-align: center">排列方向：<code>Vertical</code>（默认）或 <code>Horizontal</code></td>
+          <td style="text-align: center"><code>Orientation=&quot;Horizontal&quot;</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>Margin</code></td>
+          <td style="text-align: center">容器外间距，控制与父容器的距离</td>
+          <td style="text-align: center"><code>Margin=&quot;10&quot;</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>Padding</code></td>
+          <td style="text-align: center">容器内边距，控制子元素与容器边界的距离</td>
+          <td style="text-align: center"><code>Padding=&quot;5&quot;</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>Background</code></td>
+          <td style="text-align: center">背景色（未设置时不响应鼠标事件）</td>
+          <td style="text-align: center"><code>Background=&quot;LightGray&quot;</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>HorizontalAlignment</code></td>
+          <td style="text-align: center">容器在父容器中的水平对齐方式（<code>Left</code>/<code>Center</code>/<code>Right</code>/<code>Stretch</code>）</td>
+          <td style="text-align: center"><code>HorizontalAlignment=&quot;Center&quot;</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>VerticalAlignment</code></td>
+          <td style="text-align: center">容器在父容器中的垂直对齐方式（<code>Top</code>/<code>Center</code>/<code>Bottom</code>/<code>Stretch</code>）</td>
+          <td style="text-align: center"><code>VerticalAlignment=&quot;Top&quot;</code></td>
+      </tr>
+  </tbody>
+</table>
+<h3 class="heading-element" id="布局嵌套"><span>布局嵌套</span>
+  <a href="#%e5%b8%83%e5%b1%80%e5%b5%8c%e5%a5%97" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>StackPanel 可嵌套其他容器（如 <code>Grid</code>、嵌套的 <code>StackPanel</code>）实现复杂结构</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;!-- 垂直布局嵌套水平布局 --&gt;
+</span></span><span class="line"><span class="cl">&lt;StackPanel Orientation=&#34;Vertical&#34;&gt;
+</span></span><span class="line"><span class="cl">    &lt;TextBlock Text=&#34;用户登录&#34;/&gt;
+</span></span><span class="line"><span class="cl">    &lt;StackPanel Orientation=&#34;Horizontal&#34;&gt; &lt;!-- 水平布局 --&gt;
+</span></span><span class="line"><span class="cl">        &lt;TextBlock Text=&#34;用户名：&#34; VerticalAlignment=&#34;Center&#34;/&gt;
+</span></span><span class="line"><span class="cl">        &lt;TextBox Width=&#34;200&#34;/&gt;
+</span></span><span class="line"><span class="cl">    &lt;/StackPanel&gt;
+</span></span><span class="line"><span class="cl">    &lt;Button Content=&#34;提交&#34;/&gt;
+</span></span><span class="line"><span class="cl">&lt;/StackPanel&gt;</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 class="heading-element" id="滚动支持"><span><strong>滚动支持</strong></span>
+  <a href="#%e6%bb%9a%e5%8a%a8%e6%94%af%e6%8c%81" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>通过 <code>ScrollViewer</code> 包裹 StackPanel 解决内容溢出问题</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;ScrollViewer Height=&#34;150&#34;&gt;
+</span></span><span class="line"><span class="cl">    &lt;StackPanel&gt;
+</span></span><span class="line"><span class="cl">        &lt;Button Content=&#34;Item 1&#34; Height=&#34;40&#34;/&gt;
+</span></span><span class="line"><span class="cl">        &lt;!-- 更多子元素 --&gt;
+</span></span><span class="line"><span class="cl">    &lt;/StackPanel&gt;
+</span></span><span class="line"><span class="cl">&lt;/ScrollViewer&gt;</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 class="heading-element" id="动态操作子元素"><span><strong>动态操作子元素</strong></span>
+  <a href="#%e5%8a%a8%e6%80%81%e6%93%8d%e4%bd%9c%e5%ad%90%e5%85%83%e7%b4%a0" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>在代码中动态添加/删除子元素</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="c1">// 添加按钮</span>
+</span></span><span class="line"><span class="cl"><span class="kd">private</span> <span class="k">void</span> <span class="n">AddButton_Click</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">RoutedEventArgs</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Button</span> <span class="n">newBtn</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Button</span> <span class="p">{</span> <span class="n">Content</span> <span class="p">=</span> <span class="s">&#34;New Button&#34;</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="n">stackPanel</span><span class="p">.</span><span class="n">Children</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">newBtn</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 删除最后一个按钮</span>
+</span></span><span class="line"><span class="cl"><span class="kd">private</span> <span class="k">void</span> <span class="n">RemoveButton_Click</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">RoutedEventArgs</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">stackPanel</span><span class="p">.</span><span class="n">Children</span><span class="p">.</span><span class="n">Count</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">stackPanel</span><span class="p">.</span><span class="n">Children</span><span class="p">.</span><span class="n">RemoveAt</span><span class="p">(</span><span class="n">stackPanel</span><span class="p">.</span><span class="n">Children</span><span class="p">.</span><span class="n">Count</span> <span class="p">-</span> <span class="m">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 class="heading-element" id="wrappanel流式布局"><span>WrapPanel(流式布局)</span>
+  <a href="#wrappanel%e6%b5%81%e5%bc%8f%e5%b8%83%e5%b1%80" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>WrapPanel与StackPanel类似的功能, 相对于WrapPanel , 具有在有限的容器范围内, 可以自动换行, 或者换列处理。</p>
+<p>具体则取决于WrapPanel的排列方式 (Orientation)：</p>
+<ul>
+<li><code>Orientation=&quot;Horizontal&quot;</code>时各控件从左至右排列，当面板长度不够时，子控件就会自动换行，继续按照从左至右的顺序排列</li>
+<li><code>Orientation=&quot;Vertical&quot;</code>时各控件从上至下排列，当面板高度不够时，子控件就会自动换列，继续按照从上至下的顺序排列</li>
+</ul>
+<p>示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;WrapPanel Orientation=&#34;Horizontal&#34;&gt;
+</span></span><span class="line"><span class="cl">    &lt;Button Content=&#34;Button 150&#34; Width=&#34;150&#34;&gt;&lt;/Button&gt;
+</span></span><span class="line"><span class="cl">    &lt;Button Content=&#34;Button 200&#34; Width=&#34;200&#34;&gt;&lt;/Button&gt;
+</span></span><span class="line"><span class="cl">    &lt;Button Content=&#34;Button 150&#34; Width=&#34;150&#34;&gt;&lt;/Button&gt;
+</span></span><span class="line"><span class="cl">    &lt;Button Content=&#34;Button 200&#34; Width=&#34;200&#34;&gt;&lt;/Button&gt;
+</span></span><span class="line"><span class="cl">    &lt;Button Content=&#34;Button 150&#34; Width=&#34;150&#34;&gt;&lt;/Button&gt;
+</span></span><span class="line"><span class="cl">    &lt;Button Content=&#34;Button 200&#34; Width=&#34;200&#34;&gt;&lt;/Button&gt;
+</span></span><span class="line"><span class="cl">    &lt;Button Content=&#34;Button 150&#34; Width=&#34;150&#34;&gt;&lt;/Button&gt;
+</span></span><span class="line"><span class="cl">&lt;/WrapPanel&gt;</span></span></code></pre></td></tr></table>
+</div>
+</div><p>效果：</p>
+<img src="https://blog-1301697820.cos.ap-guangzhou.myqcloud.com/blog/0a0477be61405e490561854c0493ec6a.png" alt="在这里插入图片描述" style="zoom:50%;" />
+<h2 class="heading-element" id="dockpanel停靠布局"><span>DockPanel(停靠布局)</span>
+  <a href="#dockpanel%e5%81%9c%e9%9d%a0%e5%b8%83%e5%b1%80" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>DockPanel支持让元素简单地停靠在整个面板的某一条边上，然后拉伸元素以填满全部宽度或高度。它也支持让一个元素填充其他已停靠元素没有占用的剩余空间。</p>
+<ul>
+<li>包含在DockPanel中的元素, 具备<code>DockPanel.Dock</code>的4个枚举值 （Top/Left/Right/Bottom） 用于设置元素的锚定位置</li>
+<li><code>LastChildFill</code> : 容器中的最后一个元素时, 默认该元素填充DockPanel所有空间, 默认值为True</li>
+<li><code>DockPanel</code>中的元素未显示添加DockPanel.Dock属性时, 系统则会默认为 <code>DockPanel.Dock=“Left”</code></li>
+</ul>
+<p>示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;DockPanel&gt;
+</span></span><span class="line"><span class="cl">    &lt;Button Content=&#34;上&#34; DockPanel.Dock=&#34;Left&#34;&gt;&lt;/Button&gt;
+</span></span><span class="line"><span class="cl">    &lt;Button Content=&#34;下&#34; DockPanel.Dock=&#34;Bottom&#34;&gt;&lt;/Button&gt;
+</span></span><span class="line"><span class="cl">    &lt;Button Content=&#34;左&#34; DockPanel.Dock=&#34;Left&#34;&gt;&lt;/Button&gt;
+</span></span><span class="line"><span class="cl">    &lt;Button Content=&#34;右&#34; DockPanel.Dock=&#34;Right&#34;&gt;&lt;/Button&gt;
+</span></span><span class="line"><span class="cl">&lt;/DockPanel&gt;</span></span></code></pre></td></tr></table>
+</div>
+</div><p>效果：</p>
+<img src="https://blog-1301697820.cos.ap-guangzhou.myqcloud.com/blog/91db3e3c4853ef14db2b8a2fc4673e3d.png" alt="在这里插入图片描述" style="zoom:50%;" />
+<h2 class="heading-element" id="uniformgrid均分网格"><span>UniformGrid(均分网格)</span>
+  <a href="#uniformgrid%e5%9d%87%e5%88%86%e7%bd%91%e6%a0%bc" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p><code>UniformGrid</code>就是Grid的简化版，每个单元格的大小相同，不需要定义行列集合。每个单元格始终具有相同的大小，每个单元格只能容纳一个控件。UniformGrid控件提供了3个属性，分别是<code>Firstcolumn</code>、<code>Columns</code>、<code>Rows</code>。<code>FirstColumn</code>表示第一行要空几个单元格，后面两个属性分别用于设置行数和列数。</p>
+<ul>
+<li>与Grid不同的是, 该容器具备<code>Columns/Rows</code>属性, 通过设置该属性, <code>UniformGrid</code>则具备相应的行与列, 但是设置的<code>Columns/Rows</code>不允许单独的进行容器的大小设置</li>
+<li>位于<code>UniformGrid</code>中的子元素, 按输入顺序排列至容器中, 直至填充容器的所有空间</li>
+<li>未显示指定<code>Columns/Rows</code>, <code>UniformGrid</code>则为子元素动态分配<code>Columns/Rows</code>, 换行与换列的基准主要基于<code>UniformGrid</code>的容器大小( 宽度与高度)</li>
+</ul>
+<p>示例:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;UniformGrid Rows=&#34;2&#34; Columns=&#34;3&#34; FirstColumn=&#34;1&#34;&gt;
+</span></span><span class="line"><span class="cl">    &lt;Button Content=&#34;1&#34;/&gt;
+</span></span><span class="line"><span class="cl">    &lt;Button Content=&#34;2&#34;/&gt;
+</span></span><span class="line"><span class="cl">    &lt;!-- 2行3列等分 --&gt;
+</span></span><span class="line"><span class="cl">&lt;/UniformGrid&gt;</span></span></code></pre></td></tr></table>
+</div>
+</div><p>效果：</p>
+<img src="https://blog-1301697820.cos.ap-guangzhou.myqcloud.com/blog/image-20250805145356401.png" alt="image-20250805145356401" style="zoom: 33%;" />
+<h2 class="heading-element" id="canvas画布"><span>Canvas(画布)</span>
+  <a href="#canvas%e7%94%bb%e5%b8%83" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>Canvas是一个类似于坐标系的面板，所有的元素通过设置坐标来决定其在坐标系中的位置。具体表现为使用Left、Top、Right、 Bottom附加属性在Canvas中定位控件。</p>
+</div><div class="post-footer" id="post-footer">
   <div class="post-info">
     <div class="post-info-line">
       <div class="post-info-mod">
-        <span title="更新于 2025-08-03 01:26:27">更新于 2025-08-03&nbsp;</span>
+        <span title="更新于 2025-08-05 01:26:27">更新于 2025-08-05&nbsp;</span>
       </div></div><div class="post-info-line">
-        <div class="post-info-md"><span><a href="/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/index.md" title="阅读原始文档" class="link-to-markdown">阅读原始文档</a></span></div>
+        <div class="post-info-md"><span><a href="/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/index.md" title="阅读原始文档" class="link-to-markdown">阅读原始文档</a></span><span><a href="vscode://file/D:%5c04%e5%ad%a6%e4%b9%a0%e7%9b%b8%e5%85%b3%5c01%e7%bc%96%e7%a8%8b%5cGitHub%e4%bb%a3%e7%a0%81%5chaochan1996%5cblogByHugo%5ccontent%5ccsharp%5cwpf%5c%e5%b8%83%e5%b1%80%e6%8e%a7%e4%bb%b6.md" title="在编辑器中打开"target="_blank" rel="external nofollow noopener noreferrer" class="link-to-vscode">在编辑器中打开</a></span></div>
         <div class="post-info-share">
           <span><a href="javascript:void(0);" title="分享到 X" data-sharer="twitter" data-url="http://localhost:1313/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/" data-title="布局控件" data-hashtags="WPF,C#"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
   <a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/" data-hashtag="WPF"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
@@ -180,5 +524,5 @@
         </div></div><div id="mask"></div><noscript>
     <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
   </noscript>
-</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/search.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"version":"v0.4.0-alpha-20250721024521-a1cd700b"};</script><script src="/js/theme.min.js" defer></script></body>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/search.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"version":"v0.4.0-alpha-20250721024521-a1cd700b"};console.log('Page config:', window.config);</script><script src="/js/theme.min.js" defer></script><script src="/js/custom.min.js" defer></script></body>
 </html>
