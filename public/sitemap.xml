@@ -6,19 +6,43 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/tags/c%23/</loc>
-    <lastmod>2025-08-05T01:26:27+08:00</lastmod>
+    <loc>http://localhost:1313/csharp/basic/d14b1543-d65d-40cb-a7c4-f3bed1e0dfc6/</loc>
+    <lastmod>2025-08-05T17:06:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-08-05T01:26:27+08:00</lastmod>
+    <lastmod>2025-08-05T17:06:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/categories/draft/</loc>
+    <lastmod>2025-08-05T17:06:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/draft/</loc>
+    <lastmod>2025-08-05T17:06:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-08-05T17:06:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-08-05T17:06:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/c%23/</loc>
     <lastmod>2025-08-05T01:26:27+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -37,12 +61,6 @@
   </url>
   <url>
     <loc>http://localhost:1313/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/</loc>
-    <lastmod>2025-08-05T01:26:27+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/</loc>
     <lastmod>2025-08-05T01:26:27+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

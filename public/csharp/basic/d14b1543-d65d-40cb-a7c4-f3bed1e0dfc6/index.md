@@ -1,41 +1,5 @@
----
-title: "C#概述"
-date: 2025-08-05T17:06:28+0800
-slug: "d14b1543-d65d-40cb-a7c4-f3bed1e0dfc6"
-draft: true
-author: 
-  name: hobby
-  link: https://github.com/haochan1996
-  email: espholychan@outllook.com
-  avatar: https://avatars.githubusercontent.com/u/190246046?v=4
-description:
-keywords:
-license:
-comment: false
-weight: 0
-tags:
-  - draft
-categories:
-  - draft
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRelated: false
-hiddenFromFeed: false
-summary:
-resources:
-  - name: featured-image
-    src: featured-image.jpg
-  - name: featured-image-preview
-    src: featured-image-preview.jpg
-toc: true
-math: false
-lightgallery: false
-password:
-message:
-repost:
-  enable: true
-  url:
----
+# C#概述
+
 
 C# 是一款开源且免费的编程语言，基于流行的 C 风格语法（如 C、C++、Java），让开发者可以快速上手。它强大的跨平台能力支持开发多样化的应用，包括桌面软件、Web 应用、移动应用、微服务、物联网设备和游戏主机平台。得益于其开源特性，开发者不仅能自由使用，还能查看、修改源代码，并向社区贡献改进。
 
@@ -153,4 +117,11 @@ if (x > 0)
 ```
 
 
+
+
+
+---
+
+> 作者: [hobby](https://github.com/haochan1996)  
+> URL: http://localhost:1313/csharp/basic/d14b1543-d65d-40cb-a7c4-f3bed1e0dfc6/  
 

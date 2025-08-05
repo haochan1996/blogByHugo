@@ -639,7 +639,7 @@ hasCJKLanguage = false
       # Gravatar Email for preferred avatar in home page
       gravatarEmail = "espholychan@outlook.com"
       # URL of avatar shown in home page
-      avatarURL = "https://2.gravatar.com/avatar/3650b46b6582c3bd53d9d19932c37696fd5a671b503e0526f0da8fef6aec6920?size=512&d=initials"
+      avatarURL = "https://cn.cravatar.com/avatar/63d000c9875f8eebc37edadd6bdcb547?s=400&r=G&d=mp&ver=1754388585"
       # FixIt 0.2.17 | NEW identifier of avatar menu link
       avatarMenu = ""
       # title shown in home page (HTML format is supported)
