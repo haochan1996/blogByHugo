@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>C# 基础 - Hobbyの快乐小站</title>
-    <link>http://localhost:1313/csharp/basic/</link>
+    <title>C#基础 - 分类 - Hobbyの快乐小站</title>
+    <link>http://localhost:1313/categories/c%23%E5%9F%BA%E7%A1%80/</link>
     <description>Hobbyの快乐小站</description>
     <generator>Hugo 0.148.2 &amp; FixIt v0.4.0-alpha-20250721024521-a1cd700b</generator>
     <language>zh-CN</language>
     <lastBuildDate>Tue, 05 Aug 2025 17:06:28 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/csharp/basic/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/c%23%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>C#概述</title>
       <link>http://localhost:1313/csharp/basic/d14b1543-d65d-40cb-a7c4-f3bed1e0dfc6/</link>
