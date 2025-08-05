@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>博客创建 - 分类 - 痴人呓语</title>
+    <link>http://localhost:1313/categories/%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA/</link>
+    <description>痴人呓语</description>
+    <generator>Hugo 0.148.2 &amp; FixIt v0.4.0-alpha-20250721024521-a1cd700b</generator>
+    <language>zh-CN</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

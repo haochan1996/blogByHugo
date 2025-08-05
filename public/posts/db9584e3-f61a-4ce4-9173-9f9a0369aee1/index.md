@@ -1,3 +1,13 @@
+# 创建预设模板内容的Markdown文件
+
+
+使用`hugo new`命令创建Markdown文件时，通常需要手动输入标题、日期等信息。为了简化这个过程，可以使用一个预设模板来自动生成Markdown文件的内容。
+
+首先，你要有go环境，并安装`github.com/google/uuid`包来生成唯一的slug。
+
+在目录中创建一个名为`new_md.go`的Go语言脚本，内容如下：
+
+```go
 package main
 
 import (
@@ -84,9 +94,20 @@ func main() {
 	fmt.Printf("已生成: %s\n", filePath)
 }
 
-// 该程序用于生成一个新的 Markdown 文件，包含预设的模板内容。
+```
+
+当你运行这个脚本时，它会自动生成一个Markdown文件，包含预设的标题、日期、slug等信息。你只需要提供文件路径和文件名即可。你也可以根据实际的需求 修改模板内容。或者可以编译成可执行文件，方便使用。
+
+```bash
 // 使用方法：
 // go run new_md.go <文件路径/文件名.md>
 // 例如：
-// go run new_md.go content/csharp/wpf/布局控件.md
-// go run new_md.go content/posts/创建预设模板内容的Markdown文件.md
+go run new_md.go content/posts/创建预设模板内容的Markdown文件.md
+go run new_md.go content/csharp/wpf/布局控件.md
+```
+
+---
+
+> 作者: [hobby](https://github.com/haochan1996)  
+> URL: http://localhost:1313/posts/db9584e3-f61a-4ce4-9173-9f9a0369aee1/  
+
