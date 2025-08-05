@@ -7,6 +7,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://localhost:1313/csharp/wpf/</loc>
+    <lastmod>2025-08-02T18:25:47+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-08-05T18:22:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -98,12 +104,6 @@
   </url>
   <url>
     <loc>http://localhost:1313/csharp/</loc>
-    <lastmod>2025-08-02T18:25:47+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/csharp/wpf/</loc>
     <lastmod>2025-08-02T18:25:47+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
