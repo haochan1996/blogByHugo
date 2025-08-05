@@ -450,7 +450,7 @@ hasCJKLanguage = false
     # whether to omit favicon resource links
     noFavicon = false
     # modern SVG favicon to use in place of older style .png and .ico files
-    svgFavicon = "/favicon.png"
+    svgFavicon = "/favicon.SVG"
     # Safari mask icon color
     iconColor = "#5bbad5"
     # Windows v8-10 tile color
@@ -517,7 +517,7 @@ hasCJKLanguage = false
       # URL of the LOGO
       logo = "/favicon-192x192.png"
       # title name
-      name = "痴人呓语"
+      name = "の快乐小站"
       # you can add extra information before the name (HTML format is supported), such as icons
       pre = ""
       # you can add extra information after the name (HTML format is supported), such as icons
@@ -532,7 +532,7 @@ hasCJKLanguage = false
       typeit = false
 
   # FixIt 0.2.18 | NEW Breadcrumb config
-  [params.breadcrumb]
+  [params.breadcrumb] 
     enable = false
     sticky = false
     showHome = false
@@ -643,7 +643,7 @@ hasCJKLanguage = false
       # FixIt 0.2.17 | NEW identifier of avatar menu link
       avatarMenu = ""
       # title shown in home page (HTML format is supported)
-      title = ""
+      title = "你好，欢迎来到我的博客！	≧◉◡◉≦"
       # subtitle shown in home page (HTML format is supported)
       subtitle = ""
       # whether to use typeit animation for subtitle
@@ -654,13 +654,13 @@ hasCJKLanguage = false
       disclaimer = ""
     # Home page posts
     [params.home.posts]
-      enable = false
+      enable = true
       # special amount of posts in each home posts page
       paginate = 6
 
   # FixIt 0.2.16 | CHANGED Social config about the author
   [params.social]
-    GitHub = ""
+    GitHub = "haochan1996"
     Linkedin = ""
     Twitter = ""
     Instagram = ""
@@ -747,7 +747,7 @@ hasCJKLanguage = false
     Credly = ""
     Bluesky = ""
     Phone = ""
-    Email = ""
+    Email = "espholychan@outlook.com"
     RSS = true
     # custom social links like the following
     # [params.social.twitter]
