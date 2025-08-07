@@ -1,4 +1,4 @@
-# 布局控件
+# WPF布局控件
 
 
 WPF 布局控件（继承自 `Panel` 类, 除了`Border`）通过测量（Measure）和排列（Arrange）两个阶段自动计算子元素的位置与尺寸，支持动态适应窗口大小变化。布局控件通过 `Children` 属性容纳子元素（如按钮、文本框等），支持嵌套组合实现复杂界面。
@@ -201,8 +201,222 @@ DockPanel支持让元素简单地停靠在整个面板的某一条边上，然�
 
 ## Canvas(画布)
 
-Canvas是一个类似于坐标系的面板，所有的元素通过设置坐标来决定其在坐标系中的位置。具体表现为使用Left、Top、Right、 Bottom附加属性在Canvas中定位控件。
+Canvas是一个类似于坐标系的面板，所有的元素通过设置坐标来决定其在坐标系中的位置。
 
+基于左上角原点（0，0）的笛卡尔坐标系，通过附加属性控制位置，使用使用 `Canvas.ZIndex` 控制叠放次序（默认值为0，值越大显示在越上层）。
+
+定位属性有四个：
+
+|      属性       | 值类型 |             说明             |
+| :-------------: | :----: | :--------------------------: |
+|  `Canvas.Left`  | double | 元素左边缘与画布左边缘的距离 |
+|  `Canvas.Top`   | double |   元素顶部与画布顶部的距离   |
+| `Canvas.Right`  | double | 元素右边缘与画布右边缘的距离 |
+| `Canvas.Bottom` | double |   元素底部与画布底部的距离   |
+
+```xaml
+
+    <Canvas>
+        <!-- 使用Left和Top定位 -->
+        <Button Canvas.Left="50" Canvas.Top="30" Content="定位按钮"/>
+
+        <!-- 使用Right和Bottom定位 -->
+        <Ellipse Canvas.Right="100" Canvas.Bottom="50" 
+             Width="60" Height="60" Fill="Red"/>
+
+        <!-- 使用Right和Bottom定位 -->
+        <Ellipse Canvas.Right="120" Canvas.Bottom="50" Canvas.ZIndex="-10"
+     Width="60" Height="60" Fill="Green"/>
+    </Canvas>
+```
+
+效果：
+
+<img src="https://blog-1301697820.cos.ap-guangzhou.myqcloud.com/blog/image-20250805223342640.png" alt="image-20250805223342640" style="zoom:33%;" />
+
+## Border(边框)
+
+Border是WPF中最常用的装饰性容器控件，用于为其他元素提供**视觉框架**。它不包含复杂布局逻辑，而是专注于为单个子元素添加装饰效果。提供边框、背景、圆角等视觉效果，没有复杂的布局计算，性能高效。
+
+### 边框属性
+
+|       属性        |     类型     |   说明   |                             示例                             |
+| :---------------: | :----------: | :------: | :----------------------------------------------------------: |
+|   `BorderBrush`   |    Brush     | 边框颜色 |                     `BorderBrush="Blue"`                     |
+| `BorderThickness` |  Thickness   | 边框粗细 | `BorderThickness="2"` (四边相同) `BorderThickness="1,2,3,4"` (左,上,右,下) |
+|  `CornerRadius`   | CornerRadius | 圆角半径 | `CornerRadius="10"` (四角相同) `CornerRadius="5,10,15,20"` (左上,右上,右下,左下) |
+
+### 背景属性
+
+|     属性     |  说明  |                           高级用法                           |
+| :----------: | :----: | :----------------------------------------------------------: |
+| `Background` | 背景色 | 支持渐变： `<LinearGradientBrush>...</LinearGradientBrush>`  |
+|  `Padding`   | 内边距 | `Padding="10"` (四边相同) `Padding="5,10,15,20"` (左,上,右,下) |
+
+### 高级渲染属性
+
+|       属性        |          说明          |
+| :---------------: | :--------------------: |
+|     `Effect`      | 添加视觉效果（如阴影） |
+|   `OpacityMask`   |       透明度蒙版       |
+| `RenderTransform` |        渲染变换        |
+
+#### 实现基本边框和圆角
+
+```xaml
+<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+    <Border BorderBrush="Red" BorderThickness="2" Padding="10" CornerRadius="10">
+        <TextBlock Text="带边框的文本" Width="100" Height="100" Background="Green"/>
+    </Border>
+</Grid>
+```
+
+效果
+
+<img src="https://blog-1301697820.cos.ap-guangzhou.myqcloud.com/blog/image-20250805224057918.png" alt="image-20250805224057918" style="zoom:33%;" />
+
+#### 实现阴影效果
+
+```xaml
+<!-- 在资源中定义阴影 -->
+<Window.Resources>
+    <DropShadowEffect x:Key="CommonShadow" 
+                  BlurRadius="20" 
+                  ShadowDepth="3" 
+                  Opacity="0.2"/>
+</Window.Resources>
+
+<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+    <Border Background="White" 
+    CornerRadius="8"
+    Padding="20"
+    Effect="{StaticResource CommonShadow}">
+        <TextBlock Text="带阴影的卡片" FontSize="16"/>
+    </Border>
+</Grid>
+```
+
+效果
+
+<img src="https://blog-1301697820.cos.ap-guangzhou.myqcloud.com/blog/image-20250805224503360.png" alt="image-20250805224503360" style="zoom: 33%;" />
+
+#### 设置渐变背景
+
+```xaml
+<Border CornerRadius="10" Padding="20">
+    <Border.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#FF6A11CB" Offset="0.0"/>
+            <GradientStop Color="#FF2575FC" Offset="1.0"/>
+        </LinearGradientBrush>
+    </Border.Background>
+    
+    <TextBlock Text="渐变背景" Foreground="White" FontSize="18"/>
+</Border>
+```
+
+效果
+
+<img src="https://blog-1301697820.cos.ap-guangzhou.myqcloud.com/blog/image-20250805224639776.png" alt="image-20250805224639776" style="zoom:33%;" />
+
+## 简单案例
+
+```xaml
+<Window x:Class="_01WPF入门.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_01WPF入门"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="450" Width="800">
+
+    <DockPanel>
+        <Grid DockPanel.Dock="Top" Background="Teal" Height="80">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="这是一个简单的布局案例"  Margin="10,0,0,0" VerticalAlignment="Center" FontSize="30" Foreground="White"/>
+            <Border Margin="0,0,10,0" HorizontalAlignment="Right" Grid.Column="1" Height="40" Width="80" CornerRadius="10" Background="Beige">
+                <TextBlock Text="退出" Foreground="Red" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+        </Grid>
+
+        <StackPanel DockPanel.Dock="Bottom" Background="Gray" Height="40" Orientation="Horizontal">
+            <TextBlock Margin="10, 0,0,0" Text="版权所有：快乐编程有限公司" VerticalAlignment="Center" Foreground="Black" FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel DockPanel.Dock="Left" Background="Chocolate" Width="100">
+            <TextBlock Margin="0, 10" FontSize="14" Text="菜单栏" HorizontalAlignment="Center" Foreground="Wheat"/>
+            <TextBlock Margin="0, 10" FontSize="14" Text="用户" HorizontalAlignment="Center" Foreground="Wheat"/>
+            <TextBlock Margin="0, 10" FontSize="14" Text="事件" HorizontalAlignment="Center" Foreground="Wheat"/>
+            <TextBlock Margin="0, 10" FontSize="14" Text="报警" HorizontalAlignment="Center" Foreground="Wheat"/>
+            <TextBlock Margin="0, 10" FontSize="14" Text="趋势" HorizontalAlignment="Center" Foreground="Wheat"/>
+            <TextBlock Margin="0, 10" FontSize="14" Text="配方" HorizontalAlignment="Center" Foreground="Wheat"/>
+        </StackPanel>
+        
+        
+        <StackPanel>
+            <TextBlock Text="主内容区域" Margin="10, 10, 0, 20"/>
+            <UniformGrid Columns="3" Width="500" Height="120">
+                <Border Width="140" CornerRadius="10" Background="Teal">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="今日订单"
+                                   FontSize="16" 
+                                   HorizontalAlignment="Center" 
+                                   Margin="0, 10, 0, 0" 
+                                   Foreground="White"/>
+                        <TextBlock Text="30"
+                           FontSize="16" 
+                           HorizontalAlignment="Center" 
+                           Margin="0, 10, 0, 0" 
+                           Foreground="White"/>
+                    </StackPanel>
+                </Border>
+                <Border Width="140" CornerRadius="10" Background="RosyBrown">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="本月交易额"
+                           FontSize="16" 
+                           HorizontalAlignment="Center" 
+                           Margin="0, 10, 0, 0" 
+                           Foreground="White"/>
+                        <TextBlock Text="3万"
+                            FontSize="16" 
+                            HorizontalAlignment="Center" 
+                            Margin="0, 10, 0, 0" 
+                            Foreground="White"/>
+                    </StackPanel>
+                </Border>
+                <Border Width="140" CornerRadius="10" Background="Brown">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="今日活跃用户"
+                               FontSize="16" 
+                               HorizontalAlignment="Center" 
+                               Margin="0, 10, 0, 0" 
+                               Foreground="White"/>
+                        <TextBlock Text="19万"
+                                FontSize="16" 
+                                HorizontalAlignment="Center" 
+                                Margin="0, 10, 0, 0" 
+                                Foreground="White"/>
+                    </StackPanel>
+                </Border>
+            </UniformGrid>
+        </StackPanel>
+        
+    </DockPanel>
+</Window>
+```
+
+效果
+
+<img src="https://blog-1301697820.cos.ap-guangzhou.myqcloud.com/blog/image-20250805232221660.png" alt="image-20250805232221660" style="zoom:33%;" />
+
+全屏效果
+
+<img src="https://blog-1301697820.cos.ap-guangzhou.myqcloud.com/blog/image-20250805232246960.png" alt="image-20250805232246960" style="zoom:33%;" />
 
 
 ---

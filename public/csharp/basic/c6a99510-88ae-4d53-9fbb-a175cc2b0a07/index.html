@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>C#数据类型 - Hobbyの快乐小站</title><meta name="author" content="hobby">
+<meta name="description" content="1. 什么是数据类型？数据类型定义了变量可以存储的数据种类、占用内存的大小以及可以对变量执行的操作。C# 中的数据类型主要分为两类：
+"><meta name="keywords" content='C#'>
+  <meta itemprop="name" content="C#数据类型">
+  <meta itemprop="description" content="1. 什么是数据类型？数据类型定义了变量可以存储的数据种类、占用内存的大小以及可以对变量执行的操作。C# 中的数据类型主要分为两类：">
+  <meta itemprop="datePublished" content="2024-08-07T10:19:36+08:00">
+  <meta itemprop="dateModified" content="2024-08-07T10:19:36+08:00">
+  <meta itemprop="wordCount" content="1139">
+  <meta itemprop="keywords" content="C#"><meta property="og:url" content="http://localhost:1313/csharp/basic/c6a99510-88ae-4d53-9fbb-a175cc2b0a07/">
+  <meta property="og:site_name" content="Hobbyの快乐小站">
+  <meta property="og:title" content="C#数据类型">
+  <meta property="og:description" content="1. 什么是数据类型？数据类型定义了变量可以存储的数据种类、占用内存的大小以及可以对变量执行的操作。C# 中的数据类型主要分为两类：">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="csharp">
+    <meta property="article:published_time" content="2024-08-07T10:19:36+08:00">
+    <meta property="article:modified_time" content="2024-08-07T10:19:36+08:00">
+    <meta property="article:tag" content="C#">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="C#数据类型">
+  <meta name="twitter:description" content="1. 什么是数据类型？数据类型定义了变量可以存储的数据种类、占用内存的大小以及可以对变量执行的操作。C# 中的数据类型主要分为两类：">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="http://localhost:1313/csharp/basic/c6a99510-88ae-4d53-9fbb-a175cc2b0a07/" title="C#数据类型 - Hobbyの快乐小站" /><link rel="prev" type="text/html" href="http://localhost:1313/csharp/wpf/5f4d026a-d256-4989-a4e0-7399716779bd/" title="WPF内容控件" /><link rel="next" type="text/html" href="http://localhost:1313/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/" title="WPF布局控件" /><link rel="alternate" type="text/markdown" href="http://localhost:1313/csharp/basic/c6a99510-88ae-4d53-9fbb-a175cc2b0a07/index.md" title="C#数据类型 - Hobbyの快乐小站"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "C#数据类型",
+    "inLanguage": "zh-CN",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/localhost:1313\/csharp\/basic\/c6a99510-88ae-4d53-9fbb-a175cc2b0a07\/"
+    },"genre": "posts","keywords": "C#","wordcount":  1139 ,
+    "url": "http:\/\/localhost:1313\/csharp\/basic\/c6a99510-88ae-4d53-9fbb-a175cc2b0a07\/","datePublished": "2024-08-07T10:19:36+08:00","dateModified": "2024-08-07T10:19:36+08:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "hobby"
+      },"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="Hobbyの快乐小站"><img class="logo" src='/favicon-192x192.png' alt="Hobbyの快乐小站" height="32" width="32"><span class="header-title-text">の快乐小站</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a class="menu-link" href="/posts/"><i class="fa-solid fa-file-text fa-fw fa-sm" aria-hidden="true"></i> 文章</a></li><li class="menu-item">
+              <a class="menu-link" href="/csharp/"><i class="fa-solid fa-tree fa-fw fa-sm" aria-hidden="true"></i> C#教程</a></li><li class="menu-item has-children">
+              <a class="menu-link" href="javascript:void(0);"><i class="fa-solid fa-hourglass-start fa-fw fa-sm" aria-hidden="true"></i> 回溯</a><i class="dropdown-icon fa-solid fa-chevron-down" aria-hidden="true"></i>
+                <ul class="sub-menu"><li class="menu-item">
+                        <a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> 归档</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> 目录</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 标签</a>
+                      </li></ul></li><li class="menu-item">
+              <a class="menu-link" href="/music/8dd06b96-a944-4275-ab38-4afcb8b10160/"><i class="fa-solid fa-music fa-fw fa-sm" aria-hidden="true"></i> 听听歌吧</a></li><li class="menu-item">
+              <a class="menu-link" href="/friends/"><i class="fa-solid fa-heart fa-fw fa-sm" aria-hidden="true"></i> 友链</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="搜索文章标题或内容……" id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="Hobbyの快乐小站"><img class="logo" src='/favicon-192x192.png' alt="Hobbyの快乐小站" height="26" width="26"><span class="header-title-text">の快乐小站</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="搜索文章标题或内容……" id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              取消
+            </a>
+          </li><li class="menu-item"><a class="menu-link" href="/posts/"><i class="fa-solid fa-file-text fa-fw fa-sm" aria-hidden="true"></i> 文章</a></li><li class="menu-item"><a class="menu-link" href="/csharp/"><i class="fa-solid fa-tree fa-fw fa-sm" aria-hidden="true"></i> C#教程</a></li><li class="menu-item"><span class="nested-item">
+                  <a class="menu-link" href="javascript:void(0);"><i class="fa-solid fa-hourglass-start fa-fw fa-sm" aria-hidden="true"></i> 回溯</a>
+                  <i class="dropdown-icon fa-solid fa-chevron-right" aria-hidden="true"></i>
+                </span>
+                <ul class="sub-menu"><li class="menu-item">
+                        <a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> 归档</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> 目录</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 标签</a>
+                      </li></ul></li><li class="menu-item"><a class="menu-link" href="/music/8dd06b96-a944-4275-ab38-4afcb8b10160/"><i class="fa-solid fa-music fa-fw fa-sm" aria-hidden="true"></i> 听听歌吧</a></li><li class="menu-item"><a class="menu-link" href="/friends/"><i class="fa-solid fa-heart fa-fw fa-sm" aria-hidden="true"></i> 友链</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="转载" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>C#数据类型</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><a href="https://github.com/haochan1996" title="作者"target="_blank" rel="external nofollow noopener noreferrer author" class="author"><img class="avatar" src='https://avatars.githubusercontent.com/u/190246046?v=4' alt="hobby" height="16" width="16">&nbsp;hobby</a></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/c%23%E5%9F%BA%E7%A1%80/" class="post-category" title="分类 - C#基础"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> C#基础</a></span></div><div class="post-meta-line"><span title="发布于 2024-08-07 10:19:36"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2024-08-07">2024-08-07</time></span>&nbsp;<span title="1139 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 1200 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 6 分钟</span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-什么是数据类型">1. 什么是数据类型？</a></li>
+    <li><a href="#2-值类型-value-types">2. 值类型 (Value Types)</a>
+      <ul>
+        <li><a href="#21-整数类型">2.1 整数类型</a></li>
+        <li><a href="#22-浮点类型">2.2 浮点类型</a></li>
+        <li><a href="#23-布尔类型">2.3 布尔类型</a></li>
+        <li><a href="#24-字符类型">2.4 字符类型</a></li>
+        <li><a href="#25-结构体-struct">2.5 结构体 (Struct)</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-引用类型-reference-types">3. 引用类型 (Reference Types)</a>
+      <ul>
+        <li><a href="#31-字符串-string">3.1 字符串 (String)</a></li>
+        <li><a href="#32-数组-array">3.2 数组 (Array)</a></li>
+        <li><a href="#33-元组tuple">3.3 元组（tuple）</a></li>
+        <li><a href="#34-类-class">3.4 类 (Class)</a></li>
+        <li><a href="#35-对象-object">3.5 对象 (Object)</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-值类型与引用类型的区别">4. 值类型与引用类型的区别</a></li>
+    <li><a href="#5-类型转换">5. 类型转换</a>
+      <ul>
+        <li><a href="#51-隐式转换">5.1 隐式转换</a></li>
+        <li><a href="#52-显式转换">5.2 显式转换</a></li>
+        <li><a href="#53-使用-convert-类">5.3 使用 <code>Convert</code> 类</a></li>
+        <li><a href="#54-使用-parse-和-tryparse">5.4 使用 <code>Parse</code> 和 <code>TryParse</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#6-装箱与拆箱-boxing-and-unboxing">6. 装箱与拆箱 (Boxing and Unboxing)</a></li>
+    <li><a href="#7-可空类型-nullable-types">7. 可空类型 (Nullable Types)</a></li>
+    <li><a href="#8-动态类型-dynamic-type">8. 动态类型 (Dynamic Type)</a></li>
+    <li><a href="#9-字面量-literals">9. 字面量 (Literals)</a>
+      <ul>
+        <li><a href="#91-常见字面量类型">9.1 常见字面量类型</a></li>
+        <li><a href="#92-字面量后缀和前缀">9.2 字面量后缀和前缀</a></li>
+      </ul>
+    </li>
+    <li><a href="#10-进制转换">10. 进制转换</a>
+      <ul>
+        <li><a href="#101-使用字面量直接表示">10.1 使用字面量直接表示</a></li>
+        <li><a href="#102-使用-converttostring-转换到指定进制">10.2 使用 <code>Convert.ToString</code> 转换到指定进制</a></li>
+        <li><a href="#103-使用-converttoint32-等从字符串解析">10.3 使用 <code>Convert.ToInt32</code> 等从字符串解析</a></li>
+        <li><a href="#104-格式化输出">10.4 格式化输出</a></li>
+      </ul>
+    </li>
+    <li><a href="#11-高级主题元组-tuple">11. 高级主题：元组 (Tuple)</a></li>
+    <li><a href="#12-实践建议">12. 实践建议</a></li>
+    <li><a href="#13-示例程序">13. 示例程序</a></li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h2 class="heading-element" id="1-什么是数据类型"><span>1. 什么是数据类型？</span>
+  <a href="#1-%e4%bb%80%e4%b9%88%e6%98%af%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>数据类型定义了变量可以存储的数据种类、占用内存的大小以及可以对变量执行的操作。C# 中的数据类型主要分为两类：</p>
+<ul>
+<li><strong>值类型 (Value Types)</strong>：直接存储数据，如整数、浮点数、布尔值等。</li>
+<li><strong>引用类型 (Reference Types)</strong>：存储数据的引用（内存地址），如字符串、数组、类等。</li>
+</ul>
+<h2 class="heading-element" id="2-值类型-value-types"><span>2. 值类型 (Value Types)</span>
+  <a href="#2-%e5%80%bc%e7%b1%bb%e5%9e%8b-value-types" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>值类型变量直接在栈内存中存储实际数据。以下是常见的内置值类型：</p>
+<h3 class="heading-element" id="21-整数类型"><span>2.1 整数类型</span>
+  <a href="#21-%e6%95%b4%e6%95%b0%e7%b1%bb%e5%9e%8b" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>整数类型用于存储没有小数部分的数字。C# 提供多种整数类型，区别在于大小和是否支持负数：</p>
+<table>
+  <thead>
+      <tr>
+          <th>类型</th>
+          <th>占用字节</th>
+          <th>范围</th>
+          <th>描述</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>byte</code></td>
+          <td>1</td>
+          <td>0 到 255</td>
+          <td>无符号 8 位整数</td>
+      </tr>
+      <tr>
+          <td><code>sbyte</code></td>
+          <td>1</td>
+          <td>-128 到 127</td>
+          <td>有符号 8 位整数</td>
+      </tr>
+      <tr>
+          <td><code>short</code></td>
+          <td>2</td>
+          <td>-32,768 到 32,767</td>
+          <td>有符号 16 位整数</td>
+      </tr>
+      <tr>
+          <td><code>ushort</code></td>
+          <td>2</td>
+          <td>0 到 65,535</td>
+          <td>无符号 16 位整数</td>
+      </tr>
+      <tr>
+          <td><code>int</code></td>
+          <td>4</td>
+          <td>-2,147,483,648 到 2,147,483,647</td>
+          <td>有符号 32 位整数</td>
+      </tr>
+      <tr>
+          <td><code>uint</code></td>
+          <td>4</td>
+          <td>0 到 4,294,967,295</td>
+          <td>无符号 32 位整数</td>
+      </tr>
+      <tr>
+          <td><code>long</code></td>
+          <td>8</td>
+          <td>-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807</td>
+          <td>有符号 64 位整数</td>
+      </tr>
+      <tr>
+          <td><code>ulong</code></td>
+          <td>8</td>
+          <td>0 到 18,446,744,073,709,551,615</td>
+          <td>无符号 64 位整数</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>示例代码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">age</span> <span class="p">=</span> <span class="m">25</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">long</span> <span class="n">bigNumber</span> <span class="p">=</span> <span class="m">1234567890123L</span><span class="p">;</span> <span class="c1">// 使用 L 表示 long 类型</span>
+</span></span><span class="line"><span class="cl"><span class="kt">byte</span> <span class="n">smallNumber</span> <span class="p">=</span> <span class="m">255</span><span class="p">;</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 class="heading-element" id="22-浮点类型"><span>2.2 浮点类型</span>
+  <a href="#22-%e6%b5%ae%e7%82%b9%e7%b1%bb%e5%9e%8b" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>浮点类型用于存储带小数部分的数字，适用于需要高精度的场景：</p>
+<table>
+  <thead>
+      <tr>
+          <th>类型</th>
+          <th>占用字节</th>
+          <th>范围</th>
+          <th>精度</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>float</code></td>
+          <td>4</td>
+          <td>±1.5e-45 到 ±3.4e38</td>
+          <td>7 位有效数字</td>
+      </tr>
+      <tr>
+          <td><code>double</code></td>
+          <td>8</td>
+          <td>±5.0e-324 到 ±1.7e308</td>
+          <td>15-16 位有效数字</td>
+      </tr>
+      <tr>
+          <td><code>decimal</code></td>
+          <td>16</td>
+          <td>±1.0e-28 到 ±7.9e28</td>
+          <td>28-29 位有效数字</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>注意</strong>：</p>
+<ul>
+<li><code>float</code> 需要在数字后加 <code>f</code>（如 <code>3.14f</code>）。</li>
+<li><code>decimal</code> 需要加 <code>m</code>（如 <code>3.14m</code>），适合金融计算等高精度场景。</li>
+</ul>
+<p><strong>示例代码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">float</span> <span class="n">temperature</span> <span class="p">=</span> <span class="m">36.6f</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">double</span> <span class="n">pi</span> <span class="p">=</span> <span class="m">3.14159265359</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">decimal</span> <span class="n">balance</span> <span class="p">=</span> <span class="m">12345.6789</span><span class="n">m</span><span class="p">;</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 class="heading-element" id="23-布尔类型"><span>2.3 布尔类型</span>
+  <a href="#23-%e5%b8%83%e5%b0%94%e7%b1%bb%e5%9e%8b" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ul>
+<li><code>bool</code>：占用 1 字节，值只能是 <code>true</code> 或 <code>false</code>。</li>
+<li>用于逻辑判断。</li>
+</ul>
+<p><strong>示例代码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">bool</span> <span class="n">isStudent</span> <span class="p">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="n">hasLicense</span> <span class="p">=</span> <span class="kc">false</span><span class="p">;</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 class="heading-element" id="24-字符类型"><span>2.4 字符类型</span>
+  <a href="#24-%e5%ad%97%e7%ac%a6%e7%b1%bb%e5%9e%8b" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ul>
+<li><code>char</code>：占用 2 字节，存储单个 Unicode 字符（用单引号 <code>''</code> 表示）。</li>
+</ul>
+<p><strong>示例代码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">char</span> <span class="n">grade</span> <span class="p">=</span> <span class="sc">&#39;A&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">char</span> <span class="n">symbol</span> <span class="p">=</span> <span class="err">&#39;\</span><span class="n">u0041</span><span class="err">&#39;</span><span class="p">;</span> <span class="c1">// Unicode 表示 &#39;A&#39;</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 class="heading-element" id="25-结构体-struct"><span>2.5 结构体 (Struct)</span>
+  <a href="#25-%e7%bb%93%e6%9e%84%e4%bd%93-struct" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>结构体是用户定义的值类型，包含多个字段。例如，<code>System.DateTime</code> 是一个结构体。</p>
+<p><strong>示例代码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">Point</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">int</span> <span class="n">X</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">int</span> <span class="n">Y</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Point</span> <span class="n">p</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Point</span> <span class="p">{</span> <span class="n">X</span> <span class="p">=</span> <span class="m">10</span><span class="p">,</span> <span class="n">Y</span> <span class="p">=</span> <span class="m">20</span> <span class="p">};</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 class="heading-element" id="3-引用类型-reference-types"><span>3. 引用类型 (Reference Types)</span>
+  <a href="#3-%e5%bc%95%e7%94%a8%e7%b1%bb%e5%9e%8b-reference-types" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>引用类型变量存储的是数据的内存地址，数据本身存储在堆内存中。常见的引用类型包括：</p>
+<h3 class="heading-element" id="31-字符串-string"><span>3.1 字符串 (String)</span>
+  <a href="#31-%e5%ad%97%e7%ac%a6%e4%b8%b2-string" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ul>
+<li><code>string</code>：表示不可变的 Unicode 字符序列。</li>
+<li>使用双引号 <code>&quot;&quot;</code> 定义。</li>
+</ul>
+<p><strong>示例代码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">string</span> <span class="n">name</span> <span class="p">=</span> <span class="s">&#34;Alice&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">string</span> <span class="n">greeting</span> <span class="p">=</span> <span class="s">$&#34;Hello, {name}!&#34;</span><span class="p">;</span> <span class="c1">// 字符串插值</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 class="heading-element" id="32-数组-array"><span>3.2 数组 (Array)</span>
+  <a href="#32-%e6%95%b0%e7%bb%84-array" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>数组是固定大小的元素集合，元素类型必须一致。</p>
+<p><strong>示例代码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">int</span><span class="p">[]</span> <span class="n">numbers</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="m">3</span><span class="p">]</span> <span class="p">{</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="kt">string</span><span class="p">[]</span> <span class="n">names</span> <span class="p">=</span> <span class="p">{</span> <span class="s">&#34;Alice&#34;</span><span class="p">,</span> <span class="s">&#34;Bob&#34;</span><span class="p">,</span> <span class="s">&#34;Charlie&#34;</span> <span class="p">};</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 class="heading-element" id="33-元组tuple"><span>3.3 元组（tuple）</span>
+  <a href="#33-%e5%85%83%e7%bb%84tuple" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>C#中的元组（Tuple）是一种数据结构，允许将多个不同类型的值组合成一个对象。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">person</span> <span class="p">=</span> <span class="p">(</span><span class="n">Name</span><span class="p">:</span> <span class="s">&#34;John&#34;</span><span class="p">,</span> <span class="n">Age</span><span class="p">:</span> <span class="m">30</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="n">Name</span><span class="p">);</span>  <span class="c1">// 输出: John</span>
+</span></span><span class="line"><span class="cl"><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="n">Age</span><span class="p">);</span>   <span class="c1">// 输出: 30</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 class="heading-element" id="34-类-class"><span>3.4 类 (Class)</span>
+  <a href="#34-%e7%b1%bb-class" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>类是用户定义的引用类型，可以包含字段、属性、方法等。</p>
+<p><strong>示例代码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Person</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">int</span> <span class="n">Age</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Person</span> <span class="n">person</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Person</span> <span class="p">{</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&#34;Bob&#34;</span><span class="p">,</span> <span class="n">Age</span> <span class="p">=</span> <span class="m">30</span> <span class="p">};</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 class="heading-element" id="35-对象-object"><span>3.5 对象 (Object)</span>
+  <a href="#35-%e5%af%b9%e8%b1%a1-object" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ul>
+<li><code>object</code> 是所有类型的基类，任何类型都可以转换为 <code>object</code>。</li>
+<li>使用时需注意装箱和拆箱（见下文）。</li>
+</ul>
+<p><strong>示例代码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">object</span> <span class="n">obj</span> <span class="p">=</span> <span class="m">42</span><span class="p">;</span> <span class="c1">// 装箱</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">number</span> <span class="p">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">obj</span><span class="p">;</span> <span class="c1">// 拆箱</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 class="heading-element" id="4-值类型与引用类型的区别"><span>4. 值类型与引用类型的区别</span>
+  <a href="#4-%e5%80%bc%e7%b1%bb%e5%9e%8b%e4%b8%8e%e5%bc%95%e7%94%a8%e7%b1%bb%e5%9e%8b%e7%9a%84%e5%8c%ba%e5%88%ab" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><table>
+  <thead>
+      <tr>
+          <th>特性</th>
+          <th>值类型</th>
+          <th>引用类型</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>存储位置</strong></td>
+          <td>栈内存</td>
+          <td>堆内存（引用在栈中）</td>
+      </tr>
+      <tr>
+          <td><strong>赋值行为</strong></td>
+          <td>复制整个值</td>
+          <td>复制引用（指向同一对象）</td>
+      </tr>
+      <tr>
+          <td><strong>默认值</strong></td>
+          <td>0 或相应类型的默认值</td>
+          <td><code>null</code></td>
+      </tr>
+      <tr>
+          <td><strong>示例</strong></td>
+          <td><code>int</code>, <code>double</code>, <code>struct</code></td>
+          <td><code>string</code>, <code>class</code>, <code>array</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>示例代码</strong>（值类型与引用类型的赋值行为）：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">a</span> <span class="p">=</span> <span class="m">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">b</span> <span class="p">=</span> <span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="p">=</span> <span class="m">20</span><span class="p">;</span> <span class="c1">// a 仍然是 10</span>
+</span></span><span class="line"><span class="cl"><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">a</span><span class="p">);</span> <span class="c1">// 输出 10</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">string</span><span class="p">[]</span> <span class="n">arr1</span> <span class="p">=</span> <span class="p">{</span> <span class="s">&#34;A&#34;</span><span class="p">,</span> <span class="s">&#34;B&#34;</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="kt">string</span><span class="p">[]</span> <span class="n">arr2</span> <span class="p">=</span> <span class="n">arr1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">arr2</span><span class="p">[</span><span class="m">0</span><span class="p">]</span> <span class="p">=</span> <span class="s">&#34;C&#34;</span><span class="p">;</span> <span class="c1">// arr1[0] 也变为 &#34;C&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">arr1</span><span class="p">[</span><span class="m">0</span><span class="p">]);</span> <span class="c1">// 输出 C</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 class="heading-element" id="5-类型转换"><span>5. 类型转换</span>
+  <a href="#5-%e7%b1%bb%e5%9e%8b%e8%bd%ac%e6%8d%a2" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>C# 中类型转换分为以下几种：</p>
+<h3 class="heading-element" id="51-隐式转换"><span>5.1 隐式转换</span>
+  <a href="#51-%e9%9a%90%e5%bc%8f%e8%bd%ac%e6%8d%a2" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>低精度类型到高精度类型的自动转换，无需显式声明。</p>
+<p><strong>示例代码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">100</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">double</span> <span class="n">d</span> <span class="p">=</span> <span class="n">i</span><span class="p">;</span> <span class="c1">// 隐式转换</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 class="heading-element" id="52-显式转换"><span>5.2 显式转换</span>
+  <a href="#52-%e6%98%be%e5%bc%8f%e8%bd%ac%e6%8d%a2" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>高精度类型到低精度类型需要强制转换，可能丢失数据。</p>
+<p><strong>示例代码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">double</span> <span class="n">d</span> <span class="p">=</span> <span class="m">123.45</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">d</span><span class="p">;</span> <span class="c1">// 显式转换，i = 123</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 class="heading-element" id="53-使用-convert-类"><span>5.3 使用 <code>Convert</code> 类</span>
+  <a href="#53-%e4%bd%bf%e7%94%a8-convert-%e7%b1%bb" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p><code>System.Convert</code> 类提供多种类型转换方法。</p>
+<p><strong>示例代码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">string</span> <span class="n">str</span> <span class="p">=</span> <span class="s">&#34;123&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">num</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">str</span><span class="p">);</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 class="heading-element" id="54-使用-parse-和-tryparse"><span>5.4 使用 <code>Parse</code> 和 <code>TryParse</code></span>
+  <a href="#54-%e4%bd%bf%e7%94%a8-parse-%e5%92%8c-tryparse" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ul>
+<li><code>Parse</code>：将字符串转换为指定类型，若失败抛出异常。</li>
+<li><code>TryParse</code>：尝试转换，若失败返回 <code>false</code>，不抛异常。</li>
+</ul>
+<p><strong>示例代码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">string</span> <span class="n">str</span> <span class="p">=</span> <span class="s">&#34;123&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">result</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="n">success</span> <span class="p">=</span> <span class="kt">int</span><span class="p">.</span><span class="n">TryParse</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="k">out</span> <span class="n">result</span><span class="p">);</span> <span class="c1">// success = true, result = 123</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 class="heading-element" id="6-装箱与拆箱-boxing-and-unboxing"><span>6. 装箱与拆箱 (Boxing and Unboxing)</span>
+  <a href="#6-%e8%a3%85%e7%ae%b1%e4%b8%8e%e6%8b%86%e7%ae%b1-boxing-and-unboxing" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><ul>
+<li><strong>装箱</strong>：将值类型转换为 <code>object</code> 或接口类型，存储到堆内存。</li>
+<li><strong>拆箱</strong>：从 <code>object</code> 类型转换回值类型。</li>
+</ul>
+<p><strong>示例代码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">42</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">object</span> <span class="n">obj</span> <span class="p">=</span> <span class="n">i</span><span class="p">;</span> <span class="c1">// 装箱</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">j</span> <span class="p">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">obj</span><span class="p">;</span> <span class="c1">// 拆箱</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>注意</strong>：装箱和拆箱会影响性能，尽量避免在性能敏感的代码中使用。</p>
+<h2 class="heading-element" id="7-可空类型-nullable-types"><span>7. 可空类型 (Nullable Types)</span>
+  <a href="#7-%e5%8f%af%e7%a9%ba%e7%b1%bb%e5%9e%8b-nullable-types" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>值类型默认不能为 <code>null</code>，但可通过可空类型（如 <code>int?</code>）支持 <code>null</code> 值。</p>
+<p><strong>示例代码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">int?</span> <span class="n">nullableInt</span> <span class="p">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">nullableInt</span><span class="p">.</span><span class="n">HasValue</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">nullableInt</span><span class="p">.</span><span class="n">Value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;Value is null&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>可空值类型简写</strong>：</p>
+<ul>
+<li><code>int?</code> 等价于 <code>Nullable&lt;int&gt;</code>。</li>
+</ul>
+<h2 class="heading-element" id="8-动态类型-dynamic-type"><span>8. 动态类型 (Dynamic Type)</span>
+  <a href="#8-%e5%8a%a8%e6%80%81%e7%b1%bb%e5%9e%8b-dynamic-type" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p><code>dynamic</code> 类型允许在运行时确定类型，绕过编译时类型检查。适用于与动态语言交互或未知类型的场景。</p>
+<p><strong>示例代码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">dynamic</span> <span class="k">value</span> <span class="p">=</span> <span class="m">42</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">value</span> <span class="p">=</span> <span class="s">&#34;Now a string&#34;</span><span class="p">;</span> <span class="c1">// 动态类型允许更改类型</span>
+</span></span><span class="line"><span class="cl"><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="k">value</span><span class="p">);</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>注意</strong>：使用 <code>dynamic</code> 会降低代码可读性和性能，建议谨慎使用。</p>
+<h2 class="heading-element" id="9-字面量-literals"><span>9. 字面量 (Literals)</span>
+  <a href="#9-%e5%ad%97%e9%9d%a2%e9%87%8f-literals" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>字面量是直接在代码中书写的常量值，用于初始化变量或表示特定值。C# 支持多种类型的字面量，并允许使用前缀或后缀来指定数据类型或进制。</p>
+<h3 class="heading-element" id="91-常见字面量类型"><span>9.1 常见字面量类型</span>
+  <a href="#91-%e5%b8%b8%e8%a7%81%e5%ad%97%e9%9d%a2%e9%87%8f%e7%b1%bb%e5%9e%8b" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ul>
+<li>整数字面量：
+<ul>
+<li>十进制：<code>123</code></li>
+<li>十六进制：<code>0x7B</code>（以 <code>0x</code> 开头）</li>
+<li>二进制：<code>0b01111011</code>（以 <code>0b</code> 开头，C# 7.0+ 支持）</li>
+<li>后缀：<code>L</code>（<code>long</code>）、<code>UL</code>（<code>ulong</code>）、<code>U</code>（<code>uint</code>）。</li>
+</ul>
+</li>
+<li>浮点字面量：
+<ul>
+<li>普通浮点：<code>3.14</code></li>
+<li>科学计数法：<code>3.14e2</code>（表示 3.14 × 10² = 314）</li>
+<li>后缀：<code>f</code>（<code>float</code>）、<code>d</code>（<code>double</code>）、<code>m</code>（<code>decimal</code>）。</li>
+</ul>
+</li>
+<li><strong>字符字面量</strong>：<code>'A'</code> 或 <code>'\u0041'</code>（Unicode 字符）。</li>
+<li>字符串字面量：
+<ul>
+<li>普通字符串：<code>&quot;Hello&quot;</code></li>
+<li>逐字字符串：<code>@&quot;C:\Path&quot;</code>（忽略转义字符）。</li>
+<li>插值字符串：<code>$&quot;Value: {x}&quot;</code>（C# 6.0+）。</li>
+</ul>
+</li>
+<li><strong>布尔字面量</strong>：<code>true</code>、<code>false</code>。</li>
+<li><strong>空字面量</strong>：<code>null</code>（仅限引用类型或可空值类型）。</li>
+</ul>
+<p><strong>示例代码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">dec</span> <span class="p">=</span> <span class="m">123</span><span class="p">;</span>          <span class="c1">// 十进制</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">hex</span> <span class="p">=</span> <span class="m">0x7B</span><span class="p">;</span>         <span class="c1">// 十六进制，等价于 123</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">bin</span> <span class="p">=</span> <span class="m">0</span><span class="n">b01111011</span><span class="p">;</span>   <span class="c1">// 二进制，等价于 123</span>
+</span></span><span class="line"><span class="cl"><span class="kt">long</span> <span class="n">big</span> <span class="p">=</span> <span class="m">123L</span><span class="p">;</span>        <span class="c1">// long 类型</span>
+</span></span><span class="line"><span class="cl"><span class="kt">float</span> <span class="n">f</span> <span class="p">=</span> <span class="m">3.14f</span><span class="p">;</span>        <span class="c1">// float 类型</span>
+</span></span><span class="line"><span class="cl"><span class="kt">decimal</span> <span class="n">m</span> <span class="p">=</span> <span class="m">3.14</span><span class="n">m</span><span class="p">;</span>      <span class="c1">// decimal 类型</span>
+</span></span><span class="line"><span class="cl"><span class="kt">string</span> <span class="n">s</span> <span class="p">=</span> <span class="s">$&#34;Value: {dec}&#34;</span><span class="p">;</span> <span class="c1">// 插值字符串</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 class="heading-element" id="92-字面量后缀和前缀"><span>9.2 字面量后缀和前缀</span>
+  <a href="#92-%e5%ad%97%e9%9d%a2%e9%87%8f%e5%90%8e%e7%bc%80%e5%92%8c%e5%89%8d%e7%bc%80" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ul>
+<li>后缀明确数据类型：
+<ul>
+<li><code>123L</code>：<code>long</code></li>
+<li><code>123.45f</code>：<code>float</code></li>
+<li><code>123.45m</code>：<code>decimal</code></li>
+</ul>
+</li>
+<li>前缀指定进制：
+<ul>
+<li><code>0x</code>：十六进制</li>
+<li><code>0b</code>：二进制（C# 7.0+）</li>
+</ul>
+</li>
+</ul>
+<h2 class="heading-element" id="10-进制转换"><span>10. 进制转换</span>
+  <a href="#10-%e8%bf%9b%e5%88%b6%e8%bd%ac%e6%8d%a2" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>C# 提供了多种方法在不同进制（如十进制、十六进制、二进制）之间转换数值。</p>
+<h3 class="heading-element" id="101-使用字面量直接表示"><span>10.1 使用字面量直接表示</span>
+  <a href="#101-%e4%bd%bf%e7%94%a8%e5%ad%97%e9%9d%a2%e9%87%8f%e7%9b%b4%e6%8e%a5%e8%a1%a8%e7%a4%ba" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>如上所述，可以直接使用 <code>0x</code> 或 <code>0b</code> 前缀定义十六进制或二进制值。</p>
+<p><strong>示例代码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">hexValue</span> <span class="p">=</span> <span class="m">0xFF</span><span class="p">;</span> <span class="c1">// 十六进制 FF = 十进制 255</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">binValue</span> <span class="p">=</span> <span class="m">0</span><span class="n">b11111111</span><span class="p">;</span> <span class="c1">// 二进制 11111111 = 十进制 255</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 class="heading-element" id="102-使用-converttostring-转换到指定进制"><span>10.2 使用 <code>Convert.ToString</code> 转换到指定进制</span>
+  <a href="#102-%e4%bd%bf%e7%94%a8-converttostring-%e8%bd%ac%e6%8d%a2%e5%88%b0%e6%8c%87%e5%ae%9a%e8%bf%9b%e5%88%b6" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p><code>Convert.ToString</code> 方法可以将数字转换为指定进制的字符串表示。</p>
+<p><strong>示例代码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">number</span> <span class="p">=</span> <span class="m">255</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">string</span> <span class="n">binary</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="n">ToString</span><span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="m">2</span><span class="p">);</span>  <span class="c1">// 转换为二进制: &#34;11111111&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">string</span> <span class="n">hex</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="n">ToString</span><span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="m">16</span><span class="p">);</span>    <span class="c1">// 转换为十六进制: &#34;ff&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">string</span> <span class="n">octal</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="n">ToString</span><span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="m">8</span><span class="p">);</span>   <span class="c1">// 转换为八进制: &#34;377&#34;</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 class="heading-element" id="103-使用-converttoint32-等从字符串解析"><span>10.3 使用 <code>Convert.ToInt32</code> 等从字符串解析</span>
+  <a href="#103-%e4%bd%bf%e7%94%a8-converttoint32-%e7%ad%89%e4%bb%8e%e5%ad%97%e7%ac%a6%e4%b8%b2%e8%a7%a3%e6%9e%90" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>可以将字符串形式的其他进制数解析为十进制。</p>
+<p><strong>示例代码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">string</span> <span class="n">hexString</span> <span class="p">=</span> <span class="s">&#34;FF&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">decValue</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">hexString</span><span class="p">,</span> <span class="m">16</span><span class="p">);</span> <span class="c1">// 解析十六进制 FF 为 255</span>
+</span></span><span class="line"><span class="cl"><span class="kt">string</span> <span class="n">binString</span> <span class="p">=</span> <span class="s">&#34;11111111&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">decValue2</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">binString</span><span class="p">,</span> <span class="m">2</span><span class="p">);</span> <span class="c1">// 解析二进制 11111111 为 255</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 class="heading-element" id="104-格式化输出"><span>10.4 格式化输出</span>
+  <a href="#104-%e6%a0%bc%e5%bc%8f%e5%8c%96%e8%be%93%e5%87%ba" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>使用字符串格式化控制进制输出。</p>
+<p><strong>示例代码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">number</span> <span class="p">=</span> <span class="m">255</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;Hex: {number:X}&#34;</span><span class="p">);</span> <span class="c1">// 输出 &#34;FF&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;Binary: {Convert.ToString(number, 2)}&#34;</span><span class="p">);</span> <span class="c1">// 输出 &#34;11111111&#34;</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 class="heading-element" id="11-高级主题元组-tuple"><span>11. 高级主题：元组 (Tuple)</span>
+  <a href="#11-%e9%ab%98%e7%ba%a7%e4%b8%bb%e9%a2%98%e5%85%83%e7%bb%84-tuple" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>C# 7.0 引入了元组，允许将多个值组合为一个轻量级的数据结构。</p>
+<p><strong>示例代码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">string</span><span class="p">)</span> <span class="n">person</span> <span class="p">=</span> <span class="p">(</span><span class="m">25</span><span class="p">,</span> <span class="s">&#34;Alice&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;Age: {person.Item1}, Name: {person.Item2}&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 命名元组</span>
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">namedTuple</span> <span class="p">=</span> <span class="p">(</span><span class="n">Age</span><span class="p">:</span> <span class="m">25</span><span class="p">,</span> <span class="n">Name</span><span class="p">:</span> <span class="s">&#34;Alice&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;Age: {namedTuple.Age}, Name: {namedTuple.Name}&#34;</span><span class="p">);</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 class="heading-element" id="12-实践建议"><span>12. 实践建议</span>
+  <a href="#12-%e5%ae%9e%e8%b7%b5%e5%bb%ba%e8%ae%ae" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><ol>
+<li>选择合适的数据类型：
+<ul>
+<li>使用 <code>int</code> 或 <code>double</code> 进行常规计算。</li>
+<li>使用 <code>decimal</code> 进行金融计算。</li>
+<li>使用 <code>string</code> 处理文本。</li>
+</ul>
+</li>
+<li><strong>避免不必要的装箱/拆箱</strong>：尽量使用泛型（如 <code>List&lt;T&gt;</code>）代替 <code>ArrayList</code>。</li>
+<li><strong>善用可空类型</strong>：在需要表示“无值”时使用 <code>int?</code> 等。</li>
+<li><strong>小心类型转换</strong>：使用 <code>TryParse</code> 避免异常。</li>
+<li><strong>动态类型谨慎使用</strong>：仅在必要时使用 <code>dynamic</code>，如与 COM 对象交互。</li>
+<li>字面量和进制转换：
+<ul>
+<li>使用 <code>0x</code> 和 <code>0b</code> 前缀简化十六进制和二进制输入。</li>
+<li>使用 <code>Convert.ToString</code> 和 <code>Convert.ToInt32</code> 进行进制转换。</li>
+</ul>
+</li>
+</ol>
+<h2 class="heading-element" id="13-示例程序"><span>13. 示例程序</span>
+  <a href="#13-%e7%a4%ba%e4%be%8b%e7%a8%8b%e5%ba%8f" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>以下是一个综合示例，展示多种数据类型、字面量和进制转换的用法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Program</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="k">void</span> <span class="n">Main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 基本数据类型</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">age</span> <span class="p">=</span> <span class="m">25</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">double</span> <span class="n">height</span> <span class="p">=</span> <span class="m">1.75</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">string</span> <span class="n">name</span> <span class="p">=</span> <span class="s">&#34;Alice&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">bool</span> <span class="n">isStudent</span> <span class="p">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 可空类型</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int?</span> <span class="n">score</span> <span class="p">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">score</span><span class="p">.</span><span class="n">HasValue</span> <span class="p">?</span> <span class="n">score</span><span class="p">.</span><span class="n">Value</span> <span class="p">:</span> <span class="s">&#34;No score&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 数组</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span><span class="p">[]</span> <span class="n">grades</span> <span class="p">=</span> <span class="p">{</span> <span class="m">85</span><span class="p">,</span> <span class="m">90</span><span class="p">,</span> <span class="m">95</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;Average grade: {grades.Average()}&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 元组</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">var</span> <span class="n">person</span> <span class="p">=</span> <span class="p">(</span><span class="n">Age</span><span class="p">:</span> <span class="n">age</span><span class="p">,</span> <span class="n">Name</span><span class="p">:</span> <span class="n">name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;Person: {person.Name}, {person.Age} years old&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 类型转换</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">string</span> <span class="n">input</span> <span class="p">=</span> <span class="s">&#34;123&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="kt">int</span><span class="p">.</span><span class="n">TryParse</span><span class="p">(</span><span class="n">input</span><span class="p">,</span> <span class="k">out</span> <span class="kt">int</span> <span class="n">number</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;Parsed number: {number}&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 动态类型</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">dynamic</span> <span class="k">value</span> <span class="p">=</span> <span class="m">42</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="k">value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">value</span> <span class="p">=</span> <span class="s">&#34;Dynamic string&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="k">value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 字面量和进制转换</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">dec</span> <span class="p">=</span> <span class="m">255</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">hex</span> <span class="p">=</span> <span class="m">0xFF</span><span class="p">;</span> <span class="c1">// 十六进制 FF = 255</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">bin</span> <span class="p">=</span> <span class="m">0</span><span class="n">b11111111</span><span class="p">;</span> <span class="c1">// 二进制 11111111 = 255</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;Decimal: {dec}, Hex: {hex:X}, Binary: {Convert.ToString(bin, 2)}&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">string</span> <span class="n">hexString</span> <span class="p">=</span> <span class="s">&#34;FF&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">parsedHex</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">hexString</span><span class="p">,</span> <span class="m">16</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;Parsed hex {hexString} to decimal: {parsedHex}&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="更新于 2024-08-07 10:19:36">更新于 2024-08-07&nbsp;</span>
+      </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/csharp/basic/c6a99510-88ae-4d53-9fbb-a175cc2b0a07/index.md" title="阅读原始文档" class="link-to-markdown">阅读原始文档</a></span><span><a href="vscode://file/D:%5c04%e5%ad%a6%e4%b9%a0%e7%9b%b8%e5%85%b3%5c01%e7%bc%96%e7%a8%8b%5cGitHub%e4%bb%a3%e7%a0%81%5chaochan1996%5cblogByHugo%5ccontent%5ccsharp%5cbasic%5c2.%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b.md" title="在编辑器中打开"target="_blank" rel="external nofollow noopener noreferrer" class="link-to-vscode">在编辑器中打开</a></span></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="分享到 X" data-sharer="twitter" data-url="http://localhost:1313/csharp/basic/c6a99510-88ae-4d53-9fbb-a175cc2b0a07/" data-title="C#数据类型" data-hashtags="C#"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/csharp/basic/c6a99510-88ae-4d53-9fbb-a175cc2b0a07/" data-hashtag="C#"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/csharp/basic/c6a99510-88ae-4d53-9fbb-a175cc2b0a07/" data-title="C#数据类型"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/c%23/" class="post-tag" title="标签 - C#">C#</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/csharp/wpf/5f4d026a-d256-4989-a4e0-7399716779bd/" class="post-nav-item" rel="prev" title="WPF内容控件"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>WPF内容控件</a><a href="/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/" class="post-nav-item" rel="next" title="WPF布局控件">WPF布局控件<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.148.2"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.4.0-alpha-20250721024521-a1cd700b"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2024 - 2025</span><span class="author" itemprop="copyrightHolder">
+              <a href="/">hobby</a></span></div><div class="footer-line statistics"></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/search.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"version":"v0.4.0-alpha-20250721024521-a1cd700b"};console.log('Page config:', window.config);</script><script src="/js/theme.min.js" defer></script><script src="/js/custom.min.js" defer></script></body>
+</html>

@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>C#操作符和控制流程 - Hobbyの快乐小站</title><meta name="author" content="hobby">
+<meta name="description" content="1.操作符1.1 概述操作符是用于执行特定操作的符号，例如算术、比较、逻辑等。根据操作数的数量，操作符可以分为：
+"><meta name="keywords" content='draft'>
+  <meta itemprop="name" content="C#操作符和控制流程">
+  <meta itemprop="description" content="1.操作符1.1 概述操作符是用于执行特定操作的符号，例如算术、比较、逻辑等。根据操作数的数量，操作符可以分为：">
+  <meta itemprop="datePublished" content="2024-08-07T11:57:18+08:00">
+  <meta itemprop="dateModified" content="2024-08-07T11:57:18+08:00">
+  <meta itemprop="wordCount" content="1141">
+  <meta itemprop="keywords" content="Draft"><meta property="og:url" content="http://localhost:1313/csharp/basic/7749b4b1-4b36-42d1-bd6c-14d264055cdb/">
+  <meta property="og:site_name" content="Hobbyの快乐小站">
+  <meta property="og:title" content="C#操作符和控制流程">
+  <meta property="og:description" content="1.操作符1.1 概述操作符是用于执行特定操作的符号，例如算术、比较、逻辑等。根据操作数的数量，操作符可以分为：">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="csharp">
+    <meta property="article:published_time" content="2024-08-07T11:57:18+08:00">
+    <meta property="article:modified_time" content="2024-08-07T11:57:18+08:00">
+    <meta property="article:tag" content="Draft">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="C#操作符和控制流程">
+  <meta name="twitter:description" content="1.操作符1.1 概述操作符是用于执行特定操作的符号，例如算术、比较、逻辑等。根据操作数的数量，操作符可以分为：">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="http://localhost:1313/csharp/basic/7749b4b1-4b36-42d1-bd6c-14d264055cdb/" title="C#操作符和控制流程 - Hobbyの快乐小站" /><link rel="prev" type="text/html" href="http://localhost:1313/csharp/basic/d14b1543-d65d-40cb-a7c4-f3bed1e0dfc6/" title="C#概述" /><link rel="next" type="text/html" href="http://localhost:1313/csharp/wpf/892c051/" title="WPF入门" /><link rel="alternate" type="text/markdown" href="http://localhost:1313/csharp/basic/7749b4b1-4b36-42d1-bd6c-14d264055cdb/index.md" title="C#操作符和控制流程 - Hobbyの快乐小站"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "C#操作符和控制流程",
+    "inLanguage": "zh-CN",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/localhost:1313\/csharp\/basic\/7749b4b1-4b36-42d1-bd6c-14d264055cdb\/"
+    },"genre": "posts","keywords": "draft","wordcount":  1141 ,
+    "url": "http:\/\/localhost:1313\/csharp\/basic\/7749b4b1-4b36-42d1-bd6c-14d264055cdb\/","datePublished": "2024-08-07T11:57:18+08:00","dateModified": "2024-08-07T11:57:18+08:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "hobby"
+      },"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="Hobbyの快乐小站"><img class="logo" src='/favicon-192x192.png' alt="Hobbyの快乐小站" height="32" width="32"><span class="header-title-text">の快乐小站</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a class="menu-link" href="/posts/"><i class="fa-solid fa-file-text fa-fw fa-sm" aria-hidden="true"></i> 文章</a></li><li class="menu-item">
+              <a class="menu-link" href="/csharp/"><i class="fa-solid fa-tree fa-fw fa-sm" aria-hidden="true"></i> C#教程</a></li><li class="menu-item has-children">
+              <a class="menu-link" href="javascript:void(0);"><i class="fa-solid fa-hourglass-start fa-fw fa-sm" aria-hidden="true"></i> 回溯</a><i class="dropdown-icon fa-solid fa-chevron-down" aria-hidden="true"></i>
+                <ul class="sub-menu"><li class="menu-item">
+                        <a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> 归档</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> 目录</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 标签</a>
+                      </li></ul></li><li class="menu-item">
+              <a class="menu-link" href="/music/8dd06b96-a944-4275-ab38-4afcb8b10160/"><i class="fa-solid fa-music fa-fw fa-sm" aria-hidden="true"></i> 听听歌吧</a></li><li class="menu-item">
+              <a class="menu-link" href="/friends/"><i class="fa-solid fa-heart fa-fw fa-sm" aria-hidden="true"></i> 友链</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="搜索文章标题或内容……" id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="Hobbyの快乐小站"><img class="logo" src='/favicon-192x192.png' alt="Hobbyの快乐小站" height="26" width="26"><span class="header-title-text">の快乐小站</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="搜索文章标题或内容……" id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              取消
+            </a>
+          </li><li class="menu-item"><a class="menu-link" href="/posts/"><i class="fa-solid fa-file-text fa-fw fa-sm" aria-hidden="true"></i> 文章</a></li><li class="menu-item"><a class="menu-link" href="/csharp/"><i class="fa-solid fa-tree fa-fw fa-sm" aria-hidden="true"></i> C#教程</a></li><li class="menu-item"><span class="nested-item">
+                  <a class="menu-link" href="javascript:void(0);"><i class="fa-solid fa-hourglass-start fa-fw fa-sm" aria-hidden="true"></i> 回溯</a>
+                  <i class="dropdown-icon fa-solid fa-chevron-right" aria-hidden="true"></i>
+                </span>
+                <ul class="sub-menu"><li class="menu-item">
+                        <a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> 归档</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> 目录</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 标签</a>
+                      </li></ul></li><li class="menu-item"><a class="menu-link" href="/music/8dd06b96-a944-4275-ab38-4afcb8b10160/"><i class="fa-solid fa-music fa-fw fa-sm" aria-hidden="true"></i> 听听歌吧</a></li><li class="menu-item"><a class="menu-link" href="/friends/"><i class="fa-solid fa-heart fa-fw fa-sm" aria-hidden="true"></i> 友链</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="转载" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>C#操作符和控制流程</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><a href="https://github.com/haochan1996" title="作者"target="_blank" rel="external nofollow noopener noreferrer author" class="author"><img class="avatar" src='https://avatars.githubusercontent.com/u/190246046?v=4' alt="hobby" height="16" width="16">&nbsp;hobby</a></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/draft/" class="post-category" title="分类 - Draft"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Draft</a></span></div><div class="post-meta-line"><span title="发布于 2024-08-07 11:57:18"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2024-08-07">2024-08-07</time></span>&nbsp;<span title="1141 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 1200 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 6 分钟</span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1操作符">1.操作符</a>
+      <ul>
+        <li><a href="#11-概述">1.1 概述</a></li>
+        <li><a href="#21-算术操作符">2.1 算术操作符</a></li>
+        <li><a href="#13-赋值操作符">1.3 赋值操作符</a></li>
+        <li><a href="#14-比较操作符">1.4 比较操作符</a></li>
+        <li><a href="#15-逻辑操作符">1.5 逻辑操作符</a></li>
+        <li><a href="#16-位操作符">1.6 位操作符</a></li>
+        <li><a href="#17-其他操作符">1.7 其他操作符</a></li>
+        <li><a href="#19-特殊操作符">1.9 特殊操作符</a></li>
+        <li><a href="#110-操作符优先级和结合性">1.10 操作符优先级和结合性</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-控制流程">2. 控制流程</a>
+      <ul>
+        <li><a href="#21-条件语句-conditional-statements">2.1 条件语句 (Conditional Statements)</a>
+          <ul>
+            <li><a href="#if-else-语句"><code>if-else</code> 语句</a></li>
+            <li><a href="#switch-语句"><code>switch</code> 语句</a></li>
+          </ul>
+        </li>
+        <li><a href="#22-循环语句-looping-statements">2.2 循环语句 (Looping Statements)</a>
+          <ul>
+            <li><a href="#for"><strong><code>for</code> 循环</strong></a></li>
+            <li><a href="#while"><strong><code>while</code> 循环</strong></a></li>
+            <li><a href="#do-while"><strong><code>do-while</code> 循环</strong></a></li>
+            <li><a href="#foreach"><strong><code>foreach</code> 循环</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#3-跳转语句-jump-statements">3. 跳转语句 (Jump Statements)</a>
+          <ul>
+            <li><a href="#break"><strong><code>break</code> 语句</strong></a></li>
+            <li><a href="#continue"><strong><code>continue</code> 语句</strong></a></li>
+            <li><a href="#return"><strong><code>return</code> 语句</strong></a></li>
+            <li><a href="#goto"><strong><code>goto</code> 语句</strong></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h2 class="heading-element" id="1操作符"><span>1.操作符</span>
+  <a href="#1%e6%93%8d%e4%bd%9c%e7%ac%a6" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 class="heading-element" id="11-概述"><span>1.1 概述</span>
+  <a href="#11-%e6%a6%82%e8%bf%b0" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>操作符是用于执行特定操作的符号，例如算术、比较、逻辑等。根据操作数的数量，操作符可以分为：</p>
+<ul>
+<li><strong>一元操作符</strong>：作用于一个操作数，如 <code>-x</code>（取反）。</li>
+<li><strong>二元操作符</strong>：作用于两个操作数，如 <code>x + y</code>。</li>
+<li><strong>三元操作符</strong>：作用于三个操作数，如条件操作符 <code>condition ? true_value : false_value</code>。</li>
+</ul>
+<h3 class="heading-element" id="21-算术操作符"><span>2.1 算术操作符</span>
+  <a href="#21-%e7%ae%97%e6%9c%af%e6%93%8d%e4%bd%9c%e7%ac%a6" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>算术操作符用于执行基本的数学计算，适用于数值类型（如 <code>int</code>、<code>double</code> 等）。</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><strong>操作符</strong></th>
+          <th style="text-align: center"><strong>功能</strong></th>
+          <th style="text-align: center"><strong>示例</strong></th>
+          <th style="text-align: center"><strong>注意事项</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><code>+</code></td>
+          <td style="text-align: center">加法/字符串拼接</td>
+          <td style="text-align: center"><code>int c = 3 + 5;</code> <code>string s = &quot;a&quot; + &quot;b&quot;;</code></td>
+          <td style="text-align: center">字符串拼接产生新对象</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>-</code></td>
+          <td style="text-align: center">减法</td>
+          <td style="text-align: center"><code>double d = 5.0 - 2.0; // 3.0</code></td>
+          <td style="text-align: center">不支持<code>ulong</code>取负</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>*</code></td>
+          <td style="text-align: center">乘法</td>
+          <td style="text-align: center"><code>float f = 2.5f * 2; // 5.0</code></td>
+          <td style="text-align: center">整数乘法溢出时截断高位</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>/</code></td>
+          <td style="text-align: center">除法</td>
+          <td style="text-align: center"><code>int i = 7 / 2; // 3</code> <code>double k = 7.0 / 2; // 3.5</code></td>
+          <td style="text-align: center">整数除法舍去小数</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>%</code></td>
+          <td style="text-align: center">取余</td>
+          <td style="text-align: center"><code>int r = 10 % 3; // 1</code></td>
+          <td style="text-align: center">余数符号与被除数相同</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>++</code>/<code>--</code></td>
+          <td style="text-align: center">自增/自减</td>
+          <td style="text-align: center"><code>int x = 1; x++; // 2</code></td>
+          <td style="text-align: center">前缀先运算后返回值，后缀反之</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>示例代码：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">a</span> <span class="p">=</span> <span class="m">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">b</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">sum</span> <span class="p">=</span> <span class="n">a</span> <span class="p">+</span> <span class="n">b</span><span class="p">;</span>  <span class="c1">// 15</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">difference</span> <span class="p">=</span> <span class="n">a</span> <span class="p">-</span> <span class="n">b</span><span class="p">;</span>  <span class="c1">// 5</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">product</span> <span class="p">=</span> <span class="n">a</span> <span class="p">*</span> <span class="n">b</span><span class="p">;</span>  <span class="c1">// 50</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">quotient</span> <span class="p">=</span> <span class="n">a</span> <span class="p">/</span> <span class="n">b</span><span class="p">;</span>  <span class="c1">// 2</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">remainder</span> <span class="p">=</span> <span class="n">a</span> <span class="p">%</span> <span class="n">b</span><span class="p">;</span>  <span class="c1">// 0</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="p">++;</span>  <span class="c1">// a 现在是 11</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span><span class="p">--;</span>  <span class="c1">// b 现在是 4</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>注意：</strong></p>
+<ul>
+<li>自增和自减操作符有前置（<code>++x</code>）和后置（<code>x++</code>）之分。前置先执行操作再返回值，后置先返回值再执行操作。</li>
+</ul>
+<h3 class="heading-element" id="13-赋值操作符"><span>1.3 赋值操作符</span>
+  <a href="#13-%e8%b5%8b%e5%80%bc%e6%93%8d%e4%bd%9c%e7%ac%a6" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>赋值操作符用于将值赋给变量，常见的包括简单赋值和复合赋值。</p>
+<table>
+  <thead>
+      <tr>
+          <th>操作符</th>
+          <th>描述</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>=</code></td>
+          <td>简单赋值</td>
+          <td><code>x = y</code></td>
+      </tr>
+      <tr>
+          <td><code>+=</code></td>
+          <td>加法赋值</td>
+          <td><code>x += y</code></td>
+      </tr>
+      <tr>
+          <td><code>-=</code></td>
+          <td>减法赋值</td>
+          <td><code>x -= y</code></td>
+      </tr>
+      <tr>
+          <td><code>*=</code></td>
+          <td>乘法赋值</td>
+          <td><code>x *= y</code></td>
+      </tr>
+      <tr>
+          <td><code>/=</code></td>
+          <td>除法赋值</td>
+          <td><code>x /= y</code></td>
+      </tr>
+      <tr>
+          <td><code>%=</code></td>
+          <td>取模赋值</td>
+          <td><code>x %= y</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>示例代码：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="m">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="p">+=</span> <span class="m">5</span><span class="p">;</span>  <span class="c1">// x = x + 5, x 现在是 15</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="p">-=</span> <span class="m">3</span><span class="p">;</span>  <span class="c1">// x = x - 3, x 现在是 12</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="p">*=</span> <span class="m">2</span><span class="p">;</span>  <span class="c1">// x = x * 2, x 现在是 24</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="p">/=</span> <span class="m">4</span><span class="p">;</span>  <span class="c1">// x = x / 4, x 现在是 6</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="p">%=</span> <span class="m">3</span><span class="p">;</span>  <span class="c1">// x = x % 3, x 现在是 0</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>说明：</strong></p>
+<ul>
+<li>复合赋值操作符简化了代码，特别是在需要对变量进行多次修改时。</li>
+</ul>
+<h3 class="heading-element" id="14-比较操作符"><span>1.4 比较操作符</span>
+  <a href="#14-%e6%af%94%e8%be%83%e6%93%8d%e4%bd%9c%e7%ac%a6" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>比较操作符用于比较两个值，返回布尔值（<code>true</code> 或 <code>false</code>），常用于条件判断。</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><strong>操作符</strong></th>
+          <th style="text-align: center"><strong>功能</strong></th>
+          <th style="text-align: center"><strong>示例</strong></th>
+          <th style="text-align: center"><strong>比较规则</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><code>==</code>/<code>!=</code></td>
+          <td style="text-align: center">相等/不等</td>
+          <td style="text-align: center"><code>&quot;abc&quot; == &quot;abc&quot;; // true</code></td>
+          <td style="text-align: center">字符串比较内容，引用类型比较地址（除<code>string</code>）</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>&gt;</code>/<code>&lt;</code></td>
+          <td style="text-align: center">大于/小于</td>
+          <td style="text-align: center"><code>5 &gt; 3; // true</code></td>
+          <td style="text-align: center">字符比较Unicode码值</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>&gt;=</code>/<code>&lt;=</code></td>
+          <td style="text-align: center">大于等于/小于等于</td>
+          <td style="text-align: center"><code>4.5 &lt;= 4.5; // true</code></td>
+          <td style="text-align: center">浮点数比较需考虑精度误差</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>示例代码：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">a</span> <span class="p">=</span> <span class="m">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">b</span> <span class="p">=</span> <span class="m">20</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="n">isEqual</span> <span class="p">=</span> <span class="p">(</span><span class="n">a</span> <span class="p">==</span> <span class="n">b</span><span class="p">);</span>  <span class="c1">// false</span>
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="n">isNotEqual</span> <span class="p">=</span> <span class="p">(</span><span class="n">a</span> <span class="p">!=</span> <span class="n">b</span><span class="p">);</span>  <span class="c1">// true</span>
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="n">isGreater</span> <span class="p">=</span> <span class="p">(</span><span class="n">a</span> <span class="p">&gt;</span> <span class="n">b</span><span class="p">);</span>  <span class="c1">// false</span>
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="n">isLess</span> <span class="p">=</span> <span class="p">(</span><span class="n">a</span> <span class="p">&lt;</span> <span class="n">b</span><span class="p">);</span>  <span class="c1">// true</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>注意：</strong></p>
+<ul>
+<li>比较操作符常与控制流程语句（如 <code>if</code>）结合使用。</li>
+</ul>
+<h3 class="heading-element" id="15-逻辑操作符"><span>1.5 逻辑操作符</span>
+  <a href="#15-%e9%80%bb%e8%be%91%e6%93%8d%e4%bd%9c%e7%ac%a6" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>逻辑操作符用于组合布尔表达式，常见于复杂条件判断。</p>
+<table>
+  <thead>
+      <tr>
+          <th>操作符</th>
+          <th>名称</th>
+          <th>描述</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>&amp;&amp;</code></td>
+          <td>逻辑与</td>
+          <td><code>x &amp;&amp; y</code></td>
+      </tr>
+      <tr>
+          <td>`</td>
+          <td></td>
+          <td>`</td>
+      </tr>
+      <tr>
+          <td><code>!</code></td>
+          <td>逻辑非</td>
+          <td><code>!x</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>示例代码：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">bool</span> <span class="n">x</span> <span class="p">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="n">y</span> <span class="p">=</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="n">andResult</span> <span class="p">=</span> <span class="n">x</span> <span class="p">&amp;&amp;</span> <span class="n">y</span><span class="p">;</span>  <span class="c1">// false</span>
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="n">orResult</span> <span class="p">=</span> <span class="n">x</span> <span class="p">||</span> <span class="n">y</span><span class="p">;</span>  <span class="c1">// true</span>
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="n">notResult</span> <span class="p">=</span> <span class="p">!</span><span class="n">x</span><span class="p">;</span>  <span class="c1">// false</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>说明：</strong></p>
+<ul>
+<li>逻辑操作符具有短路求值特性：<code>&amp;&amp;</code> 在左侧为 <code>false</code> 时不计算右侧，<code>||</code> 在左侧为 <code>true</code> 时不计算右侧。</li>
+</ul>
+<h3 class="heading-element" id="16-位操作符"><span>1.6 位操作符</span>
+  <a href="#16-%e4%bd%8d%e6%93%8d%e4%bd%9c%e7%ac%a6" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>位操作符用于操作整数的二进制位，适用于低级编程和性能优化。</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><strong>操作符</strong></th>
+          <th style="text-align: center"><strong>功能</strong></th>
+          <th style="text-align: center"><strong>示例</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><code>&amp;</code></td>
+          <td style="text-align: center">按位与</td>
+          <td style="text-align: center"><code>6 &amp; 3; // 2 (0b110 &amp; 0b011 = 0b010)</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">`</td>
+          <td style="text-align: center">`</td>
+          <td style="text-align: center">按位或</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>^</code></td>
+          <td style="text-align: center">按位异或</td>
+          <td style="text-align: center"><code>6 ^ 3; // 5 (0b110 ^ 0b011 = 0b101)</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>~</code></td>
+          <td style="text-align: center">按位取反</td>
+          <td style="text-align: center"><code>~6; // -7 (补码表示)</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>&lt;&lt;</code>/<code>&gt;&gt;</code></td>
+          <td style="text-align: center">左移/右移</td>
+          <td style="text-align: center"><code>4 &lt;&lt; 1; // 8</code> <code>-4 &gt;&gt; 1; // -2</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>示例代码：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">a</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>  <span class="c1">// 二进制 0101</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">b</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span>  <span class="c1">// 二进制 0011</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">and</span> <span class="p">=</span> <span class="n">a</span> <span class="p">&amp;</span> <span class="n">b</span><span class="p">;</span>  <span class="c1">// 0001 -&gt; 1</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">or</span> <span class="p">=</span> <span class="n">a</span> <span class="p">|</span> <span class="n">b</span><span class="p">;</span>   <span class="c1">// 0111 -&gt; 7</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">xor</span> <span class="p">=</span> <span class="n">a</span> <span class="p">^</span> <span class="n">b</span><span class="p">;</span>  <span class="c1">// 0110 -&gt; 6</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">notA</span> <span class="p">=</span> <span class="p">~</span><span class="n">a</span><span class="p">;</span>    <span class="c1">// 1010 (4位) -&gt; -6 (补码)</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">leftShift</span> <span class="p">=</span> <span class="n">a</span> <span class="p">&lt;&lt;</span> <span class="m">1</span><span class="p">;</span>  <span class="c1">// 1010 -&gt; 10</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">rightShift</span> <span class="p">=</span> <span class="n">a</span> <span class="p">&gt;&gt;</span> <span class="m">1</span><span class="p">;</span> <span class="c1">// 0010 -&gt; 2</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>注意：</strong></p>
+<ul>
+<li>位操作符在处理二进制数据、标志位等场景中非常有用。</li>
+</ul>
+<h3 class="heading-element" id="17-其他操作符"><span>1.7 其他操作符</span>
+  <a href="#17-%e5%85%b6%e4%bb%96%e6%93%8d%e4%bd%9c%e7%ac%a6" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>C#还包括一些特殊操作符，增强了代码的表达能力。</p>
+<ul>
+<li>
+<p><strong>条件操作符（三元操作符）</strong>：
+语法：<code>condition ? true_expression : false_expression</code>
+示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">age</span> <span class="p">=</span> <span class="m">20</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">string</span> <span class="n">status</span> <span class="p">=</span> <span class="p">(</span><span class="n">age</span> <span class="p">&gt;=</span> <span class="m">18</span><span class="p">)</span> <span class="p">?</span> <span class="s">&#34;Adult&#34;</span> <span class="p">:</span> <span class="s">&#34;Minor&#34;</span><span class="p">;</span>  <span class="c1">// &#34;Adult&#34;</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>空合并操作符</strong>：
+语法：<code>x ?? y</code>，若 <code>x</code> 为 <code>null</code> 则返回 <code>y</code>。
+示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">string</span> <span class="n">name</span> <span class="p">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">string</span> <span class="n">displayName</span> <span class="p">=</span> <span class="n">name</span> <span class="p">??</span> <span class="s">&#34;Unknown&#34;</span><span class="p">;</span>  <span class="c1">// &#34;Unknown&#34;</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>成员访问操作符</strong>：<code>.</code> 用于访问对象的成员。
+示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">string</span> <span class="n">length</span> <span class="p">=</span> <span class="s">&#34;hello&#34;</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>  <span class="c1">// 5</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>索引操作符</strong>：<code>[]</code> 用于访问数组或集合中的元素。
+示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">int</span><span class="p">[]</span> <span class="n">numbers</span> <span class="p">=</span> <span class="p">{</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">first</span> <span class="p">=</span> <span class="n">numbers</span><span class="p">[</span><span class="m">0</span><span class="p">];</span>  <span class="c1">// 1</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h3 class="heading-element" id="19-特殊操作符"><span>1.9 特殊操作符</span>
+  <a href="#19-%e7%89%b9%e6%ae%8a%e6%93%8d%e4%bd%9c%e7%ac%a6" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>C# 还提供了一些其他特殊用途的操作符。</p>
+<table>
+  <thead>
+      <tr>
+          <th>操作符</th>
+          <th>描述</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>is</code></td>
+          <td>检查对象是否为特定类型</td>
+          <td><code>if (obj is string)</code></td>
+      </tr>
+      <tr>
+          <td><code>as</code></td>
+          <td>执行引用转换，如果失败则返回 null</td>
+          <td><code>string s = obj as string;</code></td>
+      </tr>
+      <tr>
+          <td><code>new</code></td>
+          <td>创建新对象或调用构造函数</td>
+          <td><code>MyClass obj = new MyClass();</code></td>
+      </tr>
+      <tr>
+          <td><code>sizeof</code></td>
+          <td>获取类型在内存中的大小（以字节为单位）</td>
+          <td><code>sizeof(int)</code></td>
+      </tr>
+      <tr>
+          <td><code>typeof</code></td>
+          <td>获取指定类型的 <code>System.Type</code> 对象</td>
+          <td><code>Type t = typeof(string);</code></td>
+      </tr>
+  </tbody>
+</table>
+<h3 class="heading-element" id="110-操作符优先级和结合性"><span>1.10 操作符优先级和结合性</span>
+  <a href="#110-%e6%93%8d%e4%bd%9c%e7%ac%a6%e4%bc%98%e5%85%88%e7%ba%a7%e5%92%8c%e7%bb%93%e5%90%88%e6%80%a7" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>当一个表达式中包含多个操作符时，<strong>优先级</strong>决定了操作符的执行顺序。<strong>结合性</strong>则用于处理优先级相同的操作符，决定是从左到右还是从右到左进行计算。</p>
+<ul>
+<li><strong>优先级</strong>：
+<ul>
+<li>乘法 (<code>*</code>) 和除法 (<code>/</code>) 的优先级高于加法 (<code>+</code>) 和减法 (<code>-</code>)。</li>
+<li>赋值操作符的优先级通常最低。</li>
+<li>你可以使用<strong>括号 <code>()</code></strong> 来强制改变运算顺序。</li>
+</ul>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">result</span> <span class="p">=</span> <span class="m">5</span> <span class="p">+</span> <span class="m">3</span> <span class="p">*</span> <span class="m">2</span><span class="p">;</span> <span class="c1">// 结果为 11，因为先计算 3 * 2</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">resultWithParentheses</span> <span class="p">=</span> <span class="p">(</span><span class="m">5</span> <span class="p">+</span> <span class="m">3</span><span class="p">)</span> <span class="p">*</span> <span class="m">2</span><span class="p">;</span> <span class="c1">// 结果为 16，因为先计算括号中的 5 + 3</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>结合性</strong>：
+<ul>
+<li>大多数二元操作符（如 <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>）是<strong>左结合</strong>的，即从左到右计算。</li>
+<li>赋值操作符（如 <code>=</code>) 和三元操作符 <code>?:</code> 是<strong>右结合</strong>的，即从右到左计算。</li>
+</ul>
+</li>
+</ul>
+<h2 class="heading-element" id="2-控制流程"><span>2. 控制流程</span>
+  <a href="#2-%e6%8e%a7%e5%88%b6%e6%b5%81%e7%a8%8b" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p><strong>控制流程</strong>是决定程序执行顺序的关键。它允许你根据不同的条件执行不同的代码块，或者重复执行某段代码，是编写任何复杂程序的基石。C#主要有三大类控制流程语句：<strong>条件语句</strong>、<strong>循环语句</strong>和<strong>跳转语句</strong>。</p>
+<h3 class="heading-element" id="21-条件语句-conditional-statements"><span>2.1 条件语句 (Conditional Statements)</span>
+  <a href="#21-%e6%9d%a1%e4%bb%b6%e8%af%ad%e5%8f%a5-conditional-statements" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>条件语句用于根据某个布尔表达式的结果来决定执行哪个代码块。</p>
+<h4 class="heading-element" id="if-else-语句"><span><code>if-else</code> 语句</span>
+  <a href="#if-else-%e8%af%ad%e5%8f%a5" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>这是最基本的条件语句，用于在条件为 <code>true</code> 或 <code>false</code> 时执行不同的代码。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">age</span> <span class="p">=</span> <span class="m">20</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">age</span> <span class="p">&gt;=</span> <span class="m">18</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;你已成年。&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;你未成年。&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>你可以使用 <code>else if</code> 来处理多个条件：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">score</span> <span class="p">=</span> <span class="m">85</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="p">&gt;=</span> <span class="m">90</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;优秀&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="p">&gt;=</span> <span class="m">80</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;良好&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="p">&gt;=</span> <span class="m">60</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;及格&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;不及格&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 class="heading-element" id="switch-语句"><span><code>switch</code> 语句</span>
+  <a href="#switch-%e8%af%ad%e5%8f%a5" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>当你有多个针对同一变量的等值比较时，<code>switch</code> 语句比多个 <code>if-else if</code> 语句更简洁、更易读。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl"><span class="kt">string</span> <span class="n">day</span> <span class="p">=</span> <span class="s">&#34;Monday&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">switch</span> <span class="p">(</span><span class="n">day</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="s">&#34;Monday&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="s">&#34;Tuesday&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="s">&#34;Wednesday&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="s">&#34;Thursday&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="s">&#34;Friday&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;工作日&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="s">&#34;Saturday&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="s">&#34;Sunday&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;周末&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">default</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;无效的输入&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>注意</strong>：每个 <code>case</code> 块末尾通常需要 <code>break</code> 语句来跳出 <code>switch</code>，除非你想要执行下一个 <code>case</code>（C# 7.0 以后，可以使用 <code>goto case</code>）。</p>
+<h3 class="heading-element" id="22-循环语句-looping-statements"><span>2.2 循环语句 (Looping Statements)</span>
+  <a href="#22-%e5%be%aa%e7%8e%af%e8%af%ad%e5%8f%a5-looping-statements" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>循环语句用于重复执行一段代码，直到满足特定条件为止。</p>
+<h4 class="heading-element" id="for"><span><strong><code>for</code> 循环</strong></span>
+  <a href="#for" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p><code>for</code> 循环适用于已知循环次数的情况。它由三个部分组成：初始化表达式、条件表达式和迭代表达式。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl"><span class="c1">// 打印 1 到 5</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;=</span> <span class="m">5</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 class="heading-element" id="while"><span><strong><code>while</code> 循环</strong></span>
+  <a href="#while" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p><code>while</code> 循环在每次迭代前检查条件。只要条件为 <code>true</code>，循环就会继续。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;=</span> <span class="m">5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">i</span><span class="p">++;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>注意</strong>：在使用 <code>while</code> 循环时，务必确保循环体内部有改变条件的逻辑，否则可能导致无限循环。</p>
+<h4 class="heading-element" id="do-while"><span><strong><code>do-while</code> 循环</strong></span>
+  <a href="#do-while" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p><code>do-while</code> 循环和 <code>while</code> 循环类似，但它至少会执行一次循环体，因为条件是在循环体执行之后才检查。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">i</span><span class="p">++;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;=</span> <span class="m">5</span><span class="p">);</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 class="heading-element" id="foreach"><span><strong><code>foreach</code> 循环</strong></span>
+  <a href="#foreach" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p><code>foreach</code> 循环专门用于遍历集合或数组中的所有元素，语法简洁且安全。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl"><span class="kt">string</span><span class="p">[]</span> <span class="n">fruits</span> <span class="p">=</span> <span class="p">{</span> <span class="s">&#34;Apple&#34;</span><span class="p">,</span> <span class="s">&#34;Banana&#34;</span><span class="p">,</span> <span class="s">&#34;Cherry&#34;</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">foreach</span> <span class="p">(</span><span class="kt">string</span> <span class="n">fruit</span> <span class="k">in</span> <span class="n">fruits</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">fruit</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 class="heading-element" id="3-跳转语句-jump-statements"><span>3. 跳转语句 (Jump Statements)</span>
+  <a href="#3-%e8%b7%b3%e8%bd%ac%e8%af%ad%e5%8f%a5-jump-statements" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>跳转语句用于改变程序执行的正常流程。</p>
+<h4 class="heading-element" id="break"><span><strong><code>break</code> 语句</strong></span>
+  <a href="#break" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p><code>break</code> 语句用于立即终止当前循环（<code>for</code>、<code>while</code>、<code>do-while</code>、<code>foreach</code>）或 <code>switch</code> 语句的执行。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;=</span> <span class="m">10</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="p">==</span> <span class="m">5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span><span class="p">;</span> <span class="c1">// 当 i 等于 5 时，跳出循环</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">i</span><span class="p">);</span> <span class="c1">// 只会打印 1, 2, 3, 4</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 class="heading-element" id="continue"><span><strong><code>continue</code> 语句</strong></span>
+  <a href="#continue" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p><code>continue</code> 语句用于跳过当前循环迭代中剩余的代码，并开始下一次迭代。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;=</span> <span class="m">5</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="p">==</span> <span class="m">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">continue</span><span class="p">;</span> <span class="c1">// 当 i 等于 3 时，跳过当前迭代</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">i</span><span class="p">);</span> <span class="c1">// 会打印 1, 2, 4, 5</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 class="heading-element" id="return"><span><strong><code>return</code> 语句</strong></span>
+  <a href="#return" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p><code>return</code> 语句用于从方法中返回，并可以选择性地返回一个值。它会终止方法的执行，并将控制权返回给调用者。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">Add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">a</span> <span class="p">+</span> <span class="n">b</span><span class="p">;</span> <span class="c1">// 返回两个数的和</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 class="heading-element" id="goto"><span><strong><code>goto</code> 语句</strong></span>
+  <a href="#goto" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p><code>goto</code> 语句用于无条件地跳转到程序中的一个指定标签。虽然 C# 支持 <code>goto</code>，但它的使用通常不被推荐，因为它可能导致代码难以理解和维护。在现代编程实践中，通常有更好的替代方案，如使用 <code>break</code>、<code>continue</code> 或重构代码。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl"><span class="c1">// 不推荐的用法</span>
+</span></span><span class="line"><span class="cl"><span class="k">goto</span> <span class="n">MyLabel</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;这行代码永远不会被执行&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">MyLabel</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;程序跳转到了这里&#34;</span><span class="p">);</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="更新于 2024-08-07 11:57:18">更新于 2024-08-07&nbsp;</span>
+      </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/csharp/basic/7749b4b1-4b36-42d1-bd6c-14d264055cdb/index.md" title="阅读原始文档" class="link-to-markdown">阅读原始文档</a></span><span><a href="vscode://file/D:%5c04%e5%ad%a6%e4%b9%a0%e7%9b%b8%e5%85%b3%5c01%e7%bc%96%e7%a8%8b%5cGitHub%e4%bb%a3%e7%a0%81%5chaochan1996%5cblogByHugo%5ccontent%5ccsharp%5cbasic%5c3.%e6%93%8d%e4%bd%9c%e7%ac%a6%e5%92%8c%e6%8e%a7%e5%88%b6%e6%b5%81%e7%a8%8b.md" title="在编辑器中打开"target="_blank" rel="external nofollow noopener noreferrer" class="link-to-vscode">在编辑器中打开</a></span></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="分享到 X" data-sharer="twitter" data-url="http://localhost:1313/csharp/basic/7749b4b1-4b36-42d1-bd6c-14d264055cdb/" data-title="C#操作符和控制流程" data-hashtags="draft"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/csharp/basic/7749b4b1-4b36-42d1-bd6c-14d264055cdb/" data-hashtag="draft"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/csharp/basic/7749b4b1-4b36-42d1-bd6c-14d264055cdb/" data-title="C#操作符和控制流程"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/draft/" class="post-tag" title="标签 - Draft">Draft</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/csharp/basic/d14b1543-d65d-40cb-a7c4-f3bed1e0dfc6/" class="post-nav-item" rel="prev" title="C#概述"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>C#概述</a><a href="/csharp/wpf/892c051/" class="post-nav-item" rel="next" title="WPF入门">WPF入门<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.148.2"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.4.0-alpha-20250721024521-a1cd700b"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2024 - 2025</span><span class="author" itemprop="copyrightHolder">
+              <a href="/">hobby</a></span></div><div class="footer-line statistics"></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/search.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"version":"v0.4.0-alpha-20250721024521-a1cd700b"};console.log('Page config:', window.config);</script><script src="/js/theme.min.js" defer></script><script src="/js/custom.min.js" defer></script></body>
+</html>

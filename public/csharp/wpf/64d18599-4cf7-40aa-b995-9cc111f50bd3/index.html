@@ -5,19 +5,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
     <meta name="robots" content="noodp" />
-    <title>布局控件 - Hobbyの快乐小站</title><meta name="author" content="hobby">
+    <title>WPF布局控件 - Hobbyの快乐小站</title><meta name="author" content="hobby">
 <meta name="description" content="WPF 布局控件（继承自 Panel 类, 除了Border）通过测量（Measure）和排列（Arrange）两个阶段自动计算子元素的位置与尺寸，支持动态适应窗口大小变化。布局控件通过 Children 属性容纳子元素（如按钮、文本框等），支持嵌套组合实现复杂界面。
 控件 布局方式 Grid 网格，根据自定义行和列来设置控件的布局 StackPanel 堆叠，包含的元素在垂直或水平方向排列 WrapPanel 流式布局，自动换行/列 DockPanel 边缘停靠&#43;剩余填充 Canvas 画布，内部元素以像素为单位绝对坐标定位 UniformGrid 均分网格，相当于Grid的简化版，每个单元格的大小相同 Border 装饰的控件，用于绘制边框及背景，在Border中只能有一个子控件 Panel基类Panel 是 Windows Presentation Foundation（WPF）中提供布局支持的所有元素的基类。 Panel派生元素用于在可扩展应用程序标记语言（XAML）和代码中定位和排列元素。 WPF 包含一套全面的派生面板实现，可实现许多复杂布局。 这些派生类公开了启用大多数标准用户界面（UI）方案的属性和方法。 无法找到满足其需求的子排列行为的开发人员可以通过重写 ArrangeOverride 和 MeasureOverride 方法创建新的布局。
 "><meta name="keywords" content='WPF, C#'>
-  <meta itemprop="name" content="布局控件">
+  <meta itemprop="name" content="WPF布局控件">
   <meta itemprop="description" content="WPF 布局控件（继承自 Panel 类, 除了Border）通过测量（Measure）和排列（Arrange）两个阶段自动计算子元素的位置与尺寸，支持动态适应窗口大小变化。布局控件通过 Children 属性容纳子元素（如按钮、文本框等），支持嵌套组合实现复杂界面。
 控件 布局方式 Grid 网格，根据自定义行和列来设置控件的布局 StackPanel 堆叠，包含的元素在垂直或水平方向排列 WrapPanel 流式布局，自动换行/列 DockPanel 边缘停靠&#43;剩余填充 Canvas 画布，内部元素以像素为单位绝对坐标定位 UniformGrid 均分网格，相当于Grid的简化版，每个单元格的大小相同 Border 装饰的控件，用于绘制边框及背景，在Border中只能有一个子控件 Panel基类Panel 是 Windows Presentation Foundation（WPF）中提供布局支持的所有元素的基类。 Panel派生元素用于在可扩展应用程序标记语言（XAML）和代码中定位和排列元素。 WPF 包含一套全面的派生面板实现，可实现许多复杂布局。 这些派生类公开了启用大多数标准用户界面（UI）方案的属性和方法。 无法找到满足其需求的子排列行为的开发人员可以通过重写 ArrangeOverride 和 MeasureOverride 方法创建新的布局。">
   <meta itemprop="datePublished" content="2025-08-05T01:26:27+08:00">
   <meta itemprop="dateModified" content="2025-08-05T01:26:27+08:00">
-  <meta itemprop="wordCount" content="394">
+  <meta itemprop="wordCount" content="885">
   <meta itemprop="keywords" content="WPF,C#"><meta property="og:url" content="http://localhost:1313/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/">
   <meta property="og:site_name" content="Hobbyの快乐小站">
-  <meta property="og:title" content="布局控件">
+  <meta property="og:title" content="WPF布局控件">
   <meta property="og:description" content="WPF 布局控件（继承自 Panel 类, 除了Border）通过测量（Measure）和排列（Arrange）两个阶段自动计算子元素的位置与尺寸，支持动态适应窗口大小变化。布局控件通过 Children 属性容纳子元素（如按钮、文本框等），支持嵌套组合实现复杂界面。
 控件 布局方式 Grid 网格，根据自定义行和列来设置控件的布局 StackPanel 堆叠，包含的元素在垂直或水平方向排列 WrapPanel 流式布局，自动换行/列 DockPanel 边缘停靠&#43;剩余填充 Canvas 画布，内部元素以像素为单位绝对坐标定位 UniformGrid 均分网格，相当于Grid的简化版，每个单元格的大小相同 Border 装饰的控件，用于绘制边框及背景，在Border中只能有一个子控件 Panel基类Panel 是 Windows Presentation Foundation（WPF）中提供布局支持的所有元素的基类。 Panel派生元素用于在可扩展应用程序标记语言（XAML）和代码中定位和排列元素。 WPF 包含一套全面的派生面板实现，可实现许多复杂布局。 这些派生类公开了启用大多数标准用户界面（UI）方案的属性和方法。 无法找到满足其需求的子排列行为的开发人员可以通过重写 ArrangeOverride 和 MeasureOverride 方法创建新的布局。">
   <meta property="og:locale" content="zh_CN">
@@ -29,22 +29,22 @@
     <meta property="article:tag" content="C#">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="布局控件">
+  <meta name="twitter:title" content="WPF布局控件">
   <meta name="twitter:description" content="WPF 布局控件（继承自 Panel 类, 除了Border）通过测量（Measure）和排列（Arrange）两个阶段自动计算子元素的位置与尺寸，支持动态适应窗口大小变化。布局控件通过 Children 属性容纳子元素（如按钮、文本框等），支持嵌套组合实现复杂界面。
 控件 布局方式 Grid 网格，根据自定义行和列来设置控件的布局 StackPanel 堆叠，包含的元素在垂直或水平方向排列 WrapPanel 流式布局，自动换行/列 DockPanel 边缘停靠&#43;剩余填充 Canvas 画布，内部元素以像素为单位绝对坐标定位 UniformGrid 均分网格，相当于Grid的简化版，每个单元格的大小相同 Border 装饰的控件，用于绘制边框及背景，在Border中只能有一个子控件 Panel基类Panel 是 Windows Presentation Foundation（WPF）中提供布局支持的所有元素的基类。 Panel派生元素用于在可扩展应用程序标记语言（XAML）和代码中定位和排列元素。 WPF 包含一套全面的派生面板实现，可实现许多复杂布局。 这些派生类公开了启用大多数标准用户界面（UI）方案的属性和方法。 无法找到满足其需求的子排列行为的开发人员可以通过重写 ArrangeOverride 和 MeasureOverride 方法创建新的布局。">
 <meta name="application-name" content="FixIt">
-<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="http://localhost:1313/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/" title="布局控件 - Hobbyの快乐小站" /><link rel="prev" type="text/html" href="http://localhost:1313/music/8dd06b96-a944-4275-ab38-4afcb8b10160/" title="" /><link rel="next" type="text/html" href="http://localhost:1313/csharp/basic/d14b1543-d65d-40cb-a7c4-f3bed1e0dfc6/" title="C#概述" /><link rel="alternate" type="text/markdown" href="http://localhost:1313/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/index.md" title="布局控件 - Hobbyの快乐小站"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="http://localhost:1313/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/" title="WPF布局控件 - Hobbyの快乐小站" /><link rel="prev" type="text/html" href="http://localhost:1313/csharp/basic/c6a99510-88ae-4d53-9fbb-a175cc2b0a07/" title="C#数据类型" /><link rel="alternate" type="text/markdown" href="http://localhost:1313/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/index.md" title="WPF布局控件 - Hobbyの快乐小站"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
-    "headline": "布局控件",
+    "headline": "WPF布局控件",
     "inLanguage": "zh-CN",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "http:\/\/localhost:1313\/csharp\/wpf\/64d18599-4cf7-40aa-b995-9cc111f50bd3\/"
-    },"genre": "posts","keywords": "WPF, C#","wordcount":  394 ,
+    },"genre": "posts","keywords": "WPF, C#","wordcount":  885 ,
     "url": "http:\/\/localhost:1313\/csharp\/wpf\/64d18599-4cf7-40aa-b995-9cc111f50bd3\/","datePublished": "2025-08-05T01:26:27+08:00","dateModified": "2025-08-05T01:26:27+08:00","publisher": {
       "@type": "Organization",
       "name": ""},"author": {
@@ -135,9 +135,9 @@
   </div><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
 
   <article class="page single">
-    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="转载" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>布局控件</span>
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="转载" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>WPF布局控件</span>
       </h1></div><div class="post-meta">
-      <div class="post-meta-line"><span class="post-author"><a href="https://github.com/haochan1996" title="作者"target="_blank" rel="external nofollow noopener noreferrer author" class="author"><img class="avatar" src='https://avatars.githubusercontent.com/u/190246046?v=4' alt="hobby" height="16" width="16">&nbsp;hobby</a></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/wpf/" class="post-category" title="分类 - WPF"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> WPF</a></span></div><div class="post-meta-line"><span title="发布于 2025-08-05 01:26:27"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-08-05">2025-08-05</time></span>&nbsp;<span title="394 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 400 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 2 分钟</span>&nbsp;</div>
+      <div class="post-meta-line"><span class="post-author"><a href="https://github.com/haochan1996" title="作者"target="_blank" rel="external nofollow noopener noreferrer author" class="author"><img class="avatar" src='https://avatars.githubusercontent.com/u/190246046?v=4' alt="hobby" height="16" width="16">&nbsp;hobby</a></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/wpf/" class="post-category" title="分类 - WPF"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> WPF</a></span></div><div class="post-meta-line"><span title="发布于 2025-08-05 01:26:27"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-08-05">2025-08-05</time></span>&nbsp;<span title="885 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 900 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 5 分钟</span>&nbsp;</div>
     </div><div class="details toc" id="toc-static" data-kept="false">
         <div class="details-summary toc-title">
           <span>目录</span>
@@ -158,6 +158,20 @@
     <li><a href="#dockpanel停靠布局">DockPanel(停靠布局)</a></li>
     <li><a href="#uniformgrid均分网格">UniformGrid(均分网格)</a></li>
     <li><a href="#canvas画布">Canvas(画布)</a></li>
+    <li><a href="#border边框">Border(边框)</a>
+      <ul>
+        <li><a href="#边框属性">边框属性</a></li>
+        <li><a href="#背景属性">背景属性</a></li>
+        <li><a href="#高级渲染属性">高级渲染属性</a>
+          <ul>
+            <li><a href="#实现基本边框和圆角">实现基本边框和圆角</a></li>
+            <li><a href="#实现阴影效果">实现阴影效果</a></li>
+            <li><a href="#设置渐变背景">设置渐变背景</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#简单案例">简单案例</a></li>
   </ul>
 </nav></div>
       </div><div class="content" id="content"><p>WPF 布局控件（继承自 <code>Panel</code> 类, 除了<code>Border</code>）通过测量（Measure）和排列（Arrange）两个阶段自动计算子元素的位置与尺寸，支持动态适应窗口大小变化。布局控件通过 <code>Children</code> 属性容纳子元素（如按钮、文本框等），支持嵌套组合实现复杂界面。</p>
@@ -490,7 +504,443 @@
   <a href="#canvas%e7%94%bb%e5%b8%83" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h2><p>Canvas是一个类似于坐标系的面板，所有的元素通过设置坐标来决定其在坐标系中的位置。具体表现为使用Left、Top、Right、 Bottom附加属性在Canvas中定位控件。</p>
+</h2><p>Canvas是一个类似于坐标系的面板，所有的元素通过设置坐标来决定其在坐标系中的位置。</p>
+<p>基于左上角原点（0，0）的笛卡尔坐标系，通过附加属性控制位置，使用使用 <code>Canvas.ZIndex</code> 控制叠放次序（默认值为0，值越大显示在越上层）。</p>
+<p>定位属性有四个：</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center">属性</th>
+          <th style="text-align: center">值类型</th>
+          <th style="text-align: center">说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><code>Canvas.Left</code></td>
+          <td style="text-align: center">double</td>
+          <td style="text-align: center">元素左边缘与画布左边缘的距离</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>Canvas.Top</code></td>
+          <td style="text-align: center">double</td>
+          <td style="text-align: center">元素顶部与画布顶部的距离</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>Canvas.Right</code></td>
+          <td style="text-align: center">double</td>
+          <td style="text-align: center">元素右边缘与画布右边缘的距离</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>Canvas.Bottom</code></td>
+          <td style="text-align: center">double</td>
+          <td style="text-align: center">元素底部与画布底部的距离</td>
+      </tr>
+  </tbody>
+</table>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    &lt;Canvas&gt;
+</span></span><span class="line"><span class="cl">        &lt;!-- 使用Left和Top定位 --&gt;
+</span></span><span class="line"><span class="cl">        &lt;Button Canvas.Left=&#34;50&#34; Canvas.Top=&#34;30&#34; Content=&#34;定位按钮&#34;/&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        &lt;!-- 使用Right和Bottom定位 --&gt;
+</span></span><span class="line"><span class="cl">        &lt;Ellipse Canvas.Right=&#34;100&#34; Canvas.Bottom=&#34;50&#34; 
+</span></span><span class="line"><span class="cl">             Width=&#34;60&#34; Height=&#34;60&#34; Fill=&#34;Red&#34;/&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        &lt;!-- 使用Right和Bottom定位 --&gt;
+</span></span><span class="line"><span class="cl">        &lt;Ellipse Canvas.Right=&#34;120&#34; Canvas.Bottom=&#34;50&#34; Canvas.ZIndex=&#34;-10&#34;
+</span></span><span class="line"><span class="cl">     Width=&#34;60&#34; Height=&#34;60&#34; Fill=&#34;Green&#34;/&gt;
+</span></span><span class="line"><span class="cl">    &lt;/Canvas&gt;</span></span></code></pre></td></tr></table>
+</div>
+</div><p>效果：</p>
+<img src="https://blog-1301697820.cos.ap-guangzhou.myqcloud.com/blog/image-20250805223342640.png" alt="image-20250805223342640" style="zoom:33%;" />
+<h2 class="heading-element" id="border边框"><span>Border(边框)</span>
+  <a href="#border%e8%be%b9%e6%a1%86" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>Border是WPF中最常用的装饰性容器控件，用于为其他元素提供<strong>视觉框架</strong>。它不包含复杂布局逻辑，而是专注于为单个子元素添加装饰效果。提供边框、背景、圆角等视觉效果，没有复杂的布局计算，性能高效。</p>
+<h3 class="heading-element" id="边框属性"><span>边框属性</span>
+  <a href="#%e8%be%b9%e6%a1%86%e5%b1%9e%e6%80%a7" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">属性</th>
+          <th style="text-align: center">类型</th>
+          <th style="text-align: center">说明</th>
+          <th style="text-align: center">示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><code>BorderBrush</code></td>
+          <td style="text-align: center">Brush</td>
+          <td style="text-align: center">边框颜色</td>
+          <td style="text-align: center"><code>BorderBrush=&quot;Blue&quot;</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>BorderThickness</code></td>
+          <td style="text-align: center">Thickness</td>
+          <td style="text-align: center">边框粗细</td>
+          <td style="text-align: center"><code>BorderThickness=&quot;2&quot;</code> (四边相同) <code>BorderThickness=&quot;1,2,3,4&quot;</code> (左,上,右,下)</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>CornerRadius</code></td>
+          <td style="text-align: center">CornerRadius</td>
+          <td style="text-align: center">圆角半径</td>
+          <td style="text-align: center"><code>CornerRadius=&quot;10&quot;</code> (四角相同) <code>CornerRadius=&quot;5,10,15,20&quot;</code> (左上,右上,右下,左下)</td>
+      </tr>
+  </tbody>
+</table>
+<h3 class="heading-element" id="背景属性"><span>背景属性</span>
+  <a href="#%e8%83%8c%e6%99%af%e5%b1%9e%e6%80%a7" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">属性</th>
+          <th style="text-align: center">说明</th>
+          <th style="text-align: center">高级用法</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><code>Background</code></td>
+          <td style="text-align: center">背景色</td>
+          <td style="text-align: center">支持渐变： <code>&lt;LinearGradientBrush&gt;...&lt;/LinearGradientBrush&gt;</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>Padding</code></td>
+          <td style="text-align: center">内边距</td>
+          <td style="text-align: center"><code>Padding=&quot;10&quot;</code> (四边相同) <code>Padding=&quot;5,10,15,20&quot;</code> (左,上,右,下)</td>
+      </tr>
+  </tbody>
+</table>
+<h3 class="heading-element" id="高级渲染属性"><span>高级渲染属性</span>
+  <a href="#%e9%ab%98%e7%ba%a7%e6%b8%b2%e6%9f%93%e5%b1%9e%e6%80%a7" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">属性</th>
+          <th style="text-align: center">说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><code>Effect</code></td>
+          <td style="text-align: center">添加视觉效果（如阴影）</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>OpacityMask</code></td>
+          <td style="text-align: center">透明度蒙版</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>RenderTransform</code></td>
+          <td style="text-align: center">渲染变换</td>
+      </tr>
+  </tbody>
+</table>
+<h4 class="heading-element" id="实现基本边框和圆角"><span>实现基本边框和圆角</span>
+  <a href="#%e5%ae%9e%e7%8e%b0%e5%9f%ba%e6%9c%ac%e8%be%b9%e6%a1%86%e5%92%8c%e5%9c%86%e8%a7%92" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;Grid HorizontalAlignment=&#34;Center&#34; VerticalAlignment=&#34;Center&#34;&gt;
+</span></span><span class="line"><span class="cl">    &lt;Border BorderBrush=&#34;Red&#34; BorderThickness=&#34;2&#34; Padding=&#34;10&#34; CornerRadius=&#34;10&#34;&gt;
+</span></span><span class="line"><span class="cl">        &lt;TextBlock Text=&#34;带边框的文本&#34; Width=&#34;100&#34; Height=&#34;100&#34; Background=&#34;Green&#34;/&gt;
+</span></span><span class="line"><span class="cl">    &lt;/Border&gt;
+</span></span><span class="line"><span class="cl">&lt;/Grid&gt;</span></span></code></pre></td></tr></table>
+</div>
+</div><p>效果</p>
+<img src="https://blog-1301697820.cos.ap-guangzhou.myqcloud.com/blog/image-20250805224057918.png" alt="image-20250805224057918" style="zoom:33%;" />
+<h4 class="heading-element" id="实现阴影效果"><span>实现阴影效果</span>
+  <a href="#%e5%ae%9e%e7%8e%b0%e9%98%b4%e5%bd%b1%e6%95%88%e6%9e%9c" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;!-- 在资源中定义阴影 --&gt;
+</span></span><span class="line"><span class="cl">&lt;Window.Resources&gt;
+</span></span><span class="line"><span class="cl">    &lt;DropShadowEffect x:Key=&#34;CommonShadow&#34; 
+</span></span><span class="line"><span class="cl">                  BlurRadius=&#34;20&#34; 
+</span></span><span class="line"><span class="cl">                  ShadowDepth=&#34;3&#34; 
+</span></span><span class="line"><span class="cl">                  Opacity=&#34;0.2&#34;/&gt;
+</span></span><span class="line"><span class="cl">&lt;/Window.Resources&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&lt;Grid HorizontalAlignment=&#34;Center&#34; VerticalAlignment=&#34;Center&#34;&gt;
+</span></span><span class="line"><span class="cl">    &lt;Border Background=&#34;White&#34; 
+</span></span><span class="line"><span class="cl">    CornerRadius=&#34;8&#34;
+</span></span><span class="line"><span class="cl">    Padding=&#34;20&#34;
+</span></span><span class="line"><span class="cl">    Effect=&#34;{StaticResource CommonShadow}&#34;&gt;
+</span></span><span class="line"><span class="cl">        &lt;TextBlock Text=&#34;带阴影的卡片&#34; FontSize=&#34;16&#34;/&gt;
+</span></span><span class="line"><span class="cl">    &lt;/Border&gt;
+</span></span><span class="line"><span class="cl">&lt;/Grid&gt;</span></span></code></pre></td></tr></table>
+</div>
+</div><p>效果</p>
+<img src="https://blog-1301697820.cos.ap-guangzhou.myqcloud.com/blog/image-20250805224503360.png" alt="image-20250805224503360" style="zoom: 33%;" />
+<h4 class="heading-element" id="设置渐变背景"><span>设置渐变背景</span>
+  <a href="#%e8%ae%be%e7%bd%ae%e6%b8%90%e5%8f%98%e8%83%8c%e6%99%af" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;Border CornerRadius=&#34;10&#34; Padding=&#34;20&#34;&gt;
+</span></span><span class="line"><span class="cl">    &lt;Border.Background&gt;
+</span></span><span class="line"><span class="cl">        &lt;LinearGradientBrush StartPoint=&#34;0,0&#34; EndPoint=&#34;1,1&#34;&gt;
+</span></span><span class="line"><span class="cl">            &lt;GradientStop Color=&#34;#FF6A11CB&#34; Offset=&#34;0.0&#34;/&gt;
+</span></span><span class="line"><span class="cl">            &lt;GradientStop Color=&#34;#FF2575FC&#34; Offset=&#34;1.0&#34;/&gt;
+</span></span><span class="line"><span class="cl">        &lt;/LinearGradientBrush&gt;
+</span></span><span class="line"><span class="cl">    &lt;/Border.Background&gt;
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &lt;TextBlock Text=&#34;渐变背景&#34; Foreground=&#34;White&#34; FontSize=&#34;18&#34;/&gt;
+</span></span><span class="line"><span class="cl">&lt;/Border&gt;</span></span></code></pre></td></tr></table>
+</div>
+</div><p>效果</p>
+<img src="https://blog-1301697820.cos.ap-guangzhou.myqcloud.com/blog/image-20250805224639776.png" alt="image-20250805224639776" style="zoom:33%;" />
+<h2 class="heading-element" id="简单案例"><span>简单案例</span>
+  <a href="#%e7%ae%80%e5%8d%95%e6%a1%88%e4%be%8b" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;Window x:Class=&#34;_01WPF入门.MainWindow&#34;
+</span></span><span class="line"><span class="cl">        xmlns=&#34;http://schemas.microsoft.com/winfx/2006/xaml/presentation&#34;
+</span></span><span class="line"><span class="cl">        xmlns:x=&#34;http://schemas.microsoft.com/winfx/2006/xaml&#34;
+</span></span><span class="line"><span class="cl">        xmlns:d=&#34;http://schemas.microsoft.com/expression/blend/2008&#34;
+</span></span><span class="line"><span class="cl">        xmlns:mc=&#34;http://schemas.openxmlformats.org/markup-compatibility/2006&#34;
+</span></span><span class="line"><span class="cl">        xmlns:local=&#34;clr-namespace:_01WPF入门&#34;
+</span></span><span class="line"><span class="cl">        mc:Ignorable=&#34;d&#34;
+</span></span><span class="line"><span class="cl">        WindowStartupLocation=&#34;CenterScreen&#34;
+</span></span><span class="line"><span class="cl">        Title=&#34;MainWindow&#34; Height=&#34;450&#34; Width=&#34;800&#34;&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    &lt;DockPanel&gt;
+</span></span><span class="line"><span class="cl">        &lt;Grid DockPanel.Dock=&#34;Top&#34; Background=&#34;Teal&#34; Height=&#34;80&#34;&gt;
+</span></span><span class="line"><span class="cl">            &lt;Grid.ColumnDefinitions&gt;
+</span></span><span class="line"><span class="cl">                &lt;ColumnDefinition Width=&#34;*&#34;/&gt;
+</span></span><span class="line"><span class="cl">                &lt;ColumnDefinition Width=&#34;*&#34;/&gt;
+</span></span><span class="line"><span class="cl">            &lt;/Grid.ColumnDefinitions&gt;
+</span></span><span class="line"><span class="cl">            &lt;TextBlock Grid.Column=&#34;0&#34; Text=&#34;这是一个简单的布局案例&#34;  Margin=&#34;10,0,0,0&#34; VerticalAlignment=&#34;Center&#34; FontSize=&#34;30&#34; Foreground=&#34;White&#34;/&gt;
+</span></span><span class="line"><span class="cl">            &lt;Border Margin=&#34;0,0,10,0&#34; HorizontalAlignment=&#34;Right&#34; Grid.Column=&#34;1&#34; Height=&#34;40&#34; Width=&#34;80&#34; CornerRadius=&#34;10&#34; Background=&#34;Beige&#34;&gt;
+</span></span><span class="line"><span class="cl">                &lt;TextBlock Text=&#34;退出&#34; Foreground=&#34;Red&#34; VerticalAlignment=&#34;Center&#34; HorizontalAlignment=&#34;Center&#34;/&gt;
+</span></span><span class="line"><span class="cl">            &lt;/Border&gt;
+</span></span><span class="line"><span class="cl">        &lt;/Grid&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        &lt;StackPanel DockPanel.Dock=&#34;Bottom&#34; Background=&#34;Gray&#34; Height=&#34;40&#34; Orientation=&#34;Horizontal&#34;&gt;
+</span></span><span class="line"><span class="cl">            &lt;TextBlock Margin=&#34;10, 0,0,0&#34; Text=&#34;版权所有：快乐编程有限公司&#34; VerticalAlignment=&#34;Center&#34; Foreground=&#34;Black&#34; FontSize=&#34;16&#34;/&gt;
+</span></span><span class="line"><span class="cl">        &lt;/StackPanel&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        &lt;StackPanel DockPanel.Dock=&#34;Left&#34; Background=&#34;Chocolate&#34; Width=&#34;100&#34;&gt;
+</span></span><span class="line"><span class="cl">            &lt;TextBlock Margin=&#34;0, 10&#34; FontSize=&#34;14&#34; Text=&#34;菜单栏&#34; HorizontalAlignment=&#34;Center&#34; Foreground=&#34;Wheat&#34;/&gt;
+</span></span><span class="line"><span class="cl">            &lt;TextBlock Margin=&#34;0, 10&#34; FontSize=&#34;14&#34; Text=&#34;用户&#34; HorizontalAlignment=&#34;Center&#34; Foreground=&#34;Wheat&#34;/&gt;
+</span></span><span class="line"><span class="cl">            &lt;TextBlock Margin=&#34;0, 10&#34; FontSize=&#34;14&#34; Text=&#34;事件&#34; HorizontalAlignment=&#34;Center&#34; Foreground=&#34;Wheat&#34;/&gt;
+</span></span><span class="line"><span class="cl">            &lt;TextBlock Margin=&#34;0, 10&#34; FontSize=&#34;14&#34; Text=&#34;报警&#34; HorizontalAlignment=&#34;Center&#34; Foreground=&#34;Wheat&#34;/&gt;
+</span></span><span class="line"><span class="cl">            &lt;TextBlock Margin=&#34;0, 10&#34; FontSize=&#34;14&#34; Text=&#34;趋势&#34; HorizontalAlignment=&#34;Center&#34; Foreground=&#34;Wheat&#34;/&gt;
+</span></span><span class="line"><span class="cl">            &lt;TextBlock Margin=&#34;0, 10&#34; FontSize=&#34;14&#34; Text=&#34;配方&#34; HorizontalAlignment=&#34;Center&#34; Foreground=&#34;Wheat&#34;/&gt;
+</span></span><span class="line"><span class="cl">        &lt;/StackPanel&gt;
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &lt;StackPanel&gt;
+</span></span><span class="line"><span class="cl">            &lt;TextBlock Text=&#34;主内容区域&#34; Margin=&#34;10, 10, 0, 20&#34;/&gt;
+</span></span><span class="line"><span class="cl">            &lt;UniformGrid Columns=&#34;3&#34; Width=&#34;500&#34; Height=&#34;120&#34;&gt;
+</span></span><span class="line"><span class="cl">                &lt;Border Width=&#34;140&#34; CornerRadius=&#34;10&#34; Background=&#34;Teal&#34;&gt;
+</span></span><span class="line"><span class="cl">                    &lt;StackPanel VerticalAlignment=&#34;Center&#34;&gt;
+</span></span><span class="line"><span class="cl">                        &lt;TextBlock Text=&#34;今日订单&#34;
+</span></span><span class="line"><span class="cl">                                   FontSize=&#34;16&#34; 
+</span></span><span class="line"><span class="cl">                                   HorizontalAlignment=&#34;Center&#34; 
+</span></span><span class="line"><span class="cl">                                   Margin=&#34;0, 10, 0, 0&#34; 
+</span></span><span class="line"><span class="cl">                                   Foreground=&#34;White&#34;/&gt;
+</span></span><span class="line"><span class="cl">                        &lt;TextBlock Text=&#34;30&#34;
+</span></span><span class="line"><span class="cl">                           FontSize=&#34;16&#34; 
+</span></span><span class="line"><span class="cl">                           HorizontalAlignment=&#34;Center&#34; 
+</span></span><span class="line"><span class="cl">                           Margin=&#34;0, 10, 0, 0&#34; 
+</span></span><span class="line"><span class="cl">                           Foreground=&#34;White&#34;/&gt;
+</span></span><span class="line"><span class="cl">                    &lt;/StackPanel&gt;
+</span></span><span class="line"><span class="cl">                &lt;/Border&gt;
+</span></span><span class="line"><span class="cl">                &lt;Border Width=&#34;140&#34; CornerRadius=&#34;10&#34; Background=&#34;RosyBrown&#34;&gt;
+</span></span><span class="line"><span class="cl">                    &lt;StackPanel VerticalAlignment=&#34;Center&#34;&gt;
+</span></span><span class="line"><span class="cl">                        &lt;TextBlock Text=&#34;本月交易额&#34;
+</span></span><span class="line"><span class="cl">                           FontSize=&#34;16&#34; 
+</span></span><span class="line"><span class="cl">                           HorizontalAlignment=&#34;Center&#34; 
+</span></span><span class="line"><span class="cl">                           Margin=&#34;0, 10, 0, 0&#34; 
+</span></span><span class="line"><span class="cl">                           Foreground=&#34;White&#34;/&gt;
+</span></span><span class="line"><span class="cl">                        &lt;TextBlock Text=&#34;3万&#34;
+</span></span><span class="line"><span class="cl">                            FontSize=&#34;16&#34; 
+</span></span><span class="line"><span class="cl">                            HorizontalAlignment=&#34;Center&#34; 
+</span></span><span class="line"><span class="cl">                            Margin=&#34;0, 10, 0, 0&#34; 
+</span></span><span class="line"><span class="cl">                            Foreground=&#34;White&#34;/&gt;
+</span></span><span class="line"><span class="cl">                    &lt;/StackPanel&gt;
+</span></span><span class="line"><span class="cl">                &lt;/Border&gt;
+</span></span><span class="line"><span class="cl">                &lt;Border Width=&#34;140&#34; CornerRadius=&#34;10&#34; Background=&#34;Brown&#34;&gt;
+</span></span><span class="line"><span class="cl">                    &lt;StackPanel VerticalAlignment=&#34;Center&#34;&gt;
+</span></span><span class="line"><span class="cl">                        &lt;TextBlock Text=&#34;今日活跃用户&#34;
+</span></span><span class="line"><span class="cl">                               FontSize=&#34;16&#34; 
+</span></span><span class="line"><span class="cl">                               HorizontalAlignment=&#34;Center&#34; 
+</span></span><span class="line"><span class="cl">                               Margin=&#34;0, 10, 0, 0&#34; 
+</span></span><span class="line"><span class="cl">                               Foreground=&#34;White&#34;/&gt;
+</span></span><span class="line"><span class="cl">                        &lt;TextBlock Text=&#34;19万&#34;
+</span></span><span class="line"><span class="cl">                                FontSize=&#34;16&#34; 
+</span></span><span class="line"><span class="cl">                                HorizontalAlignment=&#34;Center&#34; 
+</span></span><span class="line"><span class="cl">                                Margin=&#34;0, 10, 0, 0&#34; 
+</span></span><span class="line"><span class="cl">                                Foreground=&#34;White&#34;/&gt;
+</span></span><span class="line"><span class="cl">                    &lt;/StackPanel&gt;
+</span></span><span class="line"><span class="cl">                &lt;/Border&gt;
+</span></span><span class="line"><span class="cl">            &lt;/UniformGrid&gt;
+</span></span><span class="line"><span class="cl">        &lt;/StackPanel&gt;
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    &lt;/DockPanel&gt;
+</span></span><span class="line"><span class="cl">&lt;/Window&gt;</span></span></code></pre></td></tr></table>
+</div>
+</div><p>效果</p>
+<img src="https://blog-1301697820.cos.ap-guangzhou.myqcloud.com/blog/image-20250805232221660.png" alt="image-20250805232221660" style="zoom:33%;" />
+<p>全屏效果</p>
+<img src="https://blog-1301697820.cos.ap-guangzhou.myqcloud.com/blog/image-20250805232246960.png" alt="image-20250805232246960" style="zoom:33%;" />
 </div><div class="post-footer" id="post-footer">
   <div class="post-info">
     <div class="post-info-line">
@@ -499,9 +949,9 @@
       </div></div><div class="post-info-line">
         <div class="post-info-md"><span><a href="/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/index.md" title="阅读原始文档" class="link-to-markdown">阅读原始文档</a></span><span><a href="vscode://file/D:%5c04%e5%ad%a6%e4%b9%a0%e7%9b%b8%e5%85%b3%5c01%e7%bc%96%e7%a8%8b%5cGitHub%e4%bb%a3%e7%a0%81%5chaochan1996%5cblogByHugo%5ccontent%5ccsharp%5cwpf%5c20250805_%e5%b8%83%e5%b1%80%e6%8e%a7%e4%bb%b6.md" title="在编辑器中打开"target="_blank" rel="external nofollow noopener noreferrer" class="link-to-vscode">在编辑器中打开</a></span></div>
         <div class="post-info-share">
-          <span><a href="javascript:void(0);" title="分享到 X" data-sharer="twitter" data-url="http://localhost:1313/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/" data-title="布局控件" data-hashtags="WPF,C#"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+          <span><a href="javascript:void(0);" title="分享到 X" data-sharer="twitter" data-url="http://localhost:1313/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/" data-title="WPF布局控件" data-hashtags="WPF,C#"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
   <a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/" data-hashtag="WPF"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
-  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/" data-title="布局控件"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/" data-title="WPF布局控件"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
   </span>
         </div>
       </div></div>
@@ -511,7 +961,7 @@
     <section>
       <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
     </section>
-  </div><div class="post-nav"><a href="/csharp/wpf/892c051/" class="post-nav-item" rel="prev" title="WPF入门"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>WPF入门</a><a href="/csharp/basic/d14b1543-d65d-40cb-a7c4-f3bed1e0dfc6/" class="post-nav-item" rel="next" title="C#概述">C#概述<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+  </div><div class="post-nav"><a href="/csharp/basic/c6a99510-88ae-4d53-9fbb-a175cc2b0a07/" class="post-nav-item" rel="prev" title="C#数据类型"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>C#数据类型</a></div>
 </div>
 </article>
 

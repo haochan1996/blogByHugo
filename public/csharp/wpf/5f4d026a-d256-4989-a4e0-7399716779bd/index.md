@@ -1,41 +1,5 @@
----
-title: "WPF内容控件"
-date: 2025-08-06T11:11:43+0800
-slug: "5f4d026a-d256-4989-a4e0-7399716779bd"
-draft: true
-author: 
-  name: hobby
-  link: https://github.com/haochan1996
-  email: espholychan@outllook.com
-  avatar: https://avatars.githubusercontent.com/u/190246046?v=4
-description:
-keywords:
-license:
-comment: false
-weight: 2
-tags:
-  - draft
-categories:
-  - draft
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRelated: false
-hiddenFromFeed: false
-summary:
-resources:
-  - name: featured-image
-    src: featured-image.jpg
-  - name: featured-image-preview
-    src: featured-image-preview.jpg
-toc: true
-math: false
-lightgallery: false
-password:
-message:
-repost:
-  enable: true
-  url:
----
+# WPF内容控件
+
 
 ## Control类
 
@@ -277,4 +241,11 @@ private void Button_PreviewMouseDown(object sender, MouseButtonEventArgs e) {
     e.Handled = true; // 阻止父容器接收事件  
 }
 ```
+
+
+
+---
+
+> 作者: [hobby](https://github.com/haochan1996)  
+> URL: http://localhost:1313/csharp/wpf/5f4d026a-d256-4989-a4e0-7399716779bd/  
 
