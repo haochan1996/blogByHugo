@@ -1,3 +1,11 @@
+// 该程序用于生成一个新的 Markdown 文件，包含预设的模板内容。
+// 使用方法：
+// go run new_md.go <文件路径/文件名.md>
+// 例如：
+// go run new_md.go content/csharp/basic/布局控件.md
+// go run new_md.go content/csharp/wpf/布局控件.md
+// go run new_md.go content/posts/创建预设模板内容的Markdown文件.md
+
 package main
 
 import (
@@ -83,10 +91,3 @@ func main() {
 
 	fmt.Printf("已生成: %s\n", filePath)
 }
-
-// 该程序用于生成一个新的 Markdown 文件，包含预设的模板内容。
-// 使用方法：
-// go run new_md.go <文件路径/文件名.md>
-// 例如：
-// go run new_md.go content/csharp/wpf/布局控件.md
-// go run new_md.go content/posts/创建预设模板内容的Markdown文件.md
