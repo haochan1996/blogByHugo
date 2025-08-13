@@ -14,9 +14,9 @@ license:
 comment: false
 weight: 0
 tags:
-  - draft
+  - Rust
 categories:
-  - draft
+  - Rust基础入门
 hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRelated: false
