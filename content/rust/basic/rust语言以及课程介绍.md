@@ -37,9 +37,9 @@ repost:
   url:
 ---
 
-学习视频链接，点击跳转播放。
+令狐大神学习视频链接，点击跳转播放。
 
-{{< bilibili av78062009 >}} 
+[Rust语言编程基础教程](https://www.bilibili.com/video/av78062009?vd_source=939ae5b13ea25e42d7ce7f25bd855603&spm_id_from=333.788.player.switch&p=2)
 
 ## 环境搭建
 
