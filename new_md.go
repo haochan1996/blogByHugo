@@ -5,6 +5,7 @@
 // go run new_md.go content/csharp/basic/布局控件.md
 // go run new_md.go content/csharp/wpf/布局控件.md
 // go run new_md.go content/posts/创建预设模板内容的Markdown文件.md
+// go run new_md.go content/rust/.md
 
 package main
 
@@ -24,7 +25,7 @@ date: %s
 slug: "%s"
 draft: true
 author: 
-  name: hobby
+  name: hao
   link: https://github.com/haochan1996
   email: espholychan@outllook.com
   avatar: https://avatars.githubusercontent.com/u/190246046?v=4

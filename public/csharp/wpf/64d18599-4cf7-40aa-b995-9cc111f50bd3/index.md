@@ -421,6 +421,6 @@ Border是WPF中最常用的装饰性容器控件，用于为其他元素提供**
 
 ---
 
-> 作者: [hobby](https://github.com/haochan1996)  
+> 作者: [hao](https://github.com/haochan1996)  
 > URL: http://localhost:1313/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/  
 

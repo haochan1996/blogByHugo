@@ -460,6 +460,6 @@ IEC 61850的优势不仅体现在技术层面，更在于其对电力系统全�
 
 ---
 
-> 作者: [hobby](https://github.com/haochan1996)  
+> 作者: [hao](https://github.com/haochan1996)  
 > URL: http://localhost:1313/posts/9f9a0369aee1-f61a-4ce4-9173-9f9a0369aee1/  
 

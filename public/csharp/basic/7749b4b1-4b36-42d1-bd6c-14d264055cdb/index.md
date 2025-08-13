@@ -405,6 +405,6 @@ Console.WriteLine("程序跳转到了这里");
 
 ---
 
-> 作者: [hobby](https://github.com/haochan1996)  
+> 作者: [hao](https://github.com/haochan1996)  
 > URL: http://localhost:1313/csharp/basic/7749b4b1-4b36-42d1-bd6c-14d264055cdb/  
 

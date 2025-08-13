@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>Rust语言以及课程介绍 - 浩の快乐小站</title><meta name="author" content="hao">
+<meta name="description" content="学习视频链接，点击跳转播放。
+环境搭建安装​Windows 系统​：
+"><meta name="keywords" content='draft'>
+  <meta itemprop="name" content="rust语言以及课程介绍">
+  <meta itemprop="description" content="学习视频链接，点击跳转播放。
+环境搭建安装​Windows 系统​：">
+  <meta itemprop="datePublished" content="2025-08-14T00:33:12+08:00">
+  <meta itemprop="dateModified" content="2025-08-14T00:33:12+08:00">
+  <meta itemprop="wordCount" content="43">
+  <meta itemprop="keywords" content="Draft"><meta property="og:url" content="http://localhost:1313/rust/96e9d38d-4156-45d0-942f-2c7c1c25e1aa/">
+  <meta property="og:site_name" content="浩の快乐小站">
+  <meta property="og:title" content="rust语言以及课程介绍">
+  <meta property="og:description" content="学习视频链接，点击跳转播放。
+环境搭建安装​Windows 系统​：">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="rust">
+    <meta property="article:published_time" content="2025-08-14T00:33:12+08:00">
+    <meta property="article:modified_time" content="2025-08-14T00:33:12+08:00">
+    <meta property="article:tag" content="Draft">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="rust语言以及课程介绍">
+  <meta name="twitter:description" content="学习视频链接，点击跳转播放。
+环境搭建安装​Windows 系统​：">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="http://localhost:1313/rust/96e9d38d-4156-45d0-942f-2c7c1c25e1aa/" title="rust语言以及课程介绍 - 浩の快乐小站" /><link rel="prev" type="text/html" href="http://localhost:1313/posts/9f9a0369aee1-f61a-4ce4-9173-9f9a0369aee1/" title="IEC 61850协议详解" /><link rel="next" type="text/html" href="http://localhost:1313/csharp/basic/c6a99510-88ae-4d53-9fbb-a175cc2b0a07/" title="C#数据类型" /><link rel="alternate" type="text/markdown" href="http://localhost:1313/rust/96e9d38d-4156-45d0-942f-2c7c1c25e1aa/index.md" title="rust语言以及课程介绍 - 浩の快乐小站"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "rust语言以及课程介绍",
+    "inLanguage": "zh-CN",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/localhost:1313\/rust\/96e9d38d-4156-45d0-942f-2c7c1c25e1aa\/"
+    },"genre": "rust","keywords": "draft","wordcount":  43 ,
+    "url": "http:\/\/localhost:1313\/rust\/96e9d38d-4156-45d0-942f-2c7c1c25e1aa\/","datePublished": "2025-08-14T00:33:12+08:00","dateModified": "2025-08-14T00:33:12+08:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "hao"
+      },"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="浩の快乐小站"><img class="logo" src='/android-chrome-512x512.png' alt="浩の快乐小站" height="32" width="32"><span class="header-title-text">浩の快乐小站</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a class="menu-link" href="/posts/"><i class="fa-solid fa-file-text fa-fw fa-sm" aria-hidden="true"></i> 文章</a></li><li class="menu-item">
+              <a class="menu-link" href="/rust/"><i class="fa-solid fa-tree fa-fw fa-sm" aria-hidden="true"></i> Rust</a></li><li class="menu-item">
+              <a class="menu-link" href="/csharp/"><i class="fa-solid fa-tree fa-fw fa-sm" aria-hidden="true"></i> C#教程</a></li><li class="menu-item has-children">
+              <a class="menu-link" href="javascript:void(0);"><i class="fa-solid fa-hourglass-start fa-fw fa-sm" aria-hidden="true"></i> 回溯</a><i class="dropdown-icon fa-solid fa-chevron-down" aria-hidden="true"></i>
+                <ul class="sub-menu"><li class="menu-item">
+                        <a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> 归档</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> 目录</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 标签</a>
+                      </li></ul></li><li class="menu-item">
+              <a class="menu-link" href="/music/8dd06b96-a944-4275-ab38-4afcb8b10160/"><i class="fa-solid fa-music fa-fw fa-sm" aria-hidden="true"></i> 听听歌吧</a></li><li class="menu-item">
+              <a class="menu-link" href="/friends/"><i class="fa-solid fa-heart fa-fw fa-sm" aria-hidden="true"></i> 友链</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="搜索文章标题或内容……" id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="浩の快乐小站"><img class="logo" src='/android-chrome-512x512.png' alt="浩の快乐小站" height="26" width="26"><span class="header-title-text">浩の快乐小站</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="搜索文章标题或内容……" id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              取消
+            </a>
+          </li><li class="menu-item"><a class="menu-link" href="/posts/"><i class="fa-solid fa-file-text fa-fw fa-sm" aria-hidden="true"></i> 文章</a></li><li class="menu-item"><a class="menu-link" href="/rust/"><i class="fa-solid fa-tree fa-fw fa-sm" aria-hidden="true"></i> Rust</a></li><li class="menu-item"><a class="menu-link" href="/csharp/"><i class="fa-solid fa-tree fa-fw fa-sm" aria-hidden="true"></i> C#教程</a></li><li class="menu-item"><span class="nested-item">
+                  <a class="menu-link" href="javascript:void(0);"><i class="fa-solid fa-hourglass-start fa-fw fa-sm" aria-hidden="true"></i> 回溯</a>
+                  <i class="dropdown-icon fa-solid fa-chevron-right" aria-hidden="true"></i>
+                </span>
+                <ul class="sub-menu"><li class="menu-item">
+                        <a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> 归档</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> 目录</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 标签</a>
+                      </li></ul></li><li class="menu-item"><a class="menu-link" href="/music/8dd06b96-a944-4275-ab38-4afcb8b10160/"><i class="fa-solid fa-music fa-fw fa-sm" aria-hidden="true"></i> 听听歌吧</a></li><li class="menu-item"><a class="menu-link" href="/friends/"><i class="fa-solid fa-heart fa-fw fa-sm" aria-hidden="true"></i> 友链</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><main class="container"><article class="page single special">
+    <div class="header"><h1 class="single-title animate__animated animate__pulse animate__faster">Rust语言以及课程介绍</h1></div><div class="content" id="content"><p>学习视频链接，点击跳转播放。</p>
+<div class="bilibili">
+  <iframe src="//player.bilibili.com/player.html?bvid=av78062009&page=1&autoplay=false&poster=true&muted=false&danmaku=true&t=0" border="0" framespacing="0" allowfullscreen="true"></iframe>
+</div>
+<h2 class="heading-element" id="环境搭建"><span>环境搭建</span>
+  <a href="#%e7%8e%af%e5%a2%83%e6%90%ad%e5%bb%ba" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 class="heading-element" id="安装"><span>安装</span>
+  <a href="#%e5%ae%89%e8%a3%85" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>​Windows 系统​：</p>
+<p>访问 Rust 官网，下载 <code>rustup-init.exe</code>。</p>
+<p>运行安装程序，选择默认选项（按回车）。安装过程会自动配置环境变量，需重启终端生效。</p>
+<p>​依赖项​：安装过程中需勾选 ​​“Visual Studio C++ Build Tools”​​（包含MSVC编译器）。</p>
+<p>​macOS/Linux 系统​：</p>
+<p>打开终端，执行以下命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl --proto <span class="s1">&#39;=https&#39;</span> --tlsv1.2 -sSf https://sh.rustup.rs <span class="p">|</span> sh</span></span></code></pre></td></tr></table>
+</div>
+</div><p>安装完成后重启终端，或运行 <code>source $HOME/.cargo/env</code> 加载环境变量。
+​依赖项​：</p>
+<p>macOS：安装 Xcode 命令行工具：<code>xcode-select --install</code>
+Ubuntu/Debian：安装编译工具链：<code>sudo apt install build-essential</code></p>
+<h3 class="heading-element" id="cargo-介绍"><span>Cargo 介绍</span>
+  <a href="#cargo-%e4%bb%8b%e7%bb%8d" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3></div></article></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.148.2"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.4.0-alpha-20250721024521-a1cd700b"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2024 - 2025</span><span class="author" itemprop="copyrightHolder">
+              <a href="/">hobby</a></span></div><div class="footer-line statistics"></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/search.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"version":"v0.4.0-alpha-20250721024521-a1cd700b"};console.log('Page config:', window.config);</script><script src="/js/theme.min.js" defer></script><script src="/js/custom.min.js" defer></script></body>
+</html>

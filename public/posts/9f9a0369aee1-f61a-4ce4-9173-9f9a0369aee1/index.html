@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
     <meta name="robots" content="noodp" />
-    <title>IEC 61850协议详解 - 浩の快乐小站</title><meta name="author" content="hobby">
+    <title>IEC 61850协议详解 - 浩の快乐小站</title><meta name="author" content="hao">
 <meta name="description" content="1. 引言：智能电网时代下IEC 61850的崛起电力系统作为现代社会运行的基石，其稳定、高效运行至关重要。随着电力需求的增长和可再生能源的并网，传统电力系统面临着前所未有的挑战。变电站作为电力传输和分配的关键枢纽，其自动化水平直接影响着电网的整体性能。在这种背景下，国际电工委员会（IEC）制定的IEC 61850协议应运而生，成为推动变电站乃至整个智能电网数字化的核心标准。
 "><meta name="keywords" content='博客, IEC61850'>
   <meta itemprop="name" content="IEC 61850协议详解">
@@ -29,7 +29,7 @@
   <meta name="twitter:title" content="IEC 61850协议详解">
   <meta name="twitter:description" content="1. 引言：智能电网时代下IEC 61850的崛起电力系统作为现代社会运行的基石，其稳定、高效运行至关重要。随着电力需求的增长和可再生能源的并网，传统电力系统面临着前所未有的挑战。变电站作为电力传输和分配的关键枢纽，其自动化水平直接影响着电网的整体性能。在这种背景下，国际电工委员会（IEC）制定的IEC 61850协议应运而生，成为推动变电站乃至整个智能电网数字化的核心标准。">
 <meta name="application-name" content="FixIt">
-<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="http://localhost:1313/posts/9f9a0369aee1-f61a-4ce4-9173-9f9a0369aee1/" title="IEC 61850协议详解 - 浩の快乐小站" /><link rel="prev" type="text/html" href="http://localhost:1313/posts/db9584e3-f61a-4ce4-9173-9f9a0369aee1/" title="创建预设模板内容的Markdown文件" /><link rel="next" type="text/html" href="http://localhost:1313/csharp/basic/c6a99510-88ae-4d53-9fbb-a175cc2b0a07/" title="C#数据类型" /><link rel="alternate" type="text/markdown" href="http://localhost:1313/posts/9f9a0369aee1-f61a-4ce4-9173-9f9a0369aee1/index.md" title="IEC 61850协议详解 - 浩の快乐小站"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="http://localhost:1313/posts/9f9a0369aee1-f61a-4ce4-9173-9f9a0369aee1/" title="IEC 61850协议详解 - 浩の快乐小站" /><link rel="prev" type="text/html" href="http://localhost:1313/posts/db9584e3-f61a-4ce4-9173-9f9a0369aee1/" title="创建预设模板内容的Markdown文件" /><link rel="next" type="text/html" href="http://localhost:1313/rust/basic/96e9d38d-4156-45d0-942f-2c7c1c25e1aa/" title="rust语言以及课程介绍" /><link rel="alternate" type="text/markdown" href="http://localhost:1313/posts/9f9a0369aee1-f61a-4ce4-9173-9f9a0369aee1/index.md" title="IEC 61850协议详解 - 浩の快乐小站"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
   {
@@ -45,7 +45,7 @@
       "@type": "Organization",
       "name": ""},"author": {
         "@type": "Person",
-        "name": "hobby"
+        "name": "hao"
       },"description": ""
   }
   </script><script src="/js/head/color-scheme.min.js"></script></head>
@@ -56,6 +56,7 @@
     <nav>
       <ul class="menu"><li class="menu-item">
               <a class="menu-link" href="/posts/"><i class="fa-solid fa-file-text fa-fw fa-sm" aria-hidden="true"></i> 文章</a></li><li class="menu-item">
+              <a class="menu-link" href="/rust/"><i class="fa-solid fa-circle fa-fw fa-sm" aria-hidden="true"></i> Rust</a></li><li class="menu-item">
               <a class="menu-link" href="/csharp/"><i class="fa-solid fa-tree fa-fw fa-sm" aria-hidden="true"></i> C#教程</a></li><li class="menu-item has-children">
               <a class="menu-link" href="javascript:void(0);"><i class="fa-solid fa-hourglass-start fa-fw fa-sm" aria-hidden="true"></i> 回溯</a><i class="dropdown-icon fa-solid fa-chevron-down" aria-hidden="true"></i>
                 <ul class="sub-menu"><li class="menu-item">
@@ -108,7 +109,7 @@
             <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
               取消
             </a>
-          </li><li class="menu-item"><a class="menu-link" href="/posts/"><i class="fa-solid fa-file-text fa-fw fa-sm" aria-hidden="true"></i> 文章</a></li><li class="menu-item"><a class="menu-link" href="/csharp/"><i class="fa-solid fa-tree fa-fw fa-sm" aria-hidden="true"></i> C#教程</a></li><li class="menu-item"><span class="nested-item">
+          </li><li class="menu-item"><a class="menu-link" href="/posts/"><i class="fa-solid fa-file-text fa-fw fa-sm" aria-hidden="true"></i> 文章</a></li><li class="menu-item"><a class="menu-link" href="/rust/"><i class="fa-solid fa-circle fa-fw fa-sm" aria-hidden="true"></i> Rust</a></li><li class="menu-item"><a class="menu-link" href="/csharp/"><i class="fa-solid fa-tree fa-fw fa-sm" aria-hidden="true"></i> C#教程</a></li><li class="menu-item"><span class="nested-item">
                   <a class="menu-link" href="javascript:void(0);"><i class="fa-solid fa-hourglass-start fa-fw fa-sm" aria-hidden="true"></i> 回溯</a>
                   <i class="dropdown-icon fa-solid fa-chevron-right" aria-hidden="true"></i>
                 </span>
@@ -133,7 +134,7 @@
   <article class="page single">
     <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="转载" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>IEC 61850协议详解</span>
       </h1></div><div class="post-meta">
-      <div class="post-meta-line"><span class="post-author"><a href="https://github.com/haochan1996" title="作者"target="_blank" rel="external nofollow noopener noreferrer author" class="author"><img class="avatar" src='https://avatars.githubusercontent.com/u/190246046?v=4' alt="hobby" height="16" width="16">&nbsp;hobby</a></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category" title="分类 - 博客"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 博客</a></span></div><div class="post-meta-line"><span title="发布于 2025-08-11 15:10:40"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-08-11">2025-08-11</time></span>&nbsp;<span title="909 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 1000 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 5 分钟</span>&nbsp;</div>
+      <div class="post-meta-line"><span class="post-author"><a href="https://github.com/haochan1996" title="作者"target="_blank" rel="external nofollow noopener noreferrer author" class="author"><img class="avatar" src='https://avatars.githubusercontent.com/u/190246046?v=4' alt="hao" height="16" width="16">&nbsp;hao</a></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category" title="分类 - 博客"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 博客</a></span></div><div class="post-meta-line"><span title="发布于 2025-08-11 15:10:40"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-08-11">2025-08-11</time></span>&nbsp;<span title="909 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 1000 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 5 分钟</span>&nbsp;</div>
     </div><div class="details toc" id="toc-static" data-kept="false">
         <div class="details-summary toc-title">
           <span>目录</span>

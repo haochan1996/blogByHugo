@@ -108,6 +108,6 @@ go run new_md.go content/csharp/wpf/布局控件.md
 
 ---
 
-> 作者: [hobby](https://github.com/haochan1996)  
+> 作者: [hao](https://github.com/haochan1996)  
 > URL: http://localhost:1313/posts/db9584e3-f61a-4ce4-9173-9f9a0369aee1/  
 

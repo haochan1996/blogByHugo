@@ -454,6 +454,6 @@ Visibility 属性用于控制控件的可见性
 
 ---
 
-> 作者: [hobby](https://github.com/haochan1996)  
+> 作者: [hao](https://github.com/haochan1996)  
 > URL: http://localhost:1313/csharp/wpf/892c051/  
 

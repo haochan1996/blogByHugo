@@ -10,6 +10,6 @@
 
 ---
 
-> 作者: [hobby](https://github.com/haochan1996)  
+> 作者: [hao](https://github.com/haochan1996)  
 > URL: http://localhost:1313/music/8dd06b96-a944-4275-ab38-4afcb8b10160/  
 

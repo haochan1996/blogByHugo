@@ -19,6 +19,30 @@ hasCJKLanguage = false
 # default amount of posts in each pages
 
 [menu]
+[[menu.main]]
+    identifier = "rust"
+    parent = ""
+    # you can add extra information before the name (HTML format is supported), such as icons
+    pre = ""
+    # you can add extra information after the name (HTML format is supported), such as icons
+    post = ""
+    name = "Rust"
+    url = "/rust/"
+    # title will be shown when you hover on this menu link
+    title = ""
+    weight = 2
+    # FixIt 0.2.14 | NEW add user-defined content to menu items
+    [menu.main.params]
+      # add css class to a specific menu item
+      class = ""
+      # whether set as a draft menu item whose function is similar to a draft post/page
+      draft = false
+      # FixIt 0.2.16 | NEW add fontawesome icon to a specific menu item
+      icon = "fa-solid fa-circle"
+      # FixIt 0.2.16 | NEW set menu item type, optional values: ["mobile", "desktop"]
+      type = ""
+      # FixIt 0.3.9 | NEW whether to show the submenu item divider line
+      divided = false
   [[menu.main]]
     identifier = "csharp"
     parent = ""

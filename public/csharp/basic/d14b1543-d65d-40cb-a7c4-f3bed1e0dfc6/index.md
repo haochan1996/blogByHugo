@@ -187,6 +187,6 @@ public class Dog : Animal
 
 ---
 
-> 作者: [hobby](https://github.com/haochan1996)  
+> 作者: [hao](https://github.com/haochan1996)  
 > URL: http://localhost:1313/csharp/basic/d14b1543-d65d-40cb-a7c4-f3bed1e0dfc6/  
 
