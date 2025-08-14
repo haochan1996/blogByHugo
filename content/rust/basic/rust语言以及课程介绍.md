@@ -41,6 +41,10 @@ repost:
 
 [Rust语言编程基础教程](https://www.bilibili.com/video/av78062009?vd_source=939ae5b13ea25e42d7ce7f25bd855603&spm_id_from=333.788.player.switch&p=2)
 
+[Rust 程序设计语言 中文版](https://rustwiki.org/zh-CN/book/title-page.html)
+
+基础学习主要结合上面两个资料。
+
 ## 环境搭建
 
 Windows 系统​：

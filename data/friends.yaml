@@ -7,3 +7,9 @@
   avatar: https://fixit.lruihao.cn/images/hugo-fixit.webp
   url: https://fixit.lruihao.cn/zh-cn/collections/
   description: Fixit文档合集
+
+- nickname: Rust 程序设计语言 中文版
+  avatar: https://www.rust-lang.org/static/images/rust-logo-blk.svg
+  url: https://rustwiki.org/zh-CN/book/title-page.html
+  description: Rust 程序设计语言 中文版
+
