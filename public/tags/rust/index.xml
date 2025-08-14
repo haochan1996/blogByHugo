@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rust基础入门 - 浩の快乐小站</title>
-    <link>http://localhost:1313/rust/basic/</link>
+    <title>Rust - 标签 - 浩の快乐小站</title>
+    <link>http://localhost:1313/tags/rust/</link>
     <description>浩の快乐小站</description>
     <generator>Hugo 0.148.2 &amp; FixIt v0.4.0-alpha-20250721024521-a1cd700b</generator>
     <language>zh-CN</language>
     <lastBuildDate>Thu, 14 Aug 2025 00:33:12 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/rust/basic/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/rust/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>rust语言以及课程介绍</title>
       <link>http://localhost:1313/rust/basic/96e9d38d-4156-45d0-942f-2c7c1c25e1aa/</link>
