@@ -123,6 +123,12 @@ Cargo 是 Rust 官方提供的**构建系统（Build System）和包管理器（
   cargo run          # 编译后立即运行
   ```
 
+- 快速检查代码确保其可以编译，但并不产生可执行文件：
+
+```bash
+cargo check
+```
+
 - 发布构建（优化性能）：
 
   ```bash
@@ -176,7 +182,7 @@ fn main() {
 }
 ```
 
-main函数是程序的入口函数。
+main 函数（也称为主函数）很特殊：它始终是每个可执行 Rust 程序中运行的第一个代码。第一行声明一个名为 main 的函数，不带参数也没有返回值。如果有参数，那么它们的名字会放到括号内，它们将放在括号 () 内。。
 
 `cargo run`运行结果：
 
@@ -188,4 +194,4 @@ D:\rs_learn\hello>cargo run
 Hello, world!
 ```
 
-程序会先编译生成二进制文件`target\debug\hello.exe`，然后运行。
+程序会先编译生成二进制文件`target\debug\hello.exe`，然后运行。你看到 "Hello, world!" 字符串。我们将这个字符串作为参数传递给 println!，接着 println! 将字符串打印到屏幕上。
