@@ -1,41 +1,5 @@
----
-title: "IEC 61850协议详解"
-date: 2025-08-11T15:10:40+0800
-slug: "9f9a0369aee1-f61a-4ce4-9173-9f9a0369aee1"
-draft: false
-author: 
-  name: hao
-  link: https://github.com/haochan1996
-  email: espholychan@outllook.com
-  avatar: https://avatars.githubusercontent.com/u/190246046?v=4
-description:
-keywords:
-license:
-comment: false
-weight: 1
-tags:
-  - 电力协议
-categories:
-  - 博客
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRelated: false
-hiddenFromFeed: false
-summary:
-resources:
-  - name: featured-image
-    src: featured-image.jpg
-  - name: featured-image-preview
-    src: featured-image-preview.jpg
-toc: true
-math: false
-lightgallery: false
-password:
-message:
-repost:
-  enable: true
-  url:
----
+# IEC 61850协议详解
+
 
 
 ## 1. 引言：智能电网时代下IEC 61850的崛起
@@ -490,3 +454,10 @@ IEC 61850的优势不仅体现在技术层面，更在于其对电力系统全�
 然而，IEC 61850的全面推广仍面临挑战，包括遗留系统集成复杂性、网络安全风险以及专业人才的培养。解决这些挑战需要行业持续的投入和协作，通过协议网关实现平稳过渡，加强网络安全防护，并建立完善的人才培养体系。
 
 综上所述，IEC 61850协议凭借其独特的综合性、面向对象的设计理念、卓越的实时性能和强大的互操作性，已成为现代电力系统不可或缺的核心标准。它不仅是实现智能电网愿景的关键技术支撑，更是推动全球电力行业走向数字化、智能化未来的战略性框架。随着技术的不断演进和应用场景的拓展，IEC 61850将持续深化其在构建更安全、高效、可靠和可持续电力系统中的核心作用。
+
+
+---
+
+> 作者: [hao](https://github.com/haochan1996)  
+> URL: http://localhost:1313/rust/basic/9f9a0369aee1-f61a-4ce4-9173-9f9a0369aee1/  
+
