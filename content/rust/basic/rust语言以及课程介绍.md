@@ -157,6 +157,33 @@ cargo check
   cargo publish  # 需提前登录并配置 API Key
   ```
 
+### 在 Cargo 项目中运行指定二进制文件
+
+若项目包含多个入口（如多个 `main.rs`），可通过配置实现：
+
+1. **配置 `Cargo.toml`**：
+
+   在 `Cargo.toml`中添加多个 `[[bin]]`目标：
+
+   ```toml
+   [[bin]]
+   name = "cli"
+   path = "src/cli/main.rs"
+   
+   [[bin]]
+   name = "server"
+   path = "src/server/main.rs"
+   ```
+
+2. **运行指定目标**：
+
+   ```bash
+   cargo run --bin cli   # 运行 cli 程序
+   cargo run --bin server # 运行 server 程序
+   ```
+
+   此方法需预先定义路径，适合结构化项目
+
 ## 创建hello项目
 
 ```bash
