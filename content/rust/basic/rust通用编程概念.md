@@ -2,7 +2,7 @@
 title: "Rust通用编程概念"
 date: 2025-08-14T15:57:54+0800
 slug: "e0e61349-11a8-4cef-bb97-8bd12d84e769"
-draft: true
+draft: false
 author: 
   name: hao
   link: https://github.com/haochan1996
