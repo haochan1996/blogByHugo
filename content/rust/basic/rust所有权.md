@@ -171,7 +171,7 @@ fn main() {
 
 为什么会这样？当我们将 `s1` 赋给 `s2`，`String` 的数据被复制了，这意味着我们从栈上拷贝了它的指针、长度和容量。我们并没有复制指针指向的堆上数据。
 
-![String移动示意图](https://doc.rust-lang.org/book/img/trpl04-04.svg)
+<img src="https://doc.rust-lang.org/book/img/trpl04-04.svg" alt="String移动示意图" />
 
 当变量离开作用域后，Rust 自动调用 `drop` 函数并清理变量的堆内存。但是当 `s2` 和 `s1` 离开作用域，它们都会尝试释放相同的内存。这是一个叫做二次释放（double free）的错误。
 
