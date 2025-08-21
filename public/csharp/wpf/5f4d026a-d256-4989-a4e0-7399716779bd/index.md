@@ -246,6 +246,6 @@ private void Button_PreviewMouseDown(object sender, MouseButtonEventArgs e) {
 
 ---
 
-> 作者: [hobby](https://github.com/haochan1996)  
+> 作者: [hao](https://github.com/haochan1996)  
 > URL: http://localhost:1313/csharp/wpf/5f4d026a-d256-4989-a4e0-7399716779bd/  
 
