@@ -16,8 +16,9 @@ comment: false
 weight: 3
 tags:
   - Rust
+  - Struct
 categories:
-  - "Rust基础入门"
+  - Rust基础入门
 hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRelated: false

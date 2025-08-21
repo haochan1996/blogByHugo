@@ -16,8 +16,9 @@ comment: false
 weight: 2
 tags:
   - Rust
+  - 所有权
 categories:
-  - "Rust基础入门"
+  - Rust基础入门
 hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRelated: false
