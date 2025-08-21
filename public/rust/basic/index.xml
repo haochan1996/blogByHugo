@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rust基础入门 - 浩の快乐小站</title>
+    <title>Rust 基础 - 浩の快乐小站</title>
     <link>http://localhost:1313/rust/basic/</link>
     <description>浩の快乐小站</description>
     <generator>Hugo 0.148.2 &amp; FixIt v0.4.0-alpha-20250721024521-a1cd700b</generator>

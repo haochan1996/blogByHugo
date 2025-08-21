@@ -56,6 +56,7 @@ message:
 repost:
   enable: true
   url:
+type: posts
 ---
 
 ## 标题二

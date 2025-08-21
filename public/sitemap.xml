@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/rust/basic/</loc>
-    <lastmod>2025-08-14T18:25:47+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://localhost:1313/rust/basic/e0e61349-11a8-4cef-bb97-8bd12d84e769/</loc>
     <lastmod>2025-08-14T15:57:54+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -49,12 +43,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/rust/</loc>
-    <lastmod>2025-08-18T18:25:47+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://localhost:1313/rust/basic/38984233-be8b-4f04-bf7a-1a0f947eb699/</loc>
     <lastmod>2025-08-16T22:57:58+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -63,12 +51,6 @@
   <url>
     <loc>http://localhost:1313/csharp/wpf/5f4d026a-d256-4989-a4e0-7399716779bd/</loc>
     <lastmod>2025-08-06T11:11:43+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/csharp/</loc>
-    <lastmod>2025-08-02T18:25:47+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -96,6 +78,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://localhost:1313/rust/</loc>
+    <lastmod>2025-08-19T22:41:13+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/categories/rust%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</loc>
     <lastmod>2025-08-19T22:41:13+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -110,6 +98,12 @@
   <url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2025-08-19T22:41:13+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/rust/basic/</loc>
+    <lastmod>2025-08-18T22:41:13+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -133,6 +127,12 @@
   </url>
   <url>
     <loc>http://localhost:1313/csharp/avalonia/</loc>
+    <lastmod>2025-08-08T18:25:47+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/csharp/</loc>
     <lastmod>2025-08-08T18:25:47+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

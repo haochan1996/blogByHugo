@@ -1,12 +1,10 @@
 ---
-title: "Rust基础入门"  # 
-weight: 1  #
-description: "This is the posts section."
-date: 2025-08-14T18:25:47+08:00
+title: Rust 基础
+description: Learn about the Rust programming language, its features, and how to get started with
+date: 2025-08-18T22:41:13+0800
+weight: 0
 cascade:
   params:
     type: posts
 ---
 
-# Posts
-Welcome to the posts section.
