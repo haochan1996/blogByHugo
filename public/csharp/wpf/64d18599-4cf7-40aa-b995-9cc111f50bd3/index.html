@@ -7,19 +7,16 @@
     <meta name="robots" content="noodp" />
     <title>WPF布局控件 - 浩の快乐小站</title><meta name="author" content="hao">
 <meta name="description" content="WPF 布局控件（继承自 Panel 类, 除了Border）通过测量（Measure）和排列（Arrange）两个阶段自动计算子元素的位置与尺寸，支持动态适应窗口大小变化。布局控件通过 Children 属性容纳子元素（如按钮、文本框等），支持嵌套组合实现复杂界面。
-控件 布局方式 Grid 网格，根据自定义行和列来设置控件的布局 StackPanel 堆叠，包含的元素在垂直或水平方向排列 WrapPanel 流式布局，自动换行/列 DockPanel 边缘停靠&#43;剩余填充 Canvas 画布，内部元素以像素为单位绝对坐标定位 UniformGrid 均分网格，相当于Grid的简化版，每个单元格的大小相同 Border 装饰的控件，用于绘制边框及背景，在Border中只能有一个子控件 Panel基类Panel 是 Windows Presentation Foundation（WPF）中提供布局支持的所有元素的基类。 Panel派生元素用于在可扩展应用程序标记语言（XAML）和代码中定位和排列元素。 WPF 包含一套全面的派生面板实现，可实现许多复杂布局。 这些派生类公开了启用大多数标准用户界面（UI）方案的属性和方法。 无法找到满足其需求的子排列行为的开发人员可以通过重写 ArrangeOverride 和 MeasureOverride 方法创建新的布局。
 "><meta name="keywords" content='WPF, C#'>
   <meta itemprop="name" content="WPF布局控件">
-  <meta itemprop="description" content="WPF 布局控件（继承自 Panel 类, 除了Border）通过测量（Measure）和排列（Arrange）两个阶段自动计算子元素的位置与尺寸，支持动态适应窗口大小变化。布局控件通过 Children 属性容纳子元素（如按钮、文本框等），支持嵌套组合实现复杂界面。
-控件 布局方式 Grid 网格，根据自定义行和列来设置控件的布局 StackPanel 堆叠，包含的元素在垂直或水平方向排列 WrapPanel 流式布局，自动换行/列 DockPanel 边缘停靠&#43;剩余填充 Canvas 画布，内部元素以像素为单位绝对坐标定位 UniformGrid 均分网格，相当于Grid的简化版，每个单元格的大小相同 Border 装饰的控件，用于绘制边框及背景，在Border中只能有一个子控件 Panel基类Panel 是 Windows Presentation Foundation（WPF）中提供布局支持的所有元素的基类。 Panel派生元素用于在可扩展应用程序标记语言（XAML）和代码中定位和排列元素。 WPF 包含一套全面的派生面板实现，可实现许多复杂布局。 这些派生类公开了启用大多数标准用户界面（UI）方案的属性和方法。 无法找到满足其需求的子排列行为的开发人员可以通过重写 ArrangeOverride 和 MeasureOverride 方法创建新的布局。">
+  <meta itemprop="description" content="WPF 布局控件（继承自 Panel 类, 除了Border）通过测量（Measure）和排列（Arrange）两个阶段自动计算子元素的位置与尺寸，支持动态适应窗口大小变化。布局控件通过 Children 属性容纳子元素（如按钮、文本框等），支持嵌套组合实现复杂界面。">
   <meta itemprop="datePublished" content="2025-08-05T01:26:27+08:00">
   <meta itemprop="dateModified" content="2025-08-05T01:26:27+08:00">
-  <meta itemprop="wordCount" content="885">
+  <meta itemprop="wordCount" content="4703">
   <meta itemprop="keywords" content="WPF,C#"><meta property="og:url" content="http://localhost:1313/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/">
   <meta property="og:site_name" content="浩の快乐小站">
   <meta property="og:title" content="WPF布局控件">
-  <meta property="og:description" content="WPF 布局控件（继承自 Panel 类, 除了Border）通过测量（Measure）和排列（Arrange）两个阶段自动计算子元素的位置与尺寸，支持动态适应窗口大小变化。布局控件通过 Children 属性容纳子元素（如按钮、文本框等），支持嵌套组合实现复杂界面。
-控件 布局方式 Grid 网格，根据自定义行和列来设置控件的布局 StackPanel 堆叠，包含的元素在垂直或水平方向排列 WrapPanel 流式布局，自动换行/列 DockPanel 边缘停靠&#43;剩余填充 Canvas 画布，内部元素以像素为单位绝对坐标定位 UniformGrid 均分网格，相当于Grid的简化版，每个单元格的大小相同 Border 装饰的控件，用于绘制边框及背景，在Border中只能有一个子控件 Panel基类Panel 是 Windows Presentation Foundation（WPF）中提供布局支持的所有元素的基类。 Panel派生元素用于在可扩展应用程序标记语言（XAML）和代码中定位和排列元素。 WPF 包含一套全面的派生面板实现，可实现许多复杂布局。 这些派生类公开了启用大多数标准用户界面（UI）方案的属性和方法。 无法找到满足其需求的子排列行为的开发人员可以通过重写 ArrangeOverride 和 MeasureOverride 方法创建新的布局。">
+  <meta property="og:description" content="WPF 布局控件（继承自 Panel 类, 除了Border）通过测量（Measure）和排列（Arrange）两个阶段自动计算子元素的位置与尺寸，支持动态适应窗口大小变化。布局控件通过 Children 属性容纳子元素（如按钮、文本框等），支持嵌套组合实现复杂界面。">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="csharp">
@@ -30,8 +27,7 @@
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="WPF布局控件">
-  <meta name="twitter:description" content="WPF 布局控件（继承自 Panel 类, 除了Border）通过测量（Measure）和排列（Arrange）两个阶段自动计算子元素的位置与尺寸，支持动态适应窗口大小变化。布局控件通过 Children 属性容纳子元素（如按钮、文本框等），支持嵌套组合实现复杂界面。
-控件 布局方式 Grid 网格，根据自定义行和列来设置控件的布局 StackPanel 堆叠，包含的元素在垂直或水平方向排列 WrapPanel 流式布局，自动换行/列 DockPanel 边缘停靠&#43;剩余填充 Canvas 画布，内部元素以像素为单位绝对坐标定位 UniformGrid 均分网格，相当于Grid的简化版，每个单元格的大小相同 Border 装饰的控件，用于绘制边框及背景，在Border中只能有一个子控件 Panel基类Panel 是 Windows Presentation Foundation（WPF）中提供布局支持的所有元素的基类。 Panel派生元素用于在可扩展应用程序标记语言（XAML）和代码中定位和排列元素。 WPF 包含一套全面的派生面板实现，可实现许多复杂布局。 这些派生类公开了启用大多数标准用户界面（UI）方案的属性和方法。 无法找到满足其需求的子排列行为的开发人员可以通过重写 ArrangeOverride 和 MeasureOverride 方法创建新的布局。">
+  <meta name="twitter:description" content="WPF 布局控件（继承自 Panel 类, 除了Border）通过测量（Measure）和排列（Arrange）两个阶段自动计算子元素的位置与尺寸，支持动态适应窗口大小变化。布局控件通过 Children 属性容纳子元素（如按钮、文本框等），支持嵌套组合实现复杂界面。">
 <meta name="application-name" content="FixIt">
 <meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="http://localhost:1313/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/" title="WPF布局控件 - 浩の快乐小站" /><link rel="prev" type="text/html" href="http://localhost:1313/csharp/basic/c6a99510-88ae-4d53-9fbb-a175cc2b0a07/" title="C#数据类型" /><link rel="next" type="text/html" href="http://localhost:1313/posts/db9584e3-f61a-4ce4-9173-9f9a0369aee1/" title="创建预设模板内容的Markdown文件" /><link rel="alternate" type="text/markdown" href="http://localhost:1313/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/index.md" title="WPF布局控件 - 浩の快乐小站"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
@@ -44,7 +40,7 @@
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "http:\/\/localhost:1313\/csharp\/wpf\/64d18599-4cf7-40aa-b995-9cc111f50bd3\/"
-    },"genre": "posts","keywords": "WPF, C#","wordcount":  885 ,
+    },"genre": "posts","keywords": "WPF, C#","wordcount":  4703 ,
     "url": "http:\/\/localhost:1313\/csharp\/wpf\/64d18599-4cf7-40aa-b995-9cc111f50bd3\/","datePublished": "2025-08-05T01:26:27+08:00","dateModified": "2025-08-05T01:26:27+08:00","publisher": {
       "@type": "Organization",
       "name": ""},"author": {
@@ -138,7 +134,7 @@
   <article class="page single">
     <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="转载" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>WPF布局控件</span>
       </h1></div><div class="post-meta">
-      <div class="post-meta-line"><span class="post-author"><a href="https://github.com/haochan1996" title="作者"target="_blank" rel="external nofollow noopener noreferrer author" class="author"><img class="avatar" src='https://avatars.githubusercontent.com/u/190246046?v=4' alt="hao" height="16" width="16">&nbsp;hao</a></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/wpf/" class="post-category" title="分类 - WPF"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> WPF</a></span></div><div class="post-meta-line"><span title="发布于 2025-08-05 01:26:27"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-08-05">2025-08-05</time></span>&nbsp;<span title="885 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 900 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 5 分钟</span>&nbsp;</div>
+      <div class="post-meta-line"><span class="post-author"><a href="https://github.com/haochan1996" title="作者"target="_blank" rel="external nofollow noopener noreferrer author" class="author"><img class="avatar" src='https://avatars.githubusercontent.com/u/190246046?v=4' alt="hao" height="16" width="16">&nbsp;hao</a></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/wpf/" class="post-category" title="分类 - WPF"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> WPF</a></span></div><div class="post-meta-line"><span title="发布于 2025-08-05 01:26:27"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-08-05">2025-08-05</time></span>&nbsp;<span title="4703 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 4800 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 10 分钟</span>&nbsp;</div>
     </div><div class="details toc" id="toc-static" data-kept="false">
         <div class="details-summary toc-title">
           <span>目录</span>
@@ -962,7 +958,7 @@
     <section>
       <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
     </section>
-  </div><div class="post-nav"><a href="/csharp/basic/c6a99510-88ae-4d53-9fbb-a175cc2b0a07/" class="post-nav-item" rel="prev" title="C#数据类型"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>C#数据类型</a></div>
+  </div><div class="post-nav"></div>
 </div>
 </article>
 

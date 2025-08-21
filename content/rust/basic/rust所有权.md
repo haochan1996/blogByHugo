@@ -1,4 +1,5 @@
 ---
+type: posts
 title: "Rust所有权系统"
 date: 2025-08-16T22:57:58+0800
 slug: "38984233-be8b-4f04-bf7a-1a0f947eb699"

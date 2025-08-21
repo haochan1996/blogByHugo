@@ -1,4 +1,5 @@
 ---
+type: posts
 title: "rust语言以及课程介绍"
 date: 2025-08-14T00:33:12+0800
 slug: "96e9d38d-4156-45d0-942f-2c7c1c25e1aa"
