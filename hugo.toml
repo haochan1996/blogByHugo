@@ -26,7 +26,7 @@ enableGitInfo = true
 # whether to use emoji code
 enableEmoji = true
 # the main sections of a site
-mainSections = []
+# mainSections = []
 
 
 [menu]
@@ -708,9 +708,9 @@ mainSections = []
       disclaimer = ""
     # Home page posts
     [params.home.posts]
-      enable = false
+      enable = true
       # special amount of posts in each home posts page
-      paginate = 6
+      paginate = 10
 
   # FixIt 0.2.16 | CHANGED Social config about the author
   [params.social]

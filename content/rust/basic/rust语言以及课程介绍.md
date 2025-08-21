@@ -17,7 +17,7 @@ weight: 0
 tags:
   - Rust
 categories:
-  - Rust基础入门
+  - "Rust基础入门"
 hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRelated: false
