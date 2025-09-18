@@ -37,8 +37,8 @@ enableEmoji = true
     pre = ""
     # you can add extra information after the name (HTML format is supported), such as icons
     post = ""
-    name = "Python"
-    url = "/python/"
+    name = "go"
+    url = "/go/"
     # title will be shown when you hover on this menu link
     title = ""
     weight = 4
