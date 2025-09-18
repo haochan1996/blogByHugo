@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/rust/basic/</loc>
-    <lastmod>2025-08-21T15:11:54+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/rust/</loc>
-    <lastmod>2025-08-21T15:11:54+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/rust/basic/e0e61349-11a8-4cef-bb97-8bd12d84e769/</loc>
-    <lastmod>2025-08-14T15:57:54+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://localhost:1313/posts/9f9a0369aee1-f61a-4ce4-9173-9f9a0369aee1/</loc>
     <lastmod>2025-08-11T15:10:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -31,56 +13,14 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/csharp/wpf/64d18599-4cf7-40aa-b995-9cc111f50bd3/</loc>
-    <lastmod>2025-08-05T01:26:27+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/csharp/wpf/</loc>
-    <lastmod>2025-08-05T22:55:06+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/csharp/basic/c6a99510-88ae-4d53-9fbb-a175cc2b0a07/</loc>
-    <lastmod>2024-08-07T10:19:36+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/csharp/</loc>
-    <lastmod>2025-08-21T15:11:54+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-08-16T01:21:39+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/rust/basic_up/</loc>
-    <lastmod>2025-08-21T15:11:54+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/rust/basic/38984233-be8b-4f04-bf7a-1a0f947eb699/</loc>
-    <lastmod>2025-08-16T22:57:58+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/csharp/wpf/5f4d026a-d256-4989-a4e0-7399716779bd/</loc>
-    <lastmod>2025-08-06T11:11:43+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/rust/basic/800ae850-1128-4994-b419-72cb33047087/</loc>
-    <lastmod>2025-08-19T22:41:13+08:00</lastmod>
+    <loc>http://localhost:1313/python/</loc>
+    <lastmod>2025-09-18T16:38:07+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -91,38 +31,44 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-08-21T15:11:54+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-08-19T22:41:13+08:00</lastmod>
+    <lastmod>2025-09-11T17:06:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/tags/rust/</loc>
-    <lastmod>2025-08-19T22:41:13+08:00</lastmod>
+    <loc>http://localhost:1313/categories/python/</loc>
+    <lastmod>2025-09-11T17:06:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/categories/rust%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</loc>
-    <lastmod>2025-08-19T22:41:13+08:00</lastmod>
+    <loc>http://localhost:1313/tags/python/</loc>
+    <lastmod>2025-09-11T17:06:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/sqlalchemy/</loc>
+    <lastmod>2025-09-11T17:06:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/python/basic/d14b1543-d65d-40cb-a7c4-f3bed1e0dfc6/</loc>
+    <lastmod>2025-09-11T17:06:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-08-19T22:41:13+08:00</lastmod>
+    <lastmod>2025-09-11T17:06:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/rust/basic/96e9d38d-4156-45d0-942f-2c7c1c25e1aa/</loc>
-    <lastmod>2025-08-14T00:33:12+08:00</lastmod>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-09-18T16:38:07+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -135,30 +81,6 @@
   <url>
     <loc>http://localhost:1313/tags/%E7%94%B5%E5%8A%9B%E5%8D%8F%E8%AE%AE/</loc>
     <lastmod>2025-08-11T15:10:40+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/csharp/avalonia/</loc>
-    <lastmod>2025-08-08T23:05:59+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/c%23/</loc>
-    <lastmod>2025-08-06T11:11:43+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/categories/wpf/</loc>
-    <lastmod>2025-08-06T11:11:43+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/wpf/</loc>
-    <lastmod>2025-08-06T11:11:43+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -177,36 +99,6 @@
   <url>
     <loc>http://localhost:1313/music/</loc>
     <lastmod>2025-08-14T01:09:42+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/csharp/wpf/892c051/</loc>
-    <lastmod>2025-08-02T18:25:47+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/csharp/basic/7749b4b1-4b36-42d1-bd6c-14d264055cdb/</loc>
-    <lastmod>2024-08-07T11:57:18+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/categories/c%23%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2024-08-07T11:57:18+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/csharp/basic/d14b1543-d65d-40cb-a7c4-f3bed1e0dfc6/</loc>
-    <lastmod>2024-08-05T17:06:28+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/csharp/basic/</loc>
-    <lastmod>2025-08-07T18:01:39+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

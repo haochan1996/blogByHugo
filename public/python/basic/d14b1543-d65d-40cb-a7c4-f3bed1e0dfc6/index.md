@@ -1,43 +1,5 @@
----
-type: posts
-title: "SQLAlchemy 入门详解"
-date: 2025-09-11T17:06:28+0800
-slug: "d14b1543-d65d-40cb-a7c4-f3bed1e0dfc6"
-draft: false
-author: 
-  name: hao
-  link: https://github.com/haochan1996
-  email: espholychan@outllook.com
-  avatar: https://avatars.githubusercontent.com/u/190246046?v=4
-description:
-keywords:
-license:
-comment: false
-weight: 0
-tags:
-  - python
-  - SQLAlchemy
-categories:
-  - python
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRelated: false
-hiddenFromFeed: false
-summary:
-resources:
-  - name: featured-image
-    src: featured-image.jpg
-  - name: featured-image-preview
-    src: featured-image-preview.jpg
-toc: true
-math: false
-lightgallery: false
-password:
-message:
-repost:
-  enable: true
-  url:
----
+# SQLAlchemy 入门详解
+
 
 ## SQLAlchemy是什么？
 
@@ -59,4 +21,11 @@ SQLAlchemy是一个强大的PythonORM框架，主要应用于以下场景：
 
 
 
+
+
+
+---
+
+> 作者: [hao](https://github.com/haochan1996)  
+> URL: http://localhost:1313/python/basic/d14b1543-d65d-40cb-a7c4-f3bed1e0dfc6/  
 
