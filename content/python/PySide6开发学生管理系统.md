@@ -238,9 +238,18 @@ student_system
 - student	# 学生相关
 	- student_interface.py 	# 学生用户界面基本布局
 - classes	# 班级相关
+- config # 配置相关
+- database
+	- base_db.py # 数据库操作基类
+	- classes_db.py	# 班级数据操作
+	- student_db.py	# 学生数据操作
+	- user_db.py	# 用户数据操作
+- logs # 记录日志
+	- app.log	# 日志文件
 - user		# 用户相关
 - utils
 	- custom_style.py	# 自定义样式
+	- log.py 	#日志处理
 main.py	# 程序的入口
 ```
 
@@ -489,4 +498,203 @@ if __name__ == "__main__":
 ![image-20250920223234710](https://blog-1301697820.cos.ap-guangzhou.myqcloud.com/blog/image-20250920223234710.png)
 
 ## 数据库集成创建基类
+
+上面基础用户界面中实现了基本的界面，在表格中填充的是自定义的假数据，接下来实现从数据库中读取真实的数据。
+
+在python中操作mysql数据库，可以使用一个常用包叫做pymysql，使用前先需要安装`pip install pymysql`。
+
+### 实现日志记录功能
+
+在utils/log.py中创建日志记录器，用来记录日志，内容如下：
+
+```python
+import logging
+import os
+from logging.handlers import RotatingFileHandler 
+
+# 定义日志文件的路径
+LOG_DIR = 'logs'
+LOG_FILE_DATABASE = os.path.join(LOG_DIR, 'database.log')
+
+# 确保日志目录存在
+os.makedirs(LOG_DIR, exist_ok=True)
+
+format='%(asctime)s - %(filename)s:%(lineno)d - %(funcName)s - %(levelname)s - %(message)s'
+
+# 创建一个RotatingFileHandler对象
+handler_database = RotatingFileHandler(
+    filename=LOG_FILE_DATABASE, # 日志文件路径
+    mode= 'a',  # 追加模式
+    encoding='utf-8', # 文件编码
+    maxBytes=1024*1024*5,  # 每个日志文件最大5MB
+    backupCount=3   # 保留3个备份日志文件
+    )
+handler_database.setFormatter(logging.Formatter(format))
+
+# 获取根日志记录器并添加处理器
+logger_database = logging.getLogger("database")
+logger_database.setLevel(logging.DEBUG)
+logger_database.addHandler(handler_database)
+logger_database.addHandler(logging.StreamHandler())  # 同时输出到控制台
+
+```
+
+在base_bd.py中引入logger_database日志记录器，用于记录数据库操作基类中的日志信息。
+
+### 定义配置文件
+
+在config/settings.py中定义数据库了连接的参数，后续可以扩展中环境变量中读取。
+
+```python
+# 数据库连接配置
+DB_HOST = 'localhost'
+DB_USER = 'root'
+DB_PASSWORD = 'root'
+DB_NAME = 'student_system'
+DB_PORT = 3306
+DB_CHARSET = 'utf8mb4'
+DB_POOL_SIZE = 10
+DB_TIMEOUT = 5  # 连接超时时间，单位为秒
+DB_RETRY_ATTEMPTS = 3  # 重试连接次数
+```
+
+### 实现数据操作基类
+
+在database/base_db.py中添加如下内容：
+
+```python
+import pymysql
+import logging
+from config.settings import DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT
+from utils.log import logger_database as logger
+
+class DatabaseManager:
+    def __init__(self):
+        self.db_connection = None
+        
+    def __enter__(self):
+        '''上下文管理器入口，自动连接数据库'''
+        # print("Entering context manager, connecting to database...")
+        self.connect()
+        return self
+    
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        '''上下文管理器出口，自动断开数据库连接'''
+        # print("Exiting context manager, disconnecting from database...")
+        self.disconnect()
+
+    def connect(self):
+        # 连接数据库
+        if not self.db_connection or not self.db_connection.open: # 检查连接是否已存在且打开
+            try:
+                # 连接数据库
+                self.db_connection = pymysql.connect(
+                    host=DB_HOST,
+                    user=DB_USER,
+                    password=DB_PASSWORD,
+                    database=DB_NAME,
+                    port=DB_PORT,
+                    cursorclass=pymysql.cursors.DictCursor # 使用字典游标
+                )
+                logger.info("Database connection established.")
+                # print(self.db_connection)
+            except pymysql.MySQLError as e:
+                logger.error(f"Error connecting to database: {e}") # 记录错误日志
+
+    def disconnect(self):
+        # 断开数据库连接
+        if self.db_connection and self.db_connection.open:
+            try:
+                self.db_connection.close()
+                logger.info("Database connection closed.")
+            except pymysql.MySQLError as e:
+                logger.error(f"Error closing database connection: {e}")
+     
+    def  fetch_query(self, query, params=None, fetch_one=False): 
+        '''查询数据
+        :param query: SQL查询语句
+        :param params: 可选的查询参数
+        :param fetch_one: 是否只获取一条记录
+        :return: 查询结果
+        '''
+        if self.db_connection and self.db_connection.open:
+            try:
+                with self.db_connection.cursor() as cursor:
+                    cursor.execute(query, params)
+                    if fetch_one:
+                        return cursor.fetchone() # 获取单条记录
+                    else:
+                        return cursor.fetchall() # 获取所有记录
+                logger.info(f"Query executed: {query} with params: {params}")
+            except pymysql.MySQLError as e:
+                logger.error(f"Error executing query: {e}")
+                return None
+        else:
+            logger.error("Database connection is not established.")
+            return None
+
+    def execute_query(self, query, params=None)-> bool:
+        '''执行插入、更新或删除操作
+        :param query: SQL语句
+        :param params: 可选的参数
+        :return: 执行是否成功
+        '''
+        if self.db_connection and self.db_connection.open:
+            try:
+                with self.db_connection.cursor() as cursor:
+                    affected_rows = cursor.execute(query, params)
+                    self.db_connection.commit() # 提交事务
+                    logger.info(f"Query executed: {query} with params: {params}, affected rows: {affected_rows}")
+                    return True
+            except pymysql.MySQLError as e:
+                self.db_connection.rollback() # 回滚事务
+                logger.error(f"Error executing query: {e}")
+                return False
+        else:
+            logger.error("Database connection is not established.")
+            return False
+```
+
+connect方法实现了连接数据库，disconnect方法实现了断开数据库。fetch_query方法实现了数据查询，query是要执行的SQL语句，fetch_one默认为False，获取所有记录。
+
+execute_query实现数据库插入、更新或删除操作，使用事务方式执行，错误回滚。
+
+`from utils.log import logger_database as logger`引入了之前定义的日志处理器，所有的日志会输出到logs/database.log文件中。
+
+```tex
+2025-09-21 00:28:59,413 - base_db.py:73 - fetch_query - ERROR - Database connection is not established.
+2025-09-21 00:29:32,096 - base_db.py:36 - connect - INFO - Database connection established.
+2025-09-21 00:29:32,099 - base_db.py:46 - disconnect - INFO - Database connection closed.
+2025-09-21 00:29:47,373 - base_db.py:34 - connect - INFO - Database connection established.
+2025-09-21 00:29:47,375 - base_db.py:44 - disconnect - INFO - Database connection closed.
+```
+
+在根目录下新建test_base_bd.py文件，填入如下内容测试基类基本功能：
+
+```python
+from database.base_db import DatabaseManager
+
+if __name__ == "__main__":
+    with DatabaseManager() as db_manager:
+        db_manager.execute_query(
+            query=
+            "INSERT INTO user (user_name, password, user_role, class_id) VALUES (%s, %s,%s, %s)",
+            params=("Alice", "666666", 1, "[1,2,3,4]"))
+    with DatabaseManager() as db_manager:
+        res = db_manager.fetch_query(query="SELECT * FROM user",
+                                     fetch_one=False)
+        print(res)
+```
+
+输出结果：
+
+```bash
+>>python test_base_db.py
+Database connection established.
+Query executed: INSERT INTO user (user_name, password, user_role, class_id) VALUES (%s, %s,%s, %s) with params: ('Alice', '666666', 1, '[1,2,3,4]'), affected rows: 1
+Database connection closed.
+Database connection established.
+[{'user_id': 6, 'user_name': 'Alice', 'password': '666666', 'nickname': None, 'user_role': 1, 'class_id': '[1,2,3,4]'}]
+Database connection closed.
+```
 
