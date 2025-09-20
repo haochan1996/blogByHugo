@@ -215,13 +215,278 @@ create table user(
 
 ## 创建项目
 
-使用Pycharm创建项目，选择创建项目虚拟环境。
+使用VsCode创建目录student_system。
 
-![image-20250920194021485](https://blog-1301697820.cos.ap-guangzhou.myqcloud.com/blog/image-20250920194021485.png)
+创建项目虚拟环境(python -m venv .env)。
 
-Alt+F12打开终端，虚拟环境下安装pyside6
+激活虚拟环境，安装pyside6。
 
 ```bash
 pip install pyside6
 ```
+
+`PyQt Fluent` 是一个用于创建现代风格 PyQt 应用程序的库，它提供了丰富的 UI 组件和主题支持。如果项目中使用的是 PySide2、PySide6 或者 PyQt6，需切换至 PySide2、PySide6 和 PyQt6 分支下载对应的代码。这里安装PySide6-Fluent-Widgets。
+
+```bash
+pip install PySide6-Fluent-Widgets -i https://pypi.org/simple/
+```
+
+项目结构如下：
+
+```bash
+student_system
+- student	# 学生相关
+	- student_interface.py 	# 学生用户界面基本布局
+- classes	# 班级相关
+- user		# 用户相关
+- utils
+	- custom_style.py	# 自定义样式
+main.py	# 程序的入口
+```
+
+## 实现用界面基本布局
+
+student/student_interface.py中添加如下内容：
+
+```python
+from PySide6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout,QHeaderView, QTableWidgetItem, QCheckBox
+from PySide6.QtCore import Qt
+from qfluentwidgets import CardWidget, PushButton, SearchLineEdit, TableWidget, setCustomStyleSheet
+from utils.custom_style import *
+
+class StudentInterface(QWidget):
+
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("Student Interface")
+        self.setGeometry(100, 100, 800, 600)
+        self.students = []  # 用于存储学生数据的列表
+        self.setupUI()  # 设置UI
+        self.loadData() # 模拟加载数据
+        self.populate_table() # 填充表格
+
+    def setupUI(self):
+        # 创建垂直布局, 用于放置顶部按钮组和表格
+        layout = QVBoxLayout()
+
+        # 顶部按钮组
+        card_widget = CardWidget(self)
+        button_layout = QHBoxLayout(card_widget)
+        
+        self.addButton = PushButton("新增", self)
+        setCustomStyleSheet(self.addButton, ADD_BUTTON_STYLE, ADD_BUTTON_STYLE) # 设置新增按钮样式
+        self.searchIput = SearchLineEdit(self)
+        self.searchIput.setPlaceholderText("请输入学生姓名或学号")
+        self.searchIput.setClearButtonEnabled(True)
+        self.searchIput.setFixedWidth(500)
+        self.batchDeleteButton = PushButton("批量删除", self)
+        setCustomStyleSheet(self.batchDeleteButton, PATCH_DELETE_BUTTON_STYLE, PATCH_DELETE_BUTTON_STYLE) # 设置批量删除按钮样式
+        
+        button_layout.addWidget(self.addButton) # 添加新增按钮
+        button_layout.addWidget(self.searchIput)    # 添加搜索框
+        button_layout.addStretch(1) # 添加弹性空间, 默认填充满
+        button_layout.addWidget(self.batchDeleteButton)     # 添加批量删除按钮
+
+        layout.addWidget(card_widget)
+        
+        # 添加table
+        self.tableWidget = TableWidget(self)
+        self.tableWidget.setBorderRadius(8) # 设置圆角
+        self.tableWidget.setBorderVisible(True) # 设置边框可见
+
+        # 设置表头
+        self.tableWidget.setColumnCount(11) # 设置列数
+        self.tableWidget.setHorizontalHeaderLabels(["", "学生ID", "姓名","学号", "性别", "班级", "语文", "数学", "英语", "总分", "操作"]) # 设置表头标签
+        self.tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)  # 设置表头自适应宽度
+        
+        
+        layout.addWidget(self.tableWidget)
+        
+        self.setStyleSheet("""
+            StudentInterface {
+                background-color: white;
+            }
+        """)
+        self.resize(1280, 760)
+        self.setLayout(layout)
+
+    def loadData(self):
+        # 模拟加载数据
+        self.students = [
+            {"student_id": 1, "student_name": "张三", "student_number": "2025092001","gender": "1", "class_name": "高三1班", "chinese_score": 85, "math_score": 90, "english_score": 88},
+            {"student_id": 2, "student_name": "李四", "student_number": "2025092002","gender": "2", "class_name": "高三2班", "chinese_score": 78, "math_score": 82, "english_score": 80},
+            {"student_id": 3, "student_name": "王五", "student_number": "2025092003","gender": "1", "class_name": "高三1班", "chinese_score": 92, "math_score": 88, "english_score": 95},
+            {"student_id": 4, "student_name": "赵六", "student_number": "2025092004","gender": "2", "class_name": "高三3班", "chinese_score": 70, "math_score": 75, "english_score": 72},
+            {"student_id": 5, "student_name": "孙七", "student_number": "2025092005","gender": "1", "class_name": "高三2班", "chinese_score": 88, "math_score": 90, "english_score": 85},
+        ]
+    
+    def populate_table(self):
+        self.tableWidget.setRowCount(len(self.students)) # 设置行数
+        for row, student_info in enumerate(self.students):
+            self.setup_table_row(row, student_info)
+    
+    def setup_table_row(self, row, student_info):
+        checkbox = QCheckBox()
+        self.tableWidget.setCellWidget(row, 0, checkbox) # 添加复选框
+        # 赋值其他列
+        for col, key in enumerate(["student_id", "student_name", "student_number","gender", 
+                                   "class_name", "chinese_score", "math_score", "english_score"]):
+            value = student_info.get(key, "")
+            if key == 'gender':
+                value = "男" if value == "1" else "女"
+            item = QTableWidgetItem(str(value)) # 创建表格项
+            item.setTextAlignment(Qt.AlignCenter) # 设置文本居中
+            self.tableWidget.setItem(row, col + 1, item)    # 设置表格项， col+1 因为第一列是复选框
+        total_score = (student_info["chinese_score"] + 
+                       student_info["math_score"] + 
+                       student_info["english_score"]) # 计算总分
+        total_item = QTableWidgetItem(str(total_score)) # 创建总分项
+        # total_item.setTextAlignment(Qt.AlignCenter) # 设置文本居中
+        self.tableWidget.setItem(row, 9, total_item) # 设置总分列
+        
+        # 添加操作按钮
+        action_widget = QWidget()
+        action_layout = QHBoxLayout(action_widget)
+        action_layout.setContentsMargins(0, 0, 0, 0) #
+        action_layout.setSpacing(5) #
+        edit_button = PushButton("编辑")
+        setCustomStyleSheet(edit_button, UPDATE_BUTTON_STYLE, UPDATE_BUTTON_STYLE) # 设置编辑按钮样式
+        delete_button = PushButton("删除")
+        setCustomStyleSheet(delete_button, DELETE_BUTTON_STYLE, DELETE_BUTTON_STYLE) # 设置删除按钮样式
+        action_layout.addWidget(edit_button)
+        action_layout.addWidget(delete_button)
+        action_layout.addStretch() # 添加弹性空间, 默认填充满   
+        self.tableWidget.setCellWidget(row, 10, action_widget) # 设置操作列
+        self.tableWidget.setRowHeight(row, 40) # 设置行高
+        
+        # 设置所有列居中
+        for col in range(self.tableWidget.columnCount()):
+            item = self.tableWidget.item(row, col)
+            if item:
+                item.setTextAlignment(Qt.AlignCenter)
+```
+
+utils/custom_style.py添加如下内容：
+
+```python
+BUTTON_STYLE = """
+QPushButton {
+    color: white;
+    border: none;
+    font-family: "Segoe UI", "Microsoft Yahei";
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+QPushButton:pressed {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+"""
+
+ADD_BUTTON_STYLE = BUTTON_STYLE + """
+QPushButton {
+    background-color: #0d6efd;
+}
+QPushButton:hover {
+    background-color: #0b5ed7;
+}
+QPushButton:pressed {
+    background-color: #0a58ca;
+}
+"""
+
+DELETE_BUTTON_STYLE = BUTTON_STYLE + """
+QPushButton {
+    background-color: #D70022;
+}   
+QPushButton:hover {
+    background-color: #A3001F;
+}
+QPushButton:pressed {
+    background-color: #7F001A;
+}
+"""
+
+PATCH_DELETE_BUTTON_STYLE = BUTTON_STYLE + """
+QPushButton {
+    background-color: #E81123;
+}   
+QPushButton:hover {
+    background-color: #C50F1F;
+}
+QPushButton:pressed {
+    background-color: #A8001C;
+}   
+"""
+
+UPDATE_BUTTON_STYLE = BUTTON_STYLE + """
+QPushButton {
+    background-color: #FF8C00;
+}   
+QPushButton:hover {
+    background-color: #E87700;
+}   
+QPushButton:pressed {
+    background-color: #C86400;  
+}
+"""
+
+IMPORT_BUTTON_STYLE = BUTTON_STYLE + """
+QPushButton {   
+    background-color: #107C10;
+}   
+QPushButton:hover { 
+    background-color: #0E6C0E;
+}
+QPushButton:pressed {
+    background-color: #0C5E0C;
+}
+"""    
+
+EXPORT_BUTTON_STYLE = BUTTON_STYLE + """
+QPushButton {
+    background-color: #5C2D91;
+}   
+QPushButton:hover { 
+    background-color: #4B237A;
+}
+QPushButton:pressed {
+    background-color: #3A1A5E;
+}
+"""
+
+SEARCH_LINE_EDIT_STYLE = """
+QLineEdit {
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 14px;
+}   
+QLineEdit:focus {
+    border: 1px solid #0078D7;
+}
+"""
+```
+
+main.py添加如下内容：
+
+```python
+from PySide6.QtWidgets import QApplication
+from student.student_interface import StudentInterface
+
+if __name__ == "__main__":
+    app = QApplication([])
+    window = StudentInterface() 
+    window.show()
+    app.exec()
+```
+
+终端输入`python main.py`运行效果如下：
+
+![image-20250920223234710](https://blog-1301697820.cos.ap-guangzhou.myqcloud.com/blog/image-20250920223234710.png)
+
+## 数据库集成创建基类
 
