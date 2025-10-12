@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>WPF基础 - 浩の快乐小站</title><meta name="author" content="hao">
+<meta name="description" content="WPF介绍WPF（Windows Presentation Foundation）是微软推出的一种用于构建桌面应用程序的图形子系统。它提供了一种统一的编程模型，用于创建具有丰富用户界面的应用程序。WPF基于XAML（eXtensible Application Markup Language）语言，使得开发者可以通过声明式的方式定义用户界面，同时支持数据绑定、动画、样式和模板等功能。
+"><meta name="keywords" content='draft'>
+  <meta itemprop="name" content="WPF基础">
+  <meta itemprop="description" content="WPF介绍WPF（Windows Presentation Foundation）是微软推出的一种用于构建桌面应用程序的图形子系统。它提供了一种统一的编程模型，用于创建具有丰富用户界面的应用程序。WPF基于XAML（eXtensible Application Markup Language）语言，使得开发者可以通过声明式的方式定义用户界面，同时支持数据绑定、动画、样式和模板等功能。">
+  <meta itemprop="datePublished" content="2025-10-12T16:32:43+08:00">
+  <meta itemprop="dateModified" content="2025-10-12T16:32:43+08:00">
+  <meta itemprop="wordCount" content="3013">
+  <meta itemprop="keywords" content="Draft"><meta property="og:url" content="http://localhost:1313/wpf/b33113a1-613e-499c-b440-d349011391a3/">
+  <meta property="og:site_name" content="浩の快乐小站">
+  <meta property="og:title" content="WPF基础">
+  <meta property="og:description" content="WPF介绍WPF（Windows Presentation Foundation）是微软推出的一种用于构建桌面应用程序的图形子系统。它提供了一种统一的编程模型，用于创建具有丰富用户界面的应用程序。WPF基于XAML（eXtensible Application Markup Language）语言，使得开发者可以通过声明式的方式定义用户界面，同时支持数据绑定、动画、样式和模板等功能。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="wpf">
+    <meta property="article:published_time" content="2025-10-12T16:32:43+08:00">
+    <meta property="article:modified_time" content="2025-10-12T16:32:43+08:00">
+    <meta property="article:tag" content="Draft">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="WPF基础">
+  <meta name="twitter:description" content="WPF介绍WPF（Windows Presentation Foundation）是微软推出的一种用于构建桌面应用程序的图形子系统。它提供了一种统一的编程模型，用于创建具有丰富用户界面的应用程序。WPF基于XAML（eXtensible Application Markup Language）语言，使得开发者可以通过声明式的方式定义用户界面，同时支持数据绑定、动画、样式和模板等功能。">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="http://localhost:1313/wpf/b33113a1-613e-499c-b440-d349011391a3/" title="WPF基础 - 浩の快乐小站" /><link rel="next" type="text/html" href="http://localhost:1313/music/8dd06b96-a944-4275-ab38-4afcb8b10160/" title="" /><link rel="alternate" type="text/markdown" href="http://localhost:1313/wpf/b33113a1-613e-499c-b440-d349011391a3/index.md" title="WPF基础 - 浩の快乐小站"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "WPF基础",
+    "inLanguage": "zh-CN",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/localhost:1313\/wpf\/b33113a1-613e-499c-b440-d349011391a3\/"
+    },"genre": "posts","keywords": "draft","wordcount":  3013 ,
+    "url": "http:\/\/localhost:1313\/wpf\/b33113a1-613e-499c-b440-d349011391a3\/","datePublished": "2025-10-12T16:32:43+08:00","dateModified": "2025-10-12T16:32:43+08:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "hao"
+      },"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="浩の快乐小站"><img class="logo" src='/android-chrome-512x512.png' alt="浩の快乐小站" height="32" width="32"><span class="header-title-text">浩の快乐小站</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a class="menu-link" href="/posts/"><i class="fa-solid fa-file-text fa-fw fa-sm" aria-hidden="true"></i> 文章</a></li><li class="menu-item">
+              <a class="menu-link" href="/wpf/"><i class="fa-solid fa-tree fa-fw fa-sm" aria-hidden="true"></i> WPF</a></li><li class="menu-item has-children">
+              <a class="menu-link" href="javascript:void(0);"><i class="fa-solid fa-hourglass-start fa-fw fa-sm" aria-hidden="true"></i> 回溯</a><i class="dropdown-icon fa-solid fa-chevron-down" aria-hidden="true"></i>
+                <ul class="sub-menu"><li class="menu-item">
+                        <a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> 归档</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> 目录</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 标签</a>
+                      </li></ul></li><li class="menu-item">
+              <a class="menu-link" href="/music/8dd06b96-a944-4275-ab38-4afcb8b10160/"><i class="fa-solid fa-music fa-fw fa-sm" aria-hidden="true"></i> 听听歌吧</a></li><li class="menu-item">
+              <a class="menu-link" href="/friends/"><i class="fa-solid fa-heart fa-fw fa-sm" aria-hidden="true"></i> 网站</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="搜索文章标题或内容……" id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="浩の快乐小站"><img class="logo" src='/android-chrome-512x512.png' alt="浩の快乐小站" height="26" width="26"><span class="header-title-text">浩の快乐小站</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="搜索文章标题或内容……" id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              取消
+            </a>
+          </li><li class="menu-item"><a class="menu-link" href="/posts/"><i class="fa-solid fa-file-text fa-fw fa-sm" aria-hidden="true"></i> 文章</a></li><li class="menu-item"><a class="menu-link" href="/wpf/"><i class="fa-solid fa-tree fa-fw fa-sm" aria-hidden="true"></i> WPF</a></li><li class="menu-item"><span class="nested-item">
+                  <a class="menu-link" href="javascript:void(0);"><i class="fa-solid fa-hourglass-start fa-fw fa-sm" aria-hidden="true"></i> 回溯</a>
+                  <i class="dropdown-icon fa-solid fa-chevron-right" aria-hidden="true"></i>
+                </span>
+                <ul class="sub-menu"><li class="menu-item">
+                        <a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> 归档</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> 目录</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 标签</a>
+                      </li></ul></li><li class="menu-item"><a class="menu-link" href="/music/8dd06b96-a944-4275-ab38-4afcb8b10160/"><i class="fa-solid fa-music fa-fw fa-sm" aria-hidden="true"></i> 听听歌吧</a></li><li class="menu-item"><a class="menu-link" href="/friends/"><i class="fa-solid fa-heart fa-fw fa-sm" aria-hidden="true"></i> 网站</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="转载" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>WPF基础</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><a href="https://github.com/haochan1996" title="作者"target="_blank" rel="external nofollow noopener noreferrer author" class="author"><img class="avatar" src='https://avatars.githubusercontent.com/u/190246046?v=4' alt="hao" height="16" width="16">&nbsp;hao</a></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/draft/" class="post-category" title="分类 - Draft"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Draft</a></span></div><div class="post-meta-line"><span title="发布于 2025-10-12 16:32:43"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-10-12">2025-10-12</time></span>&nbsp;<span title="3013 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 3100 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 7 分钟</span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#wpf介绍">WPF介绍</a></li>
+    <li><a href="#wpf的基本概念">WPF的基本概念</a></li>
+    <li><a href="#wpf的项目结构">WPF的项目结构</a></li>
+    <li><a href="#xaml基础">XAML基础</a>
+      <ul>
+        <li><a href="#xaml的基本语法">XAML的基本语法</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h2 class="heading-element" id="wpf介绍"><span>WPF介绍</span>
+  <a href="#wpf%e4%bb%8b%e7%bb%8d" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>WPF（Windows Presentation Foundation）是微软推出的一种用于构建桌面应用程序的图形子系统。它提供了一种统一的编程模型，用于创建具有丰富用户界面的应用程序。WPF基于XAML（eXtensible Application Markup Language）语言，使得开发者可以通过声明式的方式定义用户界面，同时支持数据绑定、动画、样式和模板等功能。</p>
+<p>WPF的主要特点包括：</p>
+<ol>
+<li><strong>矢量图形</strong>：WPF使用矢量图形渲染界面，使得应用程序在不同分辨率下都能保持清晰。</li>
+<li><strong>数据绑定</strong>：WPF支持强大的数据绑定功能，可以轻松地将UI元素与数据源连接起来，实现动态更新。</li>
+<li><strong>样式和模板</strong>：WPF允许开发者定义样式和控制模板，使得界面可以高度定制化。</li>
+<li><strong>动画和媒体支持</strong>：WPF内置了对动画和多媒体的支持，可以创建丰富的用户体验。</li>
+<li><strong>布局系统</strong>：WPF提供了灵活的布局系统，可以根据窗口大小自动调整UI元素的位置和大小。</li>
+</ol>
+<p>WPF广泛应用于各种桌面应用程序的开发，特别适合需要复杂用户界面的应用，如图形设计工具、数据可视化应用等。通过WPF，开发者可以创建现代化、响应迅速且具有吸引力的桌面应用程序。</p>
+<h2 class="heading-element" id="wpf的基本概念"><span>WPF的基本概念</span>
+  <a href="#wpf%e7%9a%84%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><ol>
+<li><strong>XAML（eXtensible Application Markup Language）</strong>：WPF使用XAML作为主要的用户界面定义语言。XAML是一种基于XML的标记语言，允许开发者以声明式的方式定义UI元素、布局和行为。通过XAML，开发者可以清晰地描述界面的结构和外观。</li>
+<li><strong>控件（Controls）</strong>：WPF提供了丰富的内置控件，如按钮、文本框、列表框等，这些控件可以直接在XAML中使用。控件是用户界面的基本构建块，开发者可以通过设置属性和事件来定制它们的行为和外观。</li>
+<li><strong>布局（Layout）</strong>：WPF提供了多种布局容器，如Grid、StackPanel、DockPanel等，用于组织和排列UI元素。布局容器可以根据窗口大小自动调整子元素的位置和大小，确保界面在不同分辨率下都能良好显示。</li>
+<li><strong>数据绑定（Data Binding）</strong>：WPF支持强大的数据绑定功能，允许UI元素与数据源（如对象、集合等）进行连接。通过数据绑定，UI可以自动反映数据的变化，实现动态更新。</li>
+<li><strong>样式和模板（Styles and Templates）</strong>：WPF允许开发者定义样式和控制模板，以实现界面的高度定制化。样式可以统一设置控件的外观，而模板则可以完全改变控件的结构和行为。</li>
+<li><strong>事件（Events）</strong>：WPF使用事件驱动模型，允许开发者响应用户交互（如点击、输入等）。WPF支持路由事件机制，可以在控件树中传播事件，方便事件处理。</li>
+<li><strong>命令（Commands）</strong>：WPF引入了命令概念，允许将用户操作与应用程序逻辑解耦。命令可以绑定到控件上，实现统一的操作处理。</li>
+<li><strong>动画（Animation）</strong>：WPF内置了对动画的支持，允许开发者创建丰富的用户体验。通过动画，可以实现控件的平滑过渡、移动、缩放等效果。</li>
+<li><strong>资源（Resources）</strong>：WPF允许开发者定义和使用资源，如颜色、样式、模板等。资源可以在应用程序的不同部分共享，促进代码的重用和维护。</li>
+<li><strong>依赖属性（Dependency Properties）</strong>：WPF引入了依赖属性机制，允许属性值通过数据绑定、样式等方式动态变化。依赖属性支持属性值的继承和变化通知，增强了属性的灵活性。</li>
+<li><strong>视觉树（Visual Tree）和逻辑树（Logical Tree）</strong>：WPF中的UI元素组织成两种树结构。视觉树表示实际渲染的元素，而逻辑树表示元素的逻辑关系。理解这两种树结构有助于处理事件和布局。</li>
+<li><strong>命令绑定（Command Binding）</strong>：WPF允许将命令与命令处理程序绑定，简化了用户操作的处理。通过命令绑定，可以实现统一的操作逻辑。</li>
+<li><strong>多线程支持（Multithreading Support）</strong>：WPF支持多线程编程，允许在后台线程中执行耗时操作，同时保持UI的响应性。WPF提供了Dispatcher机制，用于在UI线程上执行操作。</li>
+<li><strong>3D图形支持（3D Graphics Support）</strong>：WPF内置了对3D图形的支持，允许开发者创建三维用户界面和图形效果。通过3D图形，可以实现更丰富的视觉体验。</li>
+<li><strong>文档和打印支持（Document and Printing Support）</strong>：WPF提供了对文档和打印的支持，允许开发者创建和打印复杂的文档内容。WPF支持固定文档和流文档两种文档类型。</li>
+<li><strong>国际化和本地化（Internationalization and Localization）</strong>：WPF支持国际化和本地化，  允许开发者创建多语言应用程序。通过资源文件，可以轻松地管理不同语言的文本和资源。</li>
+<li><strong>触摸和手势支持（Touch and Gesture Support）</strong>：WPF支持触摸屏和手势操作，允许开发者创建适应现代硬件的应用程序。通过触摸和手势，可以实现更自然的用户交互。</li>
+</ol>
+<h2 class="heading-element" id="wpf的项目结构"><span>WPF的项目结构</span>
+  <a href="#wpf%e7%9a%84%e9%a1%b9%e7%9b%ae%e7%bb%93%e6%9e%84" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>一个典型的WPF项目结构通常包括以下主要部分：</p>
+<ol>
+<li><strong>App.xaml</strong>：这是应用程序的入口文件，定义了应用程序的资源和启动逻辑。App.xaml.cs文件包含应用程序的代码逻辑。</li>
+<li><strong>MainWindow.xaml</strong>：这是应用程序的主窗口文件，定义了主界面的布局和控件。MainWindow.xaml.cs文件包含主窗口的代码逻辑。</li>
+<li><strong>Views文件夹</strong>：用于存放应用程序的其他窗口和用户控件的XAML文件及其对应的代码文件。</li>
+<li><strong>Models文件夹</strong>：用于存放应用程序的数据模型类，定义应用程序的数据结构和业务逻辑。</li>
+<li><strong>ViewModels文件夹</strong>：用于存放视图模型类，负责连接视图和模型，实现数据绑定和命令处理。</li>
+<li><strong>Resources文件夹</strong>：用于存放应用程序的资源文件，如样式、模板、图像等。</li>
+<li><strong>Converters文件夹</strong>：用于存放值转换器类，负责在数据绑定过程中转换数据格式。</li>
+<li><strong>Services文件夹</strong>：用于存放应用程序的服务类，负责处理数据访问、网络请求等功能。</li>
+<li><strong>Properties文件夹</strong>：包含应用程序的属性设置文件，如AssemblyInfo.cs和Settings.settings。</li>
+<li><strong>Packages文件夹</strong>：用于存放通过NuGet安装的第三方库和依赖项。</li>
+<li><strong>App.config</strong>：应用程序的配置文件，用于存储应用程序的设置和配置信息。</li>
+<li><strong>项目文件（.csproj）</strong>：包含项目的配置信息，如引用的库、编译选项等。</li>
+<li><strong>其他文件</strong>：根据项目需求，可能还会包含其他文件和文件夹，如文档、测试代码等。</li>
+</ol>
+<p>这个结构可以根据具体项目的需求进行调整和扩展，但通常会包含上述主要部分，以便组织和管理WPF应用程序的代码和资源。</p>
+<h2 class="heading-element" id="xaml基础"><span>XAML基础</span>
+  <a href="#xaml%e5%9f%ba%e7%a1%80" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>XAML（eXtensible Application Markup Language）是一种基于XML的标记语言，用于定义WPF应用程序的用户界面。通过XAML，开发者可以以声明式的方式描述UI元素、布局和行为，使得界面的结构和外观更加清晰和易于维护。</p>
+<h3 class="heading-element" id="xaml的基本语法"><span>XAML的基本语法</span>
+  <a href="#xaml%e7%9a%84%e5%9f%ba%e6%9c%ac%e8%af%ad%e6%b3%95" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ol>
+<li><strong>元素（Elements）</strong>：XAML中的每个UI组件都表示为一个元素。例如，按钮表示为<Button>元素，文本框表示为<TextBox>元素。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;TextBox Text=&#34;Enter text here&#34; Width=&#34;200&#34;/&gt;</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li><strong>属性（Attributes）</strong>：元素可以通过属性来设置其外观和行为。例如，设置按钮的内容、宽度和高度。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li><strong>嵌套（Nesting）</strong>：XAML允许元素嵌套在其他元素内部，以表示层次结构。例如，将按钮放在StackPanel中。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">xml&lt;StackPanel&gt;
+</span></span><span class="line"><span class="cl">    &lt;Button Content=&#34;Button 1&#34; Width=&#34;100&#34; Height=&#34;30&#34;/&gt;
+</span></span><span class="line"><span class="cl">    &lt;Button Content=&#34;Button 2&#34; Width=&#34;100&#34; Height=&#34;30&#34;/&gt;
+</span></span><span class="line"><span class="cl">&lt;/StackPanel&gt;</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li><strong>命名空间（Namespaces）</strong>：XAML使用XML命名空间来区分不同的元素和属性。通常，WPF元素使用默认命名空间。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">xmlns:x=&#34;http://schemas.microsoft.com/winfx/2006/xaml&#34;</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="5">
+<li><strong>注释（Comments）</strong>：XAML支持注释，可以使用<!-- -->来添加注释。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;Button Content=&#34;Click Me&#34; Width=&#34;100&#34; Height=&#34;30&#34;/&gt;</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="更新于 2025-10-12 16:32:43">更新于 2025-10-12&nbsp;</span>
+      </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/wpf/b33113a1-613e-499c-b440-d349011391a3/index.md" title="阅读原始文档" class="link-to-markdown">阅读原始文档</a></span><span><a href="vscode://file/D:%5c04%e5%ad%a6%e4%b9%a0%e7%9b%b8%e5%85%b3%5c01%e7%bc%96%e7%a8%8b%5cGitHub%e4%bb%a3%e7%a0%81%5chaochan1996%5cblogByHugo%5ccontent%5cwpf%5cWPF%e5%9f%ba%e7%a1%80.md" title="在编辑器中打开"target="_blank" rel="external nofollow noopener noreferrer" class="link-to-vscode">在编辑器中打开</a></span></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="分享到 X" data-sharer="twitter" data-url="http://localhost:1313/wpf/b33113a1-613e-499c-b440-d349011391a3/" data-title="WPF基础" data-hashtags="draft"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/wpf/b33113a1-613e-499c-b440-d349011391a3/" data-hashtag="draft"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/wpf/b33113a1-613e-499c-b440-d349011391a3/" data-title="WPF基础"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/draft/" class="post-tag" title="标签 - Draft">Draft</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/posts/db9584e3-f61a-4ce4-9173-9f9a0369aee1/" class="post-nav-item" rel="next" title="创建预设模板内容的Markdown文件">创建预设模板内容的Markdown文件<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.148.2"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.4.0-alpha-20250721024521-a1cd700b"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2024 - 2025</span><span class="author" itemprop="copyrightHolder">
+              <a href="/">hao</a></span></div><div class="footer-line statistics"></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/search.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"version":"v0.4.0-alpha-20250721024521-a1cd700b"};console.log('Page config:', window.config);</script><script src="/js/theme.min.js" defer></script><script src="/js/custom.min.js" defer></script></body>
+</html>

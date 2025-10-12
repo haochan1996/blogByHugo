@@ -19,56 +19,62 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/python/</loc>
-    <lastmod>2025-09-18T16:38:07+08:00</lastmod>
+    <loc>http://localhost:1313/wpf/</loc>
+    <lastmod>2025-10-12T16:32:43+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/go/</loc>
+    <lastmod>2025-09-18T17:53:51+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/friends/</loc>
-    <lastmod>2025-08-14T01:09:42+08:00</lastmod>
+    <lastmod>2025-09-18T16:51:19+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/music/8dd06b96-a944-4275-ab38-4afcb8b10160/</loc>
+    <lastmod>2025-09-18T16:51:19+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-09-11T17:06:28+08:00</lastmod>
+    <lastmod>2025-10-12T16:32:43+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/categories/python/</loc>
-    <lastmod>2025-09-11T17:06:28+08:00</lastmod>
+    <loc>http://localhost:1313/categories/draft/</loc>
+    <lastmod>2025-10-12T16:32:43+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/tags/python/</loc>
-    <lastmod>2025-09-11T17:06:28+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/sqlalchemy/</loc>
-    <lastmod>2025-09-11T17:06:28+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/python/basic/d14b1543-d65d-40cb-a7c4-f3bed1e0dfc6/</loc>
-    <lastmod>2025-09-11T17:06:28+08:00</lastmod>
+    <loc>http://localhost:1313/tags/draft/</loc>
+    <lastmod>2025-10-12T16:32:43+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-09-11T17:06:28+08:00</lastmod>
+    <lastmod>2025-10-12T16:32:43+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/wpf/b33113a1-613e-499c-b440-d349011391a3/</loc>
+    <lastmod>2025-10-12T16:32:43+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-09-18T16:38:07+08:00</lastmod>
+    <lastmod>2025-10-12T16:32:43+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -91,14 +97,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/music/8dd06b96-a944-4275-ab38-4afcb8b10160/</loc>
-    <lastmod>2025-08-14T01:09:42+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://localhost:1313/music/</loc>
-    <lastmod>2025-08-14T01:09:42+08:00</lastmod>
+    <lastmod>2025-09-18T16:51:19+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

@@ -31,14 +31,14 @@ enableEmoji = true
 
 [menu]
   [[menu.main]]
-    identifier = "python"
+    identifier = "wpf"
     parent = ""
     # you can add extra information before the name (HTML format is supported), such as icons
     pre = ""
     # you can add extra information after the name (HTML format is supported), such as icons
     post = ""
-    name = "python"
-    url = "/python/"
+    name = "WPF"
+    url = "/wpf/"
     # title will be shown when you hover on this menu link
     title = ""
     weight = 4
